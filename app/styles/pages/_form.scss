@@ -17,15 +17,9 @@
 }
 
 .content-form {
-	background-color: $white;
-	border:1px solid $gray-border;
-	border-radius: 8px;
-	height: 100%;
-	margin: 50px auto 90px;
 
 	.step-wrapper {
 		
-
 		.progress-bar {
 			border-radius: 30px;
 			position: relative;
@@ -127,8 +121,16 @@
 			.padding-right {
 				padding-right: 20px;
 				position: relative;
+
+				@include respond-to('medium') {
+					padding-right: 0;
+				}
 				.link-more {
 					right: 36px;
+
+					@include respond-to('medium') {
+						right: 16px;
+					}
 				}
 			}
 

@@ -519,10 +519,25 @@ body {
   height: 100%;
   margin: 0 auto;
   position: relative;
-  width: 960px; }
+  max-width: 1200px;
+  width: 90%; }
   @media (max-width: 1023px) {
     .wrapper {
-      width: 90%; } }
+      width: 100%; } }
+
+.content-form {
+  background-color: #FFF;
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+  height: 100%;
+  margin: 50px auto 90px !important; }
+  @media (max-width: 1023px) {
+    .content-form {
+      border: none;
+      border-top: 1px solid #e2e2e2;
+      border-radius: 0;
+      margin-top: 0 !important;
+      margin-bottom: 0 !important; } }
 
 a {
   text-decoration: none;
@@ -558,6 +573,9 @@ hr {
 
 .gap-20 {
   margin-top: 20px !important; }
+
+.gap-30 {
+  margin-top: 30px !important; }
 
 .gap-40 {
   margin-top: 40px !important; }
@@ -3255,8 +3273,23 @@ section .container {
   height: 50px;
   width: 94px; }
 
+body.interne .logo {
+  background-color: transparent;
+  height: 22px;
+  width: 104px; }
+
+.interne-header .logo {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
 header {
   background-color: #FFF;
+  border-bottom: 1px solid #e2e2e2;
   height: 60px;
   line-height: 60px;
   width: 100%; }
@@ -3305,8 +3338,10 @@ header {
       width: 2px; }
     header ul li {
       float: left;
-      line-height: 60px;
-      list-style: none; }
+      height: 59px;
+      line-height: 59px;
+      list-style: none;
+      position: relative; }
       header ul li.active {
         border-bottom: 1px solid #35D3B5; }
       header ul li a {
@@ -3316,11 +3351,31 @@ header {
         text-transform: uppercase; }
     header ul li + li {
       margin-left: 20px; }
+  header.interne-header ul {
+    margin-left: 140px; }
+    header.interne-header ul:before {
+      display: none; }
+    header.interne-header ul li.gray-circle {
+      margin-right: 20px; }
+      header.interne-header ul li.gray-circle:after {
+        background-color: #DDDDDD;
+        border-radius: 100%;
+        content: '';
+        display: block;
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        right: -20px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%); }
 
 footer ul {
   height: 20px;
-  margin: 0 auto 20px;
-  width: 550px; }
+  margin: 0 auto 20px; }
   footer ul li {
     float: left;
     list-style: none; }
@@ -3334,6 +3389,28 @@ footer ul {
       font-family: "Helvetica"; }
   footer ul li + li {
     margin-left: 35px; }
+  footer ul.footer-big {
+    display: block;
+    width: 550px; }
+  footer ul.footer-mobile {
+    background-color: #FAFAFA;
+    display: none;
+    height: 70px;
+    padding: 20px;
+    width: 100%; }
+    footer ul.footer-mobile li {
+      text-align: center;
+      display: block;
+      width: 100%; }
+    footer ul.footer-mobile li + li {
+      margin-left: 0; }
+      footer ul.footer-mobile li + li a {
+        color: #333D47; }
+  @media (max-width: 1023px) {
+    footer ul.footer-big {
+      display: none; }
+    footer ul.footer-mobile {
+      display: block; } }
 
 .control-group {
   margin-top: 20px; }
@@ -3439,6 +3516,9 @@ table {
   padding: 30px !important; }
   .content-form-menu.active {
     display: block; }
+  @media (max-width: 1023px) {
+    .content-form-menu.active {
+      display: none; } }
   .content-form-menu p {
     color: #333D47;
     font-family: "proxima_nova_ltlight";
@@ -4109,6 +4189,163 @@ span.icon {
     .sod_select .sod_option.disabled span:after {
       display: none; }
 
+body.interne {
+  background-color: #FAFAFA; }
+
+.page-interne-avance {
+  margin-top: 50px; }
+
+@media (max-width: 1023px) {
+  .interne-content-inner {
+    padding: 0 30px; } }
+
+.avance-tab-title {
+  height: 46px;
+  line-height: 46px;
+  margin-bottom: 15px; }
+  .avance-tab-title p {
+    color: #333D47;
+    display: inline-block;
+    font-family: "proxima_nova_ltsemibold";
+    font-size: 13px;
+    padding-left: 20px; }
+  .avance-tab-title span {
+    display: inline-block;
+    font-family: "proxima_nova_ltsemibold";
+    font-size: 13px; }
+    .avance-tab-title span.marron {
+      color: #8B572A; }
+  .avance-tab-title .control-group-search {
+    position: relative;
+    float: right;
+    width: 70%; }
+    .avance-tab-title .control-group-search:before {
+      background: url("../images/search.png") left center no-repeat;
+      content: '';
+      display: block;
+      height: 10px;
+      width: 10px;
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%); }
+    .avance-tab-title .control-group-search input {
+      padding-left: 30px; }
+
+.avance-tab {
+  cursor: pointer;
+  height: 46px;
+  margin-bottom: 10px; }
+  .avance-tab:nth-child(even) {
+    padding-left: 5px; }
+  .avance-tab:nth-child(odd) {
+    padding-right: 5px; }
+  .avance-tab .avance-tab-inner {
+    background-color: #FFF;
+    border: 1px solid #9A9A9A;
+    height: 100%;
+    line-height: 46px;
+    width: 100%;
+    padding: 0 10px; }
+    .avance-tab .avance-tab-inner div:last-child {
+      text-align: right; }
+    .avance-tab .avance-tab-inner p {
+      color: #9A9A9A;
+      font-family: "proxima_nova_rgregular";
+      font-size: 12px; }
+      .avance-tab .avance-tab-inner p.name {
+        color: #333D47;
+        font-family: "proxima_nova_ltsemibold"; }
+  .avance-tab.active .avance-tab-inner {
+    background-color: #E5F6F3; }
+  @media (max-width: 1023px) {
+    .avance-tab {
+      margin: 0;
+      margin-bottom: 10px; }
+      .avance-tab:nth-child(even) {
+        padding-left: 0; }
+      .avance-tab:nth-child(odd) {
+        padding-right: 0; } }
+
+body.interne {
+  background-color: #FAFAFA; }
+
+.page-interne-actions {
+  margin: 50px auto;
+  max-width: 960px; }
+
+@media (max-width: 1023px) {
+  .interne-content-inner {
+    padding: 0 30px; } }
+
+h2.block-title {
+  color: #333D47;
+  font-size: 22px;
+  font-family: "proxima_nova_ltsemibold";
+  padding-left: 30px; }
+
+ul.actions-content {
+  border-radius: 8px;
+  border: 1px solid #e2e2e2;
+  background-color: #F5F5F5;
+  padding: 0;
+  margin: 0 30px;
+  margin-top: 15px; }
+  ul.actions-content li + li {
+    border-top: 1px solid #e2e2e2; }
+  ul.actions-content li {
+    list-style: none;
+    position: relative; }
+    ul.actions-content li a {
+      color: #333D47;
+      display: block;
+      font-size: 14px;
+      font-family: "proxima_nova_ltsemibold";
+      padding: 15px; }
+      ul.actions-content li a.active .more {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg); }
+    ul.actions-content li .more {
+      border-left: 2px solid #1e343e;
+      border-top: 2px solid #1e343e;
+      content: "";
+      height: 10px;
+      width: 10px;
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      margin-top: -5px;
+      -webkit-transform: rotate(225deg);
+      -moz-transform: rotate(225deg);
+      -ms-transform: rotate(225deg);
+      -o-transform: rotate(225deg);
+      transform: rotate(225deg); }
+    ul.actions-content li .collapse {
+      height: 0px;
+      overflow: hidden;
+      display: block; }
+      ul.actions-content li .collapse .collapse-inner {
+        background-color: #EDEDED;
+        border-top: 1px solid #DDDDDD;
+        display: block; }
+    ul.actions-content li .inner-ul {
+      background-color: #FFF;
+      padding: 30px; }
+      ul.actions-content li .inner-ul .control-group {
+        height: 45px; }
+        ul.actions-content li .inner-ul .control-group:first-child {
+          margin-top: 0; }
+        ul.actions-content li .inner-ul .control-group .btn-submit-wrapper {
+          float: right;
+          width: 130px; }
+
 .page-login .logo {
   display: block;
   margin: 45px auto 0; }
@@ -4137,6 +4374,24 @@ span.icon {
     -o-box-shadow: 0px 2px 4px 0px #000000;
     box-shadow: 0px 2px 4px 0px #000000; }
 
+.page-interne-login .logo {
+  background-color: transparent;
+  display: block;
+  height: 22px;
+  margin: 45px auto 0; }
+
+.page-interne-login #form-login {
+  border-radius: 8px;
+  border: 1px solid #EDEDED;
+  background-color: #FAFAFA;
+  margin: 20px auto 0;
+  padding: 30px 20px;
+  height: 140px;
+  width: 330px; }
+
+.page-interne-login .control-group:nth-child(1) {
+  margin-top: 0; }
+
 .page-form {
   background-color: #FAFAFA;
   height: 100%;
@@ -4152,226 +4407,229 @@ span.icon {
     -o-transform: translateY(-50%);
     transform: translateY(-50%); }
 
-.content-form {
-  background-color: #FFF;
-  border: 1px solid #e2e2e2;
-  border-radius: 8px;
-  height: 100%;
-  margin: 50px auto 90px; }
-  .content-form .step-wrapper .progress-bar {
+.content-form .step-wrapper .progress-bar {
+  border-radius: 30px;
+  position: relative;
+  height: 10px;
+  width: 100%;
+  margin-top: 10px; }
+  .content-form .step-wrapper .progress-bar .progress-bar-empty {
     border-radius: 30px;
-    position: relative;
-    height: 10px;
-    width: 100%;
-    margin-top: 10px; }
-    .content-form .step-wrapper .progress-bar .progress-bar-empty {
-      border-radius: 30px;
-      background-color: #EDEDED;
-      display: block;
-      height: 100%;
+    background-color: #EDEDED;
+    display: block;
+    height: 100%;
+    width: 100%; }
+  .content-form .step-wrapper .progress-bar .progress-bar-full {
+    border-radius: 30px;
+    background-color: #35D3B5;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%; }
+    .content-form .step-wrapper .progress-bar .progress-bar-full.step1 {
+      width: 25%; }
+    .content-form .step-wrapper .progress-bar .progress-bar-full.step2 {
+      width: 50%; }
+    .content-form .step-wrapper .progress-bar .progress-bar-full.step3 {
+      width: 75%; }
+    .content-form .step-wrapper .progress-bar .progress-bar-full.step4 {
       width: 100%; }
-    .content-form .step-wrapper .progress-bar .progress-bar-full {
-      border-radius: 30px;
-      background-color: #35D3B5;
+
+.content-form .step-wrapper .control-group {
+  display: none; }
+  .content-form .step-wrapper .control-group.active {
+    display: block; }
+
+.content-form .content-form-inner {
+  border-left: 1px solid #e2e2e2;
+  display: none;
+  padding: 30px; }
+  .content-form .content-form-inner.step4 {
+    padding: 0; }
+  .content-form .content-form-inner.active {
+    display: block; }
+  .content-form .content-form-inner h2 {
+    color: #333D47;
+    font-size: 30px;
+    font-family: "proxima_nova_ltsemibold"; }
+  .content-form .content-form-inner p {
+    color: #333D47;
+    font-family: "proxima_nova_ltlight";
+    font-size: 14px; }
+  .content-form .content-form-inner .link-more {
+    background: url("../images/home/icn-more.png") center center no-repeat;
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    height: 13px;
+    width: 12px; }
+  .content-form .content-form-inner .control-group-checkbox, .content-form .content-form-inner .control-group {
+    margin-top: 20px;
+    position: relative; }
+    .content-form .content-form-inner .control-group-checkbox span.label, .content-form .content-form-inner .control-group span.label {
+      color: #333D47;
       display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%; }
-      .content-form .step-wrapper .progress-bar .progress-bar-full.step1 {
-        width: 25%; }
-      .content-form .step-wrapper .progress-bar .progress-bar-full.step2 {
-        width: 50%; }
-      .content-form .step-wrapper .progress-bar .progress-bar-full.step3 {
-        width: 75%; }
-      .content-form .step-wrapper .progress-bar .progress-bar-full.step4 {
-        width: 100%; }
-  .content-form .step-wrapper .control-group {
-    display: none; }
-    .content-form .step-wrapper .control-group.active {
-      display: block; }
-  .content-form .content-form-inner {
-    border-left: 1px solid #e2e2e2;
-    display: none;
-    padding: 30px; }
-    .content-form .content-form-inner.step4 {
-      padding: 0; }
-    .content-form .content-form-inner.active {
-      display: block; }
-    .content-form .content-form-inner h2 {
-      color: #333D47;
-      font-size: 30px;
+      font-size: 14px;
       font-family: "proxima_nova_ltsemibold"; }
-    .content-form .content-form-inner p {
-      color: #333D47;
-      font-family: "proxima_nova_ltlight";
+    .content-form .content-form-inner .control-group-checkbox .sod_select, .content-form .content-form-inner .control-group-checkbox input, .content-form .content-form-inner .control-group .sod_select, .content-form .content-form-inner .control-group input {
+      margin-top: 10px; }
+    .content-form .content-form-inner .control-group-checkbox input[type="text"]::-webkit-input-placeholder, .content-form .content-form-inner .control-group-checkbox input[type="email"]::-webkit-input-placeholder, .content-form .content-form-inner .control-group-checkbox input[type="password"]::-webkit-input-placeholder, .content-form .content-form-inner .control-group-checkbox input[type="tel"]::-webkit-input-placeholder, .content-form .content-form-inner .control-group input[type="text"]::-webkit-input-placeholder, .content-form .content-form-inner .control-group input[type="email"]::-webkit-input-placeholder, .content-form .content-form-inner .control-group input[type="password"]::-webkit-input-placeholder, .content-form .content-form-inner .control-group input[type="tel"]::-webkit-input-placeholder {
       font-size: 14px; }
-    .content-form .content-form-inner .link-more {
-      background: url("../images/home/icn-more.png") center center no-repeat;
-      position: absolute;
-      right: 16px;
-      bottom: 16px;
-      height: 13px;
-      width: 12px; }
-    .content-form .content-form-inner .control-group-checkbox, .content-form .content-form-inner .control-group {
-      margin-top: 20px;
+    .content-form .content-form-inner .control-group-checkbox input[type="text"]::-moz-placeholder, .content-form .content-form-inner .control-group-checkbox input[type="email"]::-moz-placeholder, .content-form .content-form-inner .control-group-checkbox input[type="password"]::-moz-placeholder, .content-form .content-form-inner .control-group-checkbox input[type="tel"]::-moz-placeholder, .content-form .content-form-inner .control-group input[type="text"]::-moz-placeholder, .content-form .content-form-inner .control-group input[type="email"]::-moz-placeholder, .content-form .content-form-inner .control-group input[type="password"]::-moz-placeholder, .content-form .content-form-inner .control-group input[type="tel"]::-moz-placeholder {
+      font-size: 14px; }
+    .content-form .content-form-inner .control-group-checkbox input[type="text"]:-moz-placeholder, .content-form .content-form-inner .control-group-checkbox input[type="email"]:-moz-placeholder, .content-form .content-form-inner .control-group-checkbox input[type="password"]:-moz-placeholder, .content-form .content-form-inner .control-group-checkbox input[type="tel"]:-moz-placeholder, .content-form .content-form-inner .control-group input[type="text"]:-moz-placeholder, .content-form .content-form-inner .control-group input[type="email"]:-moz-placeholder, .content-form .content-form-inner .control-group input[type="password"]:-moz-placeholder, .content-form .content-form-inner .control-group input[type="tel"]:-moz-placeholder {
+      font-size: 14px; }
+    .content-form .content-form-inner .control-group-checkbox input[type="text"]:-ms-input-placeholder, .content-form .content-form-inner .control-group-checkbox input[type="email"]:-ms-input-placeholder, .content-form .content-form-inner .control-group-checkbox input[type="password"]:-ms-input-placeholder, .content-form .content-form-inner .control-group-checkbox input[type="tel"]:-ms-input-placeholder, .content-form .content-form-inner .control-group input[type="text"]:-ms-input-placeholder, .content-form .content-form-inner .control-group input[type="email"]:-ms-input-placeholder, .content-form .content-form-inner .control-group input[type="password"]:-ms-input-placeholder, .content-form .content-form-inner .control-group input[type="tel"]:-ms-input-placeholder {
+      font-size: 14px; }
+    .content-form .content-form-inner .control-group-checkbox .padding-right, .content-form .content-form-inner .control-group .padding-right {
+      padding-right: 20px;
       position: relative; }
-      .content-form .content-form-inner .control-group-checkbox span.label, .content-form .content-form-inner .control-group span.label {
-        color: #333D47;
-        display: block;
-        font-size: 14px;
-        font-family: "proxima_nova_ltsemibold"; }
-      .content-form .content-form-inner .control-group-checkbox .sod_select, .content-form .content-form-inner .control-group-checkbox input, .content-form .content-form-inner .control-group .sod_select, .content-form .content-form-inner .control-group input {
-        margin-top: 10px; }
-      .content-form .content-form-inner .control-group-checkbox input[type="text"]::-webkit-input-placeholder, .content-form .content-form-inner .control-group-checkbox input[type="email"]::-webkit-input-placeholder, .content-form .content-form-inner .control-group-checkbox input[type="password"]::-webkit-input-placeholder, .content-form .content-form-inner .control-group-checkbox input[type="tel"]::-webkit-input-placeholder, .content-form .content-form-inner .control-group input[type="text"]::-webkit-input-placeholder, .content-form .content-form-inner .control-group input[type="email"]::-webkit-input-placeholder, .content-form .content-form-inner .control-group input[type="password"]::-webkit-input-placeholder, .content-form .content-form-inner .control-group input[type="tel"]::-webkit-input-placeholder {
-        font-size: 14px; }
-      .content-form .content-form-inner .control-group-checkbox input[type="text"]::-moz-placeholder, .content-form .content-form-inner .control-group-checkbox input[type="email"]::-moz-placeholder, .content-form .content-form-inner .control-group-checkbox input[type="password"]::-moz-placeholder, .content-form .content-form-inner .control-group-checkbox input[type="tel"]::-moz-placeholder, .content-form .content-form-inner .control-group input[type="text"]::-moz-placeholder, .content-form .content-form-inner .control-group input[type="email"]::-moz-placeholder, .content-form .content-form-inner .control-group input[type="password"]::-moz-placeholder, .content-form .content-form-inner .control-group input[type="tel"]::-moz-placeholder {
-        font-size: 14px; }
-      .content-form .content-form-inner .control-group-checkbox input[type="text"]:-moz-placeholder, .content-form .content-form-inner .control-group-checkbox input[type="email"]:-moz-placeholder, .content-form .content-form-inner .control-group-checkbox input[type="password"]:-moz-placeholder, .content-form .content-form-inner .control-group-checkbox input[type="tel"]:-moz-placeholder, .content-form .content-form-inner .control-group input[type="text"]:-moz-placeholder, .content-form .content-form-inner .control-group input[type="email"]:-moz-placeholder, .content-form .content-form-inner .control-group input[type="password"]:-moz-placeholder, .content-form .content-form-inner .control-group input[type="tel"]:-moz-placeholder {
-        font-size: 14px; }
-      .content-form .content-form-inner .control-group-checkbox input[type="text"]:-ms-input-placeholder, .content-form .content-form-inner .control-group-checkbox input[type="email"]:-ms-input-placeholder, .content-form .content-form-inner .control-group-checkbox input[type="password"]:-ms-input-placeholder, .content-form .content-form-inner .control-group-checkbox input[type="tel"]:-ms-input-placeholder, .content-form .content-form-inner .control-group input[type="text"]:-ms-input-placeholder, .content-form .content-form-inner .control-group input[type="email"]:-ms-input-placeholder, .content-form .content-form-inner .control-group input[type="password"]:-ms-input-placeholder, .content-form .content-form-inner .control-group input[type="tel"]:-ms-input-placeholder {
-        font-size: 14px; }
-      .content-form .content-form-inner .control-group-checkbox .padding-right, .content-form .content-form-inner .control-group .padding-right {
-        padding-right: 20px;
-        position: relative; }
-        .content-form .content-form-inner .control-group-checkbox .padding-right .link-more, .content-form .content-form-inner .control-group .padding-right .link-more {
-          right: 36px; }
-      .content-form .content-form-inner .control-group-checkbox.error input[type="text"], .content-form .content-form-inner .control-group-checkbox.error input[type="email"], .content-form .content-form-inner .control-group-checkbox.error input[type="password"], .content-form .content-form-inner .control-group-checkbox.error input[type="tel"], .content-form .content-form-inner .control-group.error input[type="text"], .content-form .content-form-inner .control-group.error input[type="email"], .content-form .content-form-inner .control-group.error input[type="password"], .content-form .content-form-inner .control-group.error input[type="tel"] {
+      @media (max-width: 1023px) {
+        .content-form .content-form-inner .control-group-checkbox .padding-right, .content-form .content-form-inner .control-group .padding-right {
+          padding-right: 0; } }
+      .content-form .content-form-inner .control-group-checkbox .padding-right .link-more, .content-form .content-form-inner .control-group .padding-right .link-more {
+        right: 36px; }
+        @media (max-width: 1023px) {
+          .content-form .content-form-inner .control-group-checkbox .padding-right .link-more, .content-form .content-form-inner .control-group .padding-right .link-more {
+            right: 16px; } }
+    .content-form .content-form-inner .control-group-checkbox.error input[type="text"], .content-form .content-form-inner .control-group-checkbox.error input[type="email"], .content-form .content-form-inner .control-group-checkbox.error input[type="password"], .content-form .content-form-inner .control-group-checkbox.error input[type="tel"], .content-form .content-form-inner .control-group.error input[type="text"], .content-form .content-form-inner .control-group.error input[type="email"], .content-form .content-form-inner .control-group.error input[type="password"], .content-form .content-form-inner .control-group.error input[type="tel"] {
+      color: #F32F00; }
+      .content-form .content-form-inner .control-group-checkbox.error input[type="text"]::-webkit-input-placeholder, .content-form .content-form-inner .control-group-checkbox.error input[type="email"]::-webkit-input-placeholder, .content-form .content-form-inner .control-group-checkbox.error input[type="password"]::-webkit-input-placeholder, .content-form .content-form-inner .control-group-checkbox.error input[type="tel"]::-webkit-input-placeholder, .content-form .content-form-inner .control-group.error input[type="text"]::-webkit-input-placeholder, .content-form .content-form-inner .control-group.error input[type="email"]::-webkit-input-placeholder, .content-form .content-form-inner .control-group.error input[type="password"]::-webkit-input-placeholder, .content-form .content-form-inner .control-group.error input[type="tel"]::-webkit-input-placeholder {
         color: #F32F00; }
-        .content-form .content-form-inner .control-group-checkbox.error input[type="text"]::-webkit-input-placeholder, .content-form .content-form-inner .control-group-checkbox.error input[type="email"]::-webkit-input-placeholder, .content-form .content-form-inner .control-group-checkbox.error input[type="password"]::-webkit-input-placeholder, .content-form .content-form-inner .control-group-checkbox.error input[type="tel"]::-webkit-input-placeholder, .content-form .content-form-inner .control-group.error input[type="text"]::-webkit-input-placeholder, .content-form .content-form-inner .control-group.error input[type="email"]::-webkit-input-placeholder, .content-form .content-form-inner .control-group.error input[type="password"]::-webkit-input-placeholder, .content-form .content-form-inner .control-group.error input[type="tel"]::-webkit-input-placeholder {
-          color: #F32F00; }
-        .content-form .content-form-inner .control-group-checkbox.error input[type="text"]::-moz-placeholder, .content-form .content-form-inner .control-group-checkbox.error input[type="email"]::-moz-placeholder, .content-form .content-form-inner .control-group-checkbox.error input[type="password"]::-moz-placeholder, .content-form .content-form-inner .control-group-checkbox.error input[type="tel"]::-moz-placeholder, .content-form .content-form-inner .control-group.error input[type="text"]::-moz-placeholder, .content-form .content-form-inner .control-group.error input[type="email"]::-moz-placeholder, .content-form .content-form-inner .control-group.error input[type="password"]::-moz-placeholder, .content-form .content-form-inner .control-group.error input[type="tel"]::-moz-placeholder {
-          color: #F32F00; }
-        .content-form .content-form-inner .control-group-checkbox.error input[type="text"]:-moz-placeholder, .content-form .content-form-inner .control-group-checkbox.error input[type="email"]:-moz-placeholder, .content-form .content-form-inner .control-group-checkbox.error input[type="password"]:-moz-placeholder, .content-form .content-form-inner .control-group-checkbox.error input[type="tel"]:-moz-placeholder, .content-form .content-form-inner .control-group.error input[type="text"]:-moz-placeholder, .content-form .content-form-inner .control-group.error input[type="email"]:-moz-placeholder, .content-form .content-form-inner .control-group.error input[type="password"]:-moz-placeholder, .content-form .content-form-inner .control-group.error input[type="tel"]:-moz-placeholder {
-          color: #F32F00; }
-        .content-form .content-form-inner .control-group-checkbox.error input[type="text"]:-ms-input-placeholder, .content-form .content-form-inner .control-group-checkbox.error input[type="email"]:-ms-input-placeholder, .content-form .content-form-inner .control-group-checkbox.error input[type="password"]:-ms-input-placeholder, .content-form .content-form-inner .control-group-checkbox.error input[type="tel"]:-ms-input-placeholder, .content-form .content-form-inner .control-group.error input[type="text"]:-ms-input-placeholder, .content-form .content-form-inner .control-group.error input[type="email"]:-ms-input-placeholder, .content-form .content-form-inner .control-group.error input[type="password"]:-ms-input-placeholder, .content-form .content-form-inner .control-group.error input[type="tel"]:-ms-input-placeholder {
-          color: #F32F00; }
-    .content-form .content-form-inner .control-group-error {
-      background-color: #FFEDE8;
-      border: 1px solid #F32F00;
-      border-radius: 8px;
-      padding: 12px;
-      margin-top: 30px; }
-      .content-form .content-form-inner .control-group-error p {
-        color: #333D47;
+      .content-form .content-form-inner .control-group-checkbox.error input[type="text"]::-moz-placeholder, .content-form .content-form-inner .control-group-checkbox.error input[type="email"]::-moz-placeholder, .content-form .content-form-inner .control-group-checkbox.error input[type="password"]::-moz-placeholder, .content-form .content-form-inner .control-group-checkbox.error input[type="tel"]::-moz-placeholder, .content-form .content-form-inner .control-group.error input[type="text"]::-moz-placeholder, .content-form .content-form-inner .control-group.error input[type="email"]::-moz-placeholder, .content-form .content-form-inner .control-group.error input[type="password"]::-moz-placeholder, .content-form .content-form-inner .control-group.error input[type="tel"]::-moz-placeholder {
+        color: #F32F00; }
+      .content-form .content-form-inner .control-group-checkbox.error input[type="text"]:-moz-placeholder, .content-form .content-form-inner .control-group-checkbox.error input[type="email"]:-moz-placeholder, .content-form .content-form-inner .control-group-checkbox.error input[type="password"]:-moz-placeholder, .content-form .content-form-inner .control-group-checkbox.error input[type="tel"]:-moz-placeholder, .content-form .content-form-inner .control-group.error input[type="text"]:-moz-placeholder, .content-form .content-form-inner .control-group.error input[type="email"]:-moz-placeholder, .content-form .content-form-inner .control-group.error input[type="password"]:-moz-placeholder, .content-form .content-form-inner .control-group.error input[type="tel"]:-moz-placeholder {
+        color: #F32F00; }
+      .content-form .content-form-inner .control-group-checkbox.error input[type="text"]:-ms-input-placeholder, .content-form .content-form-inner .control-group-checkbox.error input[type="email"]:-ms-input-placeholder, .content-form .content-form-inner .control-group-checkbox.error input[type="password"]:-ms-input-placeholder, .content-form .content-form-inner .control-group-checkbox.error input[type="tel"]:-ms-input-placeholder, .content-form .content-form-inner .control-group.error input[type="text"]:-ms-input-placeholder, .content-form .content-form-inner .control-group.error input[type="email"]:-ms-input-placeholder, .content-form .content-form-inner .control-group.error input[type="password"]:-ms-input-placeholder, .content-form .content-form-inner .control-group.error input[type="tel"]:-ms-input-placeholder {
+        color: #F32F00; }
+  .content-form .content-form-inner .control-group-error {
+    background-color: #FFEDE8;
+    border: 1px solid #F32F00;
+    border-radius: 8px;
+    padding: 12px;
+    margin-top: 30px; }
+    .content-form .content-form-inner .control-group-error p {
+      color: #333D47;
+      display: block;
+      font-size: 14px;
+      font-family: "proxima_nova_ltsemibold"; }
+    .content-form .content-form-inner .control-group-error span {
+      color: #333D47;
+      display: block;
+      font-size: 14px;
+      font-family: "proxima_nova_ltlight";
+      margin-top: 10px; }
+  .content-form .content-form-inner .step4-top {
+    padding: 30px; }
+  .content-form .content-form-inner .step4-inner {
+    border-top: 1px solid #e2e2e2; }
+    .content-form .content-form-inner .step4-inner.step4-left {
+      border-right: 1px solid #e2e2e2; }
+    .content-form .content-form-inner .step4-inner ul {
+      padding: 0; }
+    .content-form .content-form-inner .step4-inner li {
+      cursor: pointer;
+      display: block;
+      height: 60px;
+      line-height: 60px;
+      position: relative;
+      width: 100%; }
+      .content-form .content-form-inner .step4-inner li:after {
+        background: transparent;
+        content: "";
         display: block;
-        font-size: 14px;
-        font-family: "proxima_nova_ltsemibold"; }
-      .content-form .content-form-inner .control-group-error span {
+        position: absolute;
+        height: 10px;
+        width: 10px;
+        right: 10px;
+        top: 50%;
+        border-left: 3px solid #C7C7CC;
+        border-top: 3px solid #C7C7CC;
+        z-index: 2;
+        -webkit-transform: translateY(-50%) rotate(135deg);
+        -moz-transform: translateY(-50%) rotate(135deg);
+        -ms-transform: translateY(-50%) rotate(135deg);
+        -o-transform: translateY(-50%) rotate(135deg);
+        transform: translateY(-50%) rotate(135deg); }
+      .content-form .content-form-inner .step4-inner li span {
         color: #333D47;
+        font-size: 14px;
+        font-family: "proxima_nova_ltlight";
+        padding: 0 25px 0 15px; }
+      .content-form .content-form-inner .step4-inner li.check:after {
+        height: 10px;
+        width: 4px;
+        border-left: 3px solid #35D3B5;
+        border-top: 3px solid #35D3B5;
+        -webkit-transform: translateY(-50%) rotate(225deg);
+        -moz-transform: translateY(-50%) rotate(225deg);
+        -ms-transform: translateY(-50%) rotate(225deg);
+        -o-transform: translateY(-50%) rotate(225deg);
+        transform: translateY(-50%) rotate(225deg); }
+      .content-form .content-form-inner .step4-inner li:hover, .content-form .content-form-inner .step4-inner li.active {
+        background-color: #35D3B5;
+        -webkit-transition: background-color 0.4s;
+        -moz-transition: background-color 0.4s;
+        transition: background-color 0.4s; }
+        .content-form .content-form-inner .step4-inner li:hover span, .content-form .content-form-inner .step4-inner li.active span {
+          color: #FFF;
+          font-family: "proxima_nova_ltsemibold"; }
+        .content-form .content-form-inner .step4-inner li:hover:after, .content-form .content-form-inner .step4-inner li.active:after {
+          border-left: 3px solid #FFF;
+          border-top: 3px solid #FFF; }
+    .content-form .content-form-inner .step4-inner li + li {
+      border-top: 1px solid #e2e2e2; }
+  .content-form .content-form-inner .step4-inner-padding {
+    padding: 20px; }
+    .content-form .content-form-inner .step4-inner-padding .control-group-file {
+      padding: 20px; }
+      .content-form .content-form-inner .step4-inner-padding .control-group-file input::-webkit-input-placeholder {
+        color: #FFF;
+        text-align: center;
+        font-family: "proxima_nova_ltsemibold"; }
+      .content-form .content-form-inner .step4-inner-padding .control-group-file input::-moz-placeholder {
+        color: #FFF;
+        text-align: center;
+        font-family: "proxima_nova_ltsemibold"; }
+      .content-form .content-form-inner .step4-inner-padding .control-group-file input:-moz-placeholder {
+        color: #FFF;
+        text-align: center;
+        font-family: "proxima_nova_ltsemibold"; }
+      .content-form .content-form-inner .step4-inner-padding .control-group-file input:-ms-input-placeholder {
+        color: #FFF;
+        text-align: center;
+        font-family: "proxima_nova_ltsemibold"; }
+      .content-form .content-form-inner .step4-inner-padding .control-group-file span {
         display: block;
         font-size: 14px;
         font-family: "proxima_nova_ltlight";
-        margin-top: 10px; }
-    .content-form .content-form-inner .step4-top {
-      padding: 30px; }
-    .content-form .content-form-inner .step4-inner {
-      border-top: 1px solid #e2e2e2; }
-      .content-form .content-form-inner .step4-inner.step4-left {
-        border-right: 1px solid #e2e2e2; }
-      .content-form .content-form-inner .step4-inner ul {
-        padding: 0; }
-      .content-form .content-form-inner .step4-inner li {
-        cursor: pointer;
-        display: block;
-        height: 60px;
-        line-height: 60px;
-        position: relative;
-        width: 100%; }
-        .content-form .content-form-inner .step4-inner li:after {
-          background: transparent;
-          content: "";
-          display: block;
-          position: absolute;
-          height: 10px;
-          width: 10px;
-          right: 10px;
-          top: 50%;
-          border-left: 3px solid #C7C7CC;
-          border-top: 3px solid #C7C7CC;
-          z-index: 2;
-          -webkit-transform: translateY(-50%) rotate(135deg);
-          -moz-transform: translateY(-50%) rotate(135deg);
-          -ms-transform: translateY(-50%) rotate(135deg);
-          -o-transform: translateY(-50%) rotate(135deg);
-          transform: translateY(-50%) rotate(135deg); }
-        .content-form .content-form-inner .step4-inner li span {
-          color: #333D47;
-          font-size: 14px;
-          font-family: "proxima_nova_ltlight";
-          padding: 0 25px 0 15px; }
-        .content-form .content-form-inner .step4-inner li.check:after {
-          height: 10px;
-          width: 4px;
-          border-left: 3px solid #35D3B5;
-          border-top: 3px solid #35D3B5;
-          -webkit-transform: translateY(-50%) rotate(225deg);
-          -moz-transform: translateY(-50%) rotate(225deg);
-          -ms-transform: translateY(-50%) rotate(225deg);
-          -o-transform: translateY(-50%) rotate(225deg);
-          transform: translateY(-50%) rotate(225deg); }
-        .content-form .content-form-inner .step4-inner li:hover, .content-form .content-form-inner .step4-inner li.active {
-          background-color: #35D3B5;
-          -webkit-transition: background-color 0.4s;
-          -moz-transition: background-color 0.4s;
-          transition: background-color 0.4s; }
-          .content-form .content-form-inner .step4-inner li:hover span, .content-form .content-form-inner .step4-inner li.active span {
-            color: #FFF;
-            font-family: "proxima_nova_ltsemibold"; }
-          .content-form .content-form-inner .step4-inner li:hover:after, .content-form .content-form-inner .step4-inner li.active:after {
-            border-left: 3px solid #FFF;
-            border-top: 3px solid #FFF; }
-      .content-form .content-form-inner .step4-inner li + li {
-        border-top: 1px solid #e2e2e2; }
-    .content-form .content-form-inner .step4-inner-padding {
-      padding: 20px; }
-      .content-form .content-form-inner .step4-inner-padding .control-group-file {
-        padding: 20px; }
-        .content-form .content-form-inner .step4-inner-padding .control-group-file input::-webkit-input-placeholder {
-          color: #FFF;
-          text-align: center;
-          font-family: "proxima_nova_ltsemibold"; }
-        .content-form .content-form-inner .step4-inner-padding .control-group-file input::-moz-placeholder {
-          color: #FFF;
-          text-align: center;
-          font-family: "proxima_nova_ltsemibold"; }
-        .content-form .content-form-inner .step4-inner-padding .control-group-file input:-moz-placeholder {
-          color: #FFF;
-          text-align: center;
-          font-family: "proxima_nova_ltsemibold"; }
-        .content-form .content-form-inner .step4-inner-padding .control-group-file input:-ms-input-placeholder {
-          color: #FFF;
-          text-align: center;
-          font-family: "proxima_nova_ltsemibold"; }
-        .content-form .content-form-inner .step4-inner-padding .control-group-file span {
-          display: block;
-          font-size: 14px;
-          font-family: "proxima_nova_ltlight";
-          text-align: center;
-          margin-top: 20px; }
-    .content-form .content-form-inner .file-imported {
-      width: 100%; }
-      .content-form .content-form-inner .file-imported img {
-        max-width: 100%; }
-  .content-form .step-finish {
-    display: none;
-    padding: 30px;
-    text-align: center; }
-    .content-form .step-finish.active {
-      display: block; }
-    .content-form .step-finish .step-finish-inner {
-      margin: 0 auto;
-      width: 75%; }
-      @media (max-width: 1023px) {
-        .content-form .step-finish .step-finish-inner {
-          width: 100%; } }
-    .content-form .step-finish h2 {
-      font-size: 30px;
-      font-family: "proxima_nova_ltsemibold";
-      margin-bottom: 30px; }
-    .content-form .step-finish p {
-      color: #333D47;
-      font-family: "proxima_nova_ltlight"; }
+        text-align: center;
+        margin-top: 20px; }
+  .content-form .content-form-inner .file-imported {
+    width: 100%; }
+    .content-form .content-form-inner .file-imported img {
+      max-width: 100%; }
+
+.content-form .step-finish {
+  display: none;
+  padding: 30px;
+  text-align: center; }
+  .content-form .step-finish.active {
+    display: block; }
+  .content-form .step-finish .step-finish-inner {
+    margin: 0 auto;
+    width: 75%; }
+    @media (max-width: 1023px) {
+      .content-form .step-finish .step-finish-inner {
+        width: 100%; } }
+  .content-form .step-finish h2 {
+    font-size: 30px;
+    font-family: "proxima_nova_ltsemibold";
+    margin-bottom: 30px; }
+  .content-form .step-finish p {
+    color: #333D47;
+    font-family: "proxima_nova_ltlight"; }
 
 .page-dashboard {
   background-color: #FAFAFA;
@@ -4388,525 +4646,510 @@ span.icon {
     -o-transform: translateY(-50%);
     transform: translateY(-50%); }
 
-.content-form {
-  background-color: #FFF;
-  border: 1px solid #e2e2e2;
-  border-radius: 8px;
-  height: 100%;
-  margin: 50px auto 90px; }
-  .content-form .content-dashboard-inner {
-    border-left: 1px solid #e2e2e2;
-    display: none;
-    padding: 30px; }
-    .content-form .content-dashboard-inner.active {
+.content-form .content-dashboard-inner {
+  border-left: 1px solid #e2e2e2;
+  display: none;
+  padding: 30px; }
+  .content-form .content-dashboard-inner.active {
+    display: block; }
+  .content-form .content-dashboard-inner h2 {
+    color: #333D47;
+    font-size: 20px;
+    font-family: "proxima_nova_ltsemibold";
+    text-align: center; }
+  .content-form .content-dashboard-inner p {
+    color: #333D47;
+    font-family: "proxima_nova_ltlight";
+    font-size: 14px; }
+  .content-form .content-dashboard-inner span {
+    color: #999999;
+    font-size: 14px;
+    font-family: "proxima_nova_rgregular"; }
+    .content-form .content-dashboard-inner span.text {
+      line-height: 45px;
+      color: #333D47; }
+    .content-form .content-dashboard-inner span.sep {
+      background-color: #e2e2e2;
+      height: 2px;
+      float: right;
+      margin: 20px 0; }
+  .content-form .content-dashboard-inner .inner-left {
+    text-align: right;
+    line-height: 45px; }
+  .content-form .content-dashboard-inner .inner-right {
+    padding-left: 20px; }
+    .content-form .content-dashboard-inner .inner-right span.status {
+      color: #FF8964;
+      line-height: 45px; }
+    .content-form .content-dashboard-inner .inner-right span.more-text {
+      margin-top: 10px;
       display: block; }
-    .content-form .content-dashboard-inner h2 {
-      color: #333D47;
-      font-size: 20px;
+    .content-form .content-dashboard-inner .inner-right .btn-file {
+      font-size: 14px;
       font-family: "proxima_nova_ltsemibold";
-      text-align: center; }
-    .content-form .content-dashboard-inner p {
+      width: 130px; }
+  .content-form .content-dashboard-inner input[type="text"], .content-form .content-dashboard-inner input[type="email"], .content-form .content-dashboard-inner input[type="password"], .content-form .content-dashboard-inner input[type="tel"] {
+    color: #333D47;
+    font-family: "proxima_nova_rgregular";
+    font-size: 14px; }
+  .content-form .content-dashboard-inner.step2 .control-group {
+    margin-top: 10px; }
+  .content-form .content-dashboard-inner.step3 p, .content-form .content-dashboard-inner.step4 p {
+    color: #333D47;
+    font-size: 16px;
+    font-family: "proxima_nova_ltsemibold"; }
+  .content-form .content-dashboard-inner.step3 span, .content-form .content-dashboard-inner.step4 span {
+    display: block;
+    margin: 20px 0; }
+  .content-form .content-dashboard-inner.step3 .btn-file, .content-form .content-dashboard-inner.step4 .btn-file {
+    width: 130px; }
+  .content-form .content-dashboard-inner.step3 {
+    padding-bottom: 0; }
+    .content-form .content-dashboard-inner.step3 a.orange {
+      color: #FD9426;
+      font-family: "proxima_nova_ltsemibold";
+      font-size: 14px;
+      margin-left: 30px; }
+    .content-form .content-dashboard-inner.step3 .control-group-big {
+      margin-bottom: 20px; }
+      .content-form .content-dashboard-inner.step3 .control-group-big:nth-child(1) {
+        margin-top: 40px; }
+      .content-form .content-dashboard-inner.step3 .control-group-big p {
+        display: inline-block; }
+      .content-form .content-dashboard-inner.step3 .control-group-big .check {
+        background: transparent;
+        display: inline-block;
+        height: 10px;
+        width: 6px;
+        right: 10px;
+        border-left: 3px solid #35D3B5;
+        border-top: 3px solid #35D3B5;
+        margin: 0;
+        margin-left: 20px;
+        z-index: 2;
+        -webkit-transform: rotate(225deg);
+        -moz-transform: rotate(225deg);
+        -ms-transform: rotate(225deg);
+        -o-transform: rotate(225deg);
+        transform: rotate(225deg); }
+    .content-form .content-dashboard-inner.step3 .control-group-big + .control-group-big {
+      border-top: 1px solid #e2e2e2;
+      padding-top: 20px; }
+  .content-form .content-dashboard-inner .control-group-submit {
+    float: right;
+    width: 60%;
+    margin-top: 0; }
+    .content-form .content-dashboard-inner .control-group-submit a.cancel {
+      color: #9A9A9A;
+      font-size: 14px;
+      font-family: "proxima_nova_ltsemibold";
+      line-height: 45px; }
+
+.page-dashboard {
+  background-color: #FAFAFA;
+  height: 100%;
+  width: 100%; }
+  .page-dashboard .logo {
+    margin-right: 20px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%); }
+
+.content-form .content-facture-inner {
+  border-left: 1px solid #e2e2e2;
+  display: none;
+  padding: 30px 0; }
+  .content-form .content-facture-inner.step3 {
+    padding: 30px 0 0; }
+  .content-form .content-facture-inner.active {
+    display: block; }
+  .content-form .content-facture-inner h2 {
+    color: #333D47;
+    font-size: 20px;
+    font-family: "proxima_nova_ltsemibold";
+    text-align: center; }
+  .content-form .content-facture-inner p {
+    color: #333D47;
+    font-family: "proxima_nova_ltlight";
+    font-size: 14px; }
+  .content-form .content-facture-inner span {
+    color: #999999;
+    font-size: 14px;
+    font-family: "proxima_nova_rgregular"; }
+    .content-form .content-facture-inner span.text {
+      line-height: 45px;
+      color: #333D47; }
+    .content-form .content-facture-inner span.sep {
+      background-color: #e2e2e2;
+      height: 2px;
+      float: right;
+      margin: 20px 0; }
+  .content-form .content-facture-inner input[type="text"], .content-form .content-facture-inner input[type="email"], .content-form .content-facture-inner input[type="password"], .content-form .content-facture-inner input[type="tel"], .content-form .content-facture-inner input[type="date"] {
+    color: #333D47;
+    font-family: "proxima_nova_rgregular";
+    font-size: 14px; }
+  .content-form .content-facture-inner.step1 .inner-step, .content-form .content-facture-inner.step2 .inner-step {
+    float: none;
+    margin: 0 auto;
+    width: 90%; }
+  .content-form .content-facture-inner.step1 span.sep, .content-form .content-facture-inner.step2 span.sep {
+    height: 1px;
+    float: none;
+    display: block;
+    width: 100%; }
+  .content-form .content-facture-inner.step1 .control-group-date span, .content-form .content-facture-inner.step2 .control-group-date span {
+    color: #333D47;
+    display: inline-block;
+    margin: 0 12px; }
+  .content-form .content-facture-inner.step1 .control-group-date input[type="date"], .content-form .content-facture-inner.step2 .control-group-date input[type="date"] {
+    display: inline-block;
+    width: 45%;
+    text-transform: uppercase; }
+  .content-form .content-facture-inner.step1 .control-group-submit .btn-submit-wrapper, .content-form .content-facture-inner.step2 .control-group-submit .btn-submit-wrapper {
+    float: right;
+    width: 220px; }
+  .content-form .content-facture-inner .control-group-submit {
+    float: right;
+    width: 60%;
+    margin-top: 0; }
+    .content-form .content-facture-inner .control-group-submit a.cancel {
+      color: #9A9A9A;
+      font-size: 14px;
+      font-family: "proxima_nova_ltsemibold";
+      line-height: 45px; }
+  .content-form .content-facture-inner .tab-inner {
+    padding: 0 20px 0 30px; }
+  .content-form .content-facture-inner .tab-title .row {
+    height: 50px;
+    line-height: 50px; }
+  .content-form .content-facture-inner .tab-tab {
+    border-top: 1px solid #e2e2e2; }
+    .content-form .content-facture-inner .tab-tab .row {
+      height: 50px;
+      line-height: 50px; }
+    .content-form .content-facture-inner .tab-tab span {
       color: #333D47;
-      font-family: "proxima_nova_ltlight";
-      font-size: 14px; }
-    .content-form .content-dashboard-inner span {
-      color: #999999;
       font-size: 14px;
       font-family: "proxima_nova_rgregular"; }
-      .content-form .content-dashboard-inner span.text {
-        line-height: 45px;
-        color: #333D47; }
-      .content-form .content-dashboard-inner span.sep {
-        background-color: #e2e2e2;
-        height: 2px;
-        float: right;
-        margin: 20px 0; }
-    .content-form .content-dashboard-inner .inner-left {
-      text-align: right;
-      line-height: 45px; }
-    .content-form .content-dashboard-inner .inner-right {
-      padding-left: 20px; }
-      .content-form .content-dashboard-inner .inner-right span.status {
-        color: #FF8964;
-        line-height: 45px; }
-      .content-form .content-dashboard-inner .inner-right span.more-text {
-        margin-top: 10px;
-        display: block; }
-      .content-form .content-dashboard-inner .inner-right .btn-file {
+    .content-form .content-facture-inner .tab-tab .tab-prix {
+      position: relative; }
+      .content-form .content-facture-inner .tab-tab .tab-prix:after {
+        background: transparent;
+        content: "";
+        display: block;
+        position: absolute;
+        height: 7px;
+        width: 7px;
+        right: 0;
+        top: 50%;
+        border-left: 3px solid #C7C7CC;
+        border-top: 3px solid #C7C7CC;
+        z-index: 2;
+        -webkit-transform: translateY(-50%) rotate(135deg);
+        -moz-transform: translateY(-50%) rotate(135deg);
+        -ms-transform: translateY(-50%) rotate(135deg);
+        -o-transform: translateY(-50%) rotate(135deg);
+        transform: translateY(-50%) rotate(135deg); }
+  .content-form .content-facture-inner .pagination {
+    border-top: 1px solid #e2e2e2;
+    padding: 0;
+    margin: 0;
+    height: 45px;
+    line-height: 45px;
+    text-align: center; }
+    .content-form .content-facture-inner .pagination li {
+      display: inline-block;
+      list-style: none; }
+      .content-form .content-facture-inner .pagination li a {
+        color: #999999;
         font-size: 14px;
-        font-family: "proxima_nova_ltsemibold";
-        width: 130px; }
-    .content-form .content-dashboard-inner input[type="text"], .content-form .content-dashboard-inner input[type="email"], .content-form .content-dashboard-inner input[type="password"], .content-form .content-dashboard-inner input[type="tel"] {
-      color: #333D47;
-      font-family: "proxima_nova_rgregular";
-      font-size: 14px; }
-    .content-form .content-dashboard-inner.step2 .control-group {
-      margin-top: 10px; }
-    .content-form .content-dashboard-inner.step3 p, .content-form .content-dashboard-inner.step4 p {
+        font-family: "proxima_nova_rgregular"; }
+      .content-form .content-facture-inner .pagination li.active a, .content-form .content-facture-inner .pagination li:hover a {
+        color: #333D47; }
+    .content-form .content-facture-inner .pagination li + li {
+      margin-left: 20px; }
+
+.page-dashboard {
+  background-color: #FAFAFA;
+  height: 100%;
+  width: 100%; }
+  .page-dashboard .logo {
+    margin-right: 20px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%); }
+
+.content-form .vehicule-wrapper .btn {
+  color: #FFF;
+  padding-left: 40px; }
+
+.content-form .vehicule-wrapper .btn-submit-wrapper {
+  position: relative; }
+  .content-form .vehicule-wrapper .btn-submit-wrapper:before {
+    content: '+';
+    color: #FFF;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    font-size: 20px;
+    font-family: "proxima_nova_rgbold";
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%); }
+
+.content-form .vehicule-wrapper .progress-bar {
+  border-radius: 30px;
+  position: relative;
+  height: 10px;
+  width: 100%;
+  margin-top: 10px; }
+  .content-form .vehicule-wrapper .progress-bar .progress-bar-empty {
+    border-radius: 30px;
+    background-color: #EDEDED;
+    display: block;
+    height: 100%;
+    width: 100%; }
+  .content-form .vehicule-wrapper .progress-bar .progress-bar-full {
+    border-radius: 30px;
+    background-color: #35D3B5;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%; }
+    .content-form .vehicule-wrapper .progress-bar .progress-bar-full.step1 {
+      width: 25%; }
+    .content-form .vehicule-wrapper .progress-bar .progress-bar-full.step2 {
+      width: 50%; }
+    .content-form .vehicule-wrapper .progress-bar .progress-bar-full.step3 {
+      width: 75%; }
+    .content-form .vehicule-wrapper .progress-bar .progress-bar-full.step4 {
+      width: 100%; }
+
+.content-form .content-vehicule-inner {
+  border-left: 1px solid #e2e2e2;
+  display: none;
+  padding: 30px; }
+  .content-form .content-vehicule-inner.active {
+    display: block; }
+  .content-form .content-vehicule-inner h2 {
+    color: #333D47;
+    font-size: 30px;
+    font-family: "proxima_nova_ltsemibold";
+    text-align: center; }
+  .content-form .content-vehicule-inner.step1 h2, .content-form .content-vehicule-inner.step2 h2 {
+    text-align: left; }
+  .content-form .content-vehicule-inner.step2 {
+    padding: 0; }
+  .content-form .content-vehicule-inner p {
+    color: #333D47;
+    font-family: "proxima_nova_ltlight";
+    font-size: 14px; }
+  .content-form .content-vehicule-inner span {
+    color: #999999;
+    font-size: 14px;
+    font-family: "proxima_nova_rgregular"; }
+    .content-form .content-vehicule-inner span.text {
+      line-height: 45px;
+      color: #333D47; }
+    .content-form .content-vehicule-inner span.sep {
+      background-color: #e2e2e2;
+      height: 2px;
+      float: right;
+      margin: 20px 0; }
+  .content-form .content-vehicule-inner.dashboard {
+    padding-bottom: 0; }
+    .content-form .content-vehicule-inner.dashboard p {
       color: #333D47;
       font-size: 16px;
       font-family: "proxima_nova_ltsemibold"; }
-    .content-form .content-dashboard-inner.step3 span, .content-form .content-dashboard-inner.step4 span {
+    .content-form .content-vehicule-inner.dashboard span {
       display: block;
       margin: 20px 0; }
-    .content-form .content-dashboard-inner.step3 .btn-file, .content-form .content-dashboard-inner.step4 .btn-file {
+    .content-form .content-vehicule-inner.dashboard .btn-file {
       width: 130px; }
-    .content-form .content-dashboard-inner.step3 {
-      padding-bottom: 0; }
-      .content-form .content-dashboard-inner.step3 a.orange {
-        color: #FD9426;
-        font-family: "proxima_nova_ltsemibold";
-        font-size: 14px;
-        margin-left: 30px; }
-      .content-form .content-dashboard-inner.step3 .control-group-big {
-        margin-bottom: 20px; }
-        .content-form .content-dashboard-inner.step3 .control-group-big:nth-child(1) {
-          margin-top: 40px; }
-        .content-form .content-dashboard-inner.step3 .control-group-big p {
-          display: inline-block; }
-        .content-form .content-dashboard-inner.step3 .control-group-big .check {
-          background: transparent;
-          display: inline-block;
-          height: 10px;
-          width: 6px;
-          right: 10px;
-          border-left: 3px solid #35D3B5;
-          border-top: 3px solid #35D3B5;
-          margin: 0;
-          margin-left: 20px;
-          z-index: 2;
-          -webkit-transform: rotate(225deg);
-          -moz-transform: rotate(225deg);
-          -ms-transform: rotate(225deg);
-          -o-transform: rotate(225deg);
-          transform: rotate(225deg); }
-      .content-form .content-dashboard-inner.step3 .control-group-big + .control-group-big {
-        border-top: 1px solid #e2e2e2;
-        padding-top: 20px; }
-    .content-form .content-dashboard-inner .control-group-submit {
-      float: right;
-      width: 60%;
-      margin-top: 0; }
-      .content-form .content-dashboard-inner .control-group-submit a.cancel {
-        color: #9A9A9A;
-        font-size: 14px;
-        font-family: "proxima_nova_ltsemibold";
-        line-height: 45px; }
-
-.page-dashboard {
-  background-color: #FAFAFA;
-  height: 100%;
-  width: 100%; }
-  .page-dashboard .logo {
-    margin-right: 20px;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%); }
-
-.content-form {
-  background-color: #FFF;
-  border: 1px solid #e2e2e2;
-  border-radius: 8px;
-  height: 100%;
-  margin: 50px auto 90px; }
-  .content-form .content-facture-inner {
-    border-left: 1px solid #e2e2e2;
-    display: none;
-    padding: 30px 0; }
-    .content-form .content-facture-inner.step3 {
-      padding: 30px 0 0; }
-    .content-form .content-facture-inner.active {
-      display: block; }
-    .content-form .content-facture-inner h2 {
-      color: #333D47;
-      font-size: 20px;
+    .content-form .content-vehicule-inner.dashboard a.orange {
+      color: #FD9426;
       font-family: "proxima_nova_ltsemibold";
-      text-align: center; }
-    .content-form .content-facture-inner p {
-      color: #333D47;
-      font-family: "proxima_nova_ltlight";
-      font-size: 14px; }
-    .content-form .content-facture-inner span {
-      color: #999999;
       font-size: 14px;
-      font-family: "proxima_nova_rgregular"; }
-      .content-form .content-facture-inner span.text {
-        line-height: 45px;
-        color: #333D47; }
-      .content-form .content-facture-inner span.sep {
-        background-color: #e2e2e2;
-        height: 2px;
-        float: right;
-        margin: 20px 0; }
-    .content-form .content-facture-inner input[type="text"], .content-form .content-facture-inner input[type="email"], .content-form .content-facture-inner input[type="password"], .content-form .content-facture-inner input[type="tel"], .content-form .content-facture-inner input[type="date"] {
-      color: #333D47;
-      font-family: "proxima_nova_rgregular";
-      font-size: 14px; }
-    .content-form .content-facture-inner.step1 .inner-step, .content-form .content-facture-inner.step2 .inner-step {
-      float: none;
-      margin: 0 auto;
-      width: 90%; }
-    .content-form .content-facture-inner.step1 span.sep, .content-form .content-facture-inner.step2 span.sep {
-      height: 1px;
-      float: none;
-      display: block;
-      width: 100%; }
-    .content-form .content-facture-inner.step1 .control-group-date span, .content-form .content-facture-inner.step2 .control-group-date span {
-      color: #333D47;
-      display: inline-block;
-      margin: 0 12px; }
-    .content-form .content-facture-inner.step1 .control-group-date input[type="date"], .content-form .content-facture-inner.step2 .control-group-date input[type="date"] {
-      display: inline-block;
-      width: 45%;
-      text-transform: uppercase; }
-    .content-form .content-facture-inner.step1 .control-group-submit .btn-submit-wrapper, .content-form .content-facture-inner.step2 .control-group-submit .btn-submit-wrapper {
-      float: right;
-      width: 220px; }
-    .content-form .content-facture-inner .control-group-submit {
-      float: right;
-      width: 60%;
-      margin-top: 0; }
-      .content-form .content-facture-inner .control-group-submit a.cancel {
-        color: #9A9A9A;
-        font-size: 14px;
-        font-family: "proxima_nova_ltsemibold";
-        line-height: 45px; }
-    .content-form .content-facture-inner .tab-inner {
-      padding: 0 20px 0 30px; }
-    .content-form .content-facture-inner .tab-title .row {
-      height: 50px;
-      line-height: 50px; }
-    .content-form .content-facture-inner .tab-tab {
-      border-top: 1px solid #e2e2e2; }
-      .content-form .content-facture-inner .tab-tab .row {
-        height: 50px;
-        line-height: 50px; }
-      .content-form .content-facture-inner .tab-tab span {
-        color: #333D47;
-        font-size: 14px;
-        font-family: "proxima_nova_rgregular"; }
-      .content-form .content-facture-inner .tab-tab .tab-prix {
-        position: relative; }
-        .content-form .content-facture-inner .tab-tab .tab-prix:after {
-          background: transparent;
-          content: "";
-          display: block;
-          position: absolute;
-          height: 7px;
-          width: 7px;
-          right: 0;
-          top: 50%;
-          border-left: 3px solid #C7C7CC;
-          border-top: 3px solid #C7C7CC;
-          z-index: 2;
-          -webkit-transform: translateY(-50%) rotate(135deg);
-          -moz-transform: translateY(-50%) rotate(135deg);
-          -ms-transform: translateY(-50%) rotate(135deg);
-          -o-transform: translateY(-50%) rotate(135deg);
-          transform: translateY(-50%) rotate(135deg); }
-    .content-form .content-facture-inner .pagination {
-      border-top: 1px solid #e2e2e2;
-      padding: 0;
-      margin: 0;
-      height: 45px;
-      line-height: 45px;
-      text-align: center; }
-      .content-form .content-facture-inner .pagination li {
+      margin-left: 30px; }
+    .content-form .content-vehicule-inner.dashboard .control-group-big {
+      margin-bottom: 20px; }
+      .content-form .content-vehicule-inner.dashboard .control-group-big:nth-child(1) {
+        margin-top: 40px; }
+      .content-form .content-vehicule-inner.dashboard .control-group-big p {
+        display: inline-block; }
+      .content-form .content-vehicule-inner.dashboard .control-group-big .check {
+        background: transparent;
         display: inline-block;
-        list-style: none; }
-        .content-form .content-facture-inner .pagination li a {
-          color: #999999;
-          font-size: 14px;
-          font-family: "proxima_nova_rgregular"; }
-        .content-form .content-facture-inner .pagination li.active a, .content-form .content-facture-inner .pagination li:hover a {
-          color: #333D47; }
-      .content-form .content-facture-inner .pagination li + li {
-        margin-left: 20px; }
-
-.page-dashboard {
-  background-color: #FAFAFA;
-  height: 100%;
-  width: 100%; }
-  .page-dashboard .logo {
-    margin-right: 20px;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%); }
-
-.content-form {
-  background-color: #FFF;
-  border: 1px solid #e2e2e2;
-  border-radius: 8px;
-  height: 100%;
-  margin: 50px auto 90px; }
-  .content-form .vehicule-wrapper .btn {
-    color: #FFF;
-    padding-left: 40px; }
-  .content-form .vehicule-wrapper .btn-submit-wrapper {
+        height: 10px;
+        width: 6px;
+        right: 10px;
+        border-left: 3px solid #35D3B5;
+        border-top: 3px solid #35D3B5;
+        margin: 0;
+        margin-left: 20px;
+        z-index: 2;
+        -webkit-transform: rotate(225deg);
+        -moz-transform: rotate(225deg);
+        -ms-transform: rotate(225deg);
+        -o-transform: rotate(225deg);
+        transform: rotate(225deg); }
+    .content-form .content-vehicule-inner.dashboard .control-group-big + .control-group-big {
+      border-top: 1px solid #e2e2e2;
+      padding-top: 20px; }
+  .content-form .content-vehicule-inner .control-group-checkbox, .content-form .content-vehicule-inner .control-group {
+    margin-top: 20px;
     position: relative; }
-    .content-form .vehicule-wrapper .btn-submit-wrapper:before {
-      content: '+';
-      color: #FFF;
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: 15px;
-      font-size: 20px;
-      font-family: "proxima_nova_rgbold";
-      -webkit-transform: translateY(-50%);
-      -moz-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      -o-transform: translateY(-50%);
-      transform: translateY(-50%); }
-  .content-form .vehicule-wrapper .progress-bar {
-    border-radius: 30px;
-    position: relative;
-    height: 10px;
-    width: 100%;
-    margin-top: 10px; }
-    .content-form .vehicule-wrapper .progress-bar .progress-bar-empty {
-      border-radius: 30px;
-      background-color: #EDEDED;
-      display: block;
-      height: 100%;
-      width: 100%; }
-    .content-form .vehicule-wrapper .progress-bar .progress-bar-full {
-      border-radius: 30px;
-      background-color: #35D3B5;
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%; }
-      .content-form .vehicule-wrapper .progress-bar .progress-bar-full.step1 {
-        width: 25%; }
-      .content-form .vehicule-wrapper .progress-bar .progress-bar-full.step2 {
-        width: 50%; }
-      .content-form .vehicule-wrapper .progress-bar .progress-bar-full.step3 {
-        width: 75%; }
-      .content-form .vehicule-wrapper .progress-bar .progress-bar-full.step4 {
-        width: 100%; }
-  .content-form .content-vehicule-inner {
-    border-left: 1px solid #e2e2e2;
-    display: none;
-    padding: 30px; }
-    .content-form .content-vehicule-inner.active {
-      display: block; }
-    .content-form .content-vehicule-inner h2 {
+    .content-form .content-vehicule-inner .control-group-checkbox span.label, .content-form .content-vehicule-inner .control-group span.label {
       color: #333D47;
-      font-size: 30px;
-      font-family: "proxima_nova_ltsemibold";
-      text-align: center; }
-    .content-form .content-vehicule-inner.step1 h2, .content-form .content-vehicule-inner.step2 h2 {
-      text-align: left; }
-    .content-form .content-vehicule-inner.step2 {
-      padding: 0; }
-    .content-form .content-vehicule-inner p {
-      color: #333D47;
-      font-family: "proxima_nova_ltlight";
-      font-size: 14px; }
-    .content-form .content-vehicule-inner span {
-      color: #999999;
+      display: block;
       font-size: 14px;
-      font-family: "proxima_nova_rgregular"; }
-      .content-form .content-vehicule-inner span.text {
-        line-height: 45px;
-        color: #333D47; }
-      .content-form .content-vehicule-inner span.sep {
-        background-color: #e2e2e2;
-        height: 2px;
-        float: right;
-        margin: 20px 0; }
-    .content-form .content-vehicule-inner.dashboard {
-      padding-bottom: 0; }
-      .content-form .content-vehicule-inner.dashboard p {
-        color: #333D47;
-        font-size: 16px;
-        font-family: "proxima_nova_ltsemibold"; }
-      .content-form .content-vehicule-inner.dashboard span {
-        display: block;
-        margin: 20px 0; }
-      .content-form .content-vehicule-inner.dashboard .btn-file {
-        width: 130px; }
-      .content-form .content-vehicule-inner.dashboard a.orange {
-        color: #FD9426;
-        font-family: "proxima_nova_ltsemibold";
-        font-size: 14px;
-        margin-left: 30px; }
-      .content-form .content-vehicule-inner.dashboard .control-group-big {
-        margin-bottom: 20px; }
-        .content-form .content-vehicule-inner.dashboard .control-group-big:nth-child(1) {
-          margin-top: 40px; }
-        .content-form .content-vehicule-inner.dashboard .control-group-big p {
-          display: inline-block; }
-        .content-form .content-vehicule-inner.dashboard .control-group-big .check {
-          background: transparent;
-          display: inline-block;
-          height: 10px;
-          width: 6px;
-          right: 10px;
-          border-left: 3px solid #35D3B5;
-          border-top: 3px solid #35D3B5;
-          margin: 0;
-          margin-left: 20px;
-          z-index: 2;
-          -webkit-transform: rotate(225deg);
-          -moz-transform: rotate(225deg);
-          -ms-transform: rotate(225deg);
-          -o-transform: rotate(225deg);
-          transform: rotate(225deg); }
-      .content-form .content-vehicule-inner.dashboard .control-group-big + .control-group-big {
-        border-top: 1px solid #e2e2e2;
-        padding-top: 20px; }
-    .content-form .content-vehicule-inner .control-group-checkbox, .content-form .content-vehicule-inner .control-group {
-      margin-top: 20px;
-      position: relative; }
-      .content-form .content-vehicule-inner .control-group-checkbox span.label, .content-form .content-vehicule-inner .control-group span.label {
-        color: #333D47;
-        display: block;
-        font-size: 14px;
-        font-family: "proxima_nova_ltsemibold"; }
-      .content-form .content-vehicule-inner .control-group-checkbox .sod_select, .content-form .content-vehicule-inner .control-group-checkbox input, .content-form .content-vehicule-inner .control-group .sod_select, .content-form .content-vehicule-inner .control-group input {
-        margin-top: 10px; }
-      .content-form .content-vehicule-inner .control-group-checkbox input[type="text"]::-webkit-input-placeholder, .content-form .content-vehicule-inner .control-group-checkbox input[type="email"]::-webkit-input-placeholder, .content-form .content-vehicule-inner .control-group-checkbox input[type="password"]::-webkit-input-placeholder, .content-form .content-vehicule-inner .control-group-checkbox input[type="tel"]::-webkit-input-placeholder, .content-form .content-vehicule-inner .control-group input[type="text"]::-webkit-input-placeholder, .content-form .content-vehicule-inner .control-group input[type="email"]::-webkit-input-placeholder, .content-form .content-vehicule-inner .control-group input[type="password"]::-webkit-input-placeholder, .content-form .content-vehicule-inner .control-group input[type="tel"]::-webkit-input-placeholder {
-        font-size: 14px; }
-      .content-form .content-vehicule-inner .control-group-checkbox input[type="text"]::-moz-placeholder, .content-form .content-vehicule-inner .control-group-checkbox input[type="email"]::-moz-placeholder, .content-form .content-vehicule-inner .control-group-checkbox input[type="password"]::-moz-placeholder, .content-form .content-vehicule-inner .control-group-checkbox input[type="tel"]::-moz-placeholder, .content-form .content-vehicule-inner .control-group input[type="text"]::-moz-placeholder, .content-form .content-vehicule-inner .control-group input[type="email"]::-moz-placeholder, .content-form .content-vehicule-inner .control-group input[type="password"]::-moz-placeholder, .content-form .content-vehicule-inner .control-group input[type="tel"]::-moz-placeholder {
-        font-size: 14px; }
-      .content-form .content-vehicule-inner .control-group-checkbox input[type="text"]:-moz-placeholder, .content-form .content-vehicule-inner .control-group-checkbox input[type="email"]:-moz-placeholder, .content-form .content-vehicule-inner .control-group-checkbox input[type="password"]:-moz-placeholder, .content-form .content-vehicule-inner .control-group-checkbox input[type="tel"]:-moz-placeholder, .content-form .content-vehicule-inner .control-group input[type="text"]:-moz-placeholder, .content-form .content-vehicule-inner .control-group input[type="email"]:-moz-placeholder, .content-form .content-vehicule-inner .control-group input[type="password"]:-moz-placeholder, .content-form .content-vehicule-inner .control-group input[type="tel"]:-moz-placeholder {
-        font-size: 14px; }
-      .content-form .content-vehicule-inner .control-group-checkbox input[type="text"]:-ms-input-placeholder, .content-form .content-vehicule-inner .control-group-checkbox input[type="email"]:-ms-input-placeholder, .content-form .content-vehicule-inner .control-group-checkbox input[type="password"]:-ms-input-placeholder, .content-form .content-vehicule-inner .control-group-checkbox input[type="tel"]:-ms-input-placeholder, .content-form .content-vehicule-inner .control-group input[type="text"]:-ms-input-placeholder, .content-form .content-vehicule-inner .control-group input[type="email"]:-ms-input-placeholder, .content-form .content-vehicule-inner .control-group input[type="password"]:-ms-input-placeholder, .content-form .content-vehicule-inner .control-group input[type="tel"]:-ms-input-placeholder {
-        font-size: 14px; }
-      .content-form .content-vehicule-inner .control-group-checkbox .padding-right, .content-form .content-vehicule-inner .control-group .padding-right {
-        padding-right: 20px;
-        position: relative; }
-        .content-form .content-vehicule-inner .control-group-checkbox .padding-right .link-more, .content-form .content-vehicule-inner .control-group .padding-right .link-more {
-          right: 36px; }
-      .content-form .content-vehicule-inner .control-group-checkbox.error input[type="text"], .content-form .content-vehicule-inner .control-group-checkbox.error input[type="email"], .content-form .content-vehicule-inner .control-group-checkbox.error input[type="password"], .content-form .content-vehicule-inner .control-group-checkbox.error input[type="tel"], .content-form .content-vehicule-inner .control-group.error input[type="text"], .content-form .content-vehicule-inner .control-group.error input[type="email"], .content-form .content-vehicule-inner .control-group.error input[type="password"], .content-form .content-vehicule-inner .control-group.error input[type="tel"] {
-        color: #F32F00; }
-        .content-form .content-vehicule-inner .control-group-checkbox.error input[type="text"]::-webkit-input-placeholder, .content-form .content-vehicule-inner .control-group-checkbox.error input[type="email"]::-webkit-input-placeholder, .content-form .content-vehicule-inner .control-group-checkbox.error input[type="password"]::-webkit-input-placeholder, .content-form .content-vehicule-inner .control-group-checkbox.error input[type="tel"]::-webkit-input-placeholder, .content-form .content-vehicule-inner .control-group.error input[type="text"]::-webkit-input-placeholder, .content-form .content-vehicule-inner .control-group.error input[type="email"]::-webkit-input-placeholder, .content-form .content-vehicule-inner .control-group.error input[type="password"]::-webkit-input-placeholder, .content-form .content-vehicule-inner .control-group.error input[type="tel"]::-webkit-input-placeholder {
-          color: #F32F00; }
-        .content-form .content-vehicule-inner .control-group-checkbox.error input[type="text"]::-moz-placeholder, .content-form .content-vehicule-inner .control-group-checkbox.error input[type="email"]::-moz-placeholder, .content-form .content-vehicule-inner .control-group-checkbox.error input[type="password"]::-moz-placeholder, .content-form .content-vehicule-inner .control-group-checkbox.error input[type="tel"]::-moz-placeholder, .content-form .content-vehicule-inner .control-group.error input[type="text"]::-moz-placeholder, .content-form .content-vehicule-inner .control-group.error input[type="email"]::-moz-placeholder, .content-form .content-vehicule-inner .control-group.error input[type="password"]::-moz-placeholder, .content-form .content-vehicule-inner .control-group.error input[type="tel"]::-moz-placeholder {
-          color: #F32F00; }
-        .content-form .content-vehicule-inner .control-group-checkbox.error input[type="text"]:-moz-placeholder, .content-form .content-vehicule-inner .control-group-checkbox.error input[type="email"]:-moz-placeholder, .content-form .content-vehicule-inner .control-group-checkbox.error input[type="password"]:-moz-placeholder, .content-form .content-vehicule-inner .control-group-checkbox.error input[type="tel"]:-moz-placeholder, .content-form .content-vehicule-inner .control-group.error input[type="text"]:-moz-placeholder, .content-form .content-vehicule-inner .control-group.error input[type="email"]:-moz-placeholder, .content-form .content-vehicule-inner .control-group.error input[type="password"]:-moz-placeholder, .content-form .content-vehicule-inner .control-group.error input[type="tel"]:-moz-placeholder {
-          color: #F32F00; }
-        .content-form .content-vehicule-inner .control-group-checkbox.error input[type="text"]:-ms-input-placeholder, .content-form .content-vehicule-inner .control-group-checkbox.error input[type="email"]:-ms-input-placeholder, .content-form .content-vehicule-inner .control-group-checkbox.error input[type="password"]:-ms-input-placeholder, .content-form .content-vehicule-inner .control-group-checkbox.error input[type="tel"]:-ms-input-placeholder, .content-form .content-vehicule-inner .control-group.error input[type="text"]:-ms-input-placeholder, .content-form .content-vehicule-inner .control-group.error input[type="email"]:-ms-input-placeholder, .content-form .content-vehicule-inner .control-group.error input[type="password"]:-ms-input-placeholder, .content-form .content-vehicule-inner .control-group.error input[type="tel"]:-ms-input-placeholder {
-          color: #F32F00; }
-    .content-form .content-vehicule-inner input[type="text"], .content-form .content-vehicule-inner input[type="email"], .content-form .content-vehicule-inner input[type="password"], .content-form .content-vehicule-inner input[type="tel"] {
-      color: #333D47;
-      font-family: "proxima_nova_rgregular";
+      font-family: "proxima_nova_ltsemibold"; }
+    .content-form .content-vehicule-inner .control-group-checkbox .sod_select, .content-form .content-vehicule-inner .control-group-checkbox input, .content-form .content-vehicule-inner .control-group .sod_select, .content-form .content-vehicule-inner .control-group input {
+      margin-top: 10px; }
+    .content-form .content-vehicule-inner .control-group-checkbox input[type="text"]::-webkit-input-placeholder, .content-form .content-vehicule-inner .control-group-checkbox input[type="email"]::-webkit-input-placeholder, .content-form .content-vehicule-inner .control-group-checkbox input[type="password"]::-webkit-input-placeholder, .content-form .content-vehicule-inner .control-group-checkbox input[type="tel"]::-webkit-input-placeholder, .content-form .content-vehicule-inner .control-group input[type="text"]::-webkit-input-placeholder, .content-form .content-vehicule-inner .control-group input[type="email"]::-webkit-input-placeholder, .content-form .content-vehicule-inner .control-group input[type="password"]::-webkit-input-placeholder, .content-form .content-vehicule-inner .control-group input[type="tel"]::-webkit-input-placeholder {
       font-size: 14px; }
-    .content-form .content-vehicule-inner .step2-top {
-      padding: 30px; }
-    .content-form .content-vehicule-inner .step2-inner {
-      border-top: 1px solid #e2e2e2; }
-      .content-form .content-vehicule-inner .step2-inner.step2-right {
-        border-left: 1px solid #e2e2e2; }
-      .content-form .content-vehicule-inner .step2-inner ul {
-        padding: 0; }
-      .content-form .content-vehicule-inner .step2-inner li {
-        cursor: pointer;
-        display: block;
-        height: 60px;
-        line-height: 60px;
-        position: relative;
-        width: 100%; }
-        .content-form .content-vehicule-inner .step2-inner li:last-child {
-          border-bottom: 1px solid #e2e2e2; }
-        .content-form .content-vehicule-inner .step2-inner li:after {
-          background: transparent;
-          content: "";
-          display: block;
-          position: absolute;
-          height: 10px;
-          width: 10px;
-          right: 10px;
-          top: 50%;
-          border-left: 3px solid #C7C7CC;
-          border-top: 3px solid #C7C7CC;
-          z-index: 2;
-          -webkit-transform: translateY(-50%) rotate(135deg);
-          -moz-transform: translateY(-50%) rotate(135deg);
-          -ms-transform: translateY(-50%) rotate(135deg);
-          -o-transform: translateY(-50%) rotate(135deg);
-          transform: translateY(-50%) rotate(135deg); }
-        .content-form .content-vehicule-inner .step2-inner li span {
-          color: #333D47;
-          font-size: 14px;
-          font-family: "proxima_nova_ltlight";
-          padding: 0 25px 0 15px; }
-        .content-form .content-vehicule-inner .step2-inner li.check:after {
-          height: 10px;
-          width: 4px;
-          border-left: 3px solid #35D3B5;
-          border-top: 3px solid #35D3B5;
-          -webkit-transform: translateY(-50%) rotate(225deg);
-          -moz-transform: translateY(-50%) rotate(225deg);
-          -ms-transform: translateY(-50%) rotate(225deg);
-          -o-transform: translateY(-50%) rotate(225deg);
-          transform: translateY(-50%) rotate(225deg); }
-        .content-form .content-vehicule-inner .step2-inner li:hover, .content-form .content-vehicule-inner .step2-inner li.active {
-          background-color: #35D3B5;
-          -webkit-transition: background-color 0.4s;
-          -moz-transition: background-color 0.4s;
-          transition: background-color 0.4s; }
-          .content-form .content-vehicule-inner .step2-inner li:hover span, .content-form .content-vehicule-inner .step2-inner li.active span {
-            color: #FFF;
-            font-family: "proxima_nova_ltsemibold"; }
-          .content-form .content-vehicule-inner .step2-inner li:hover:after, .content-form .content-vehicule-inner .step2-inner li.active:after {
-            border-left: 3px solid #FFF;
-            border-top: 3px solid #FFF; }
-      .content-form .content-vehicule-inner .step2-inner li + li {
-        border-top: 1px solid #e2e2e2; }
-    .content-form .content-vehicule-inner .step2-inner-padding {
-      padding: 20px; }
-      .content-form .content-vehicule-inner .step2-inner-padding .control-group-file {
-        padding: 20px; }
-        .content-form .content-vehicule-inner .step2-inner-padding .control-group-file input::-webkit-input-placeholder {
-          color: #FFF;
-          text-align: center;
-          font-family: "proxima_nova_ltsemibold"; }
-        .content-form .content-vehicule-inner .step2-inner-padding .control-group-file input::-moz-placeholder {
-          color: #FFF;
-          text-align: center;
-          font-family: "proxima_nova_ltsemibold"; }
-        .content-form .content-vehicule-inner .step2-inner-padding .control-group-file input:-moz-placeholder {
-          color: #FFF;
-          text-align: center;
-          font-family: "proxima_nova_ltsemibold"; }
-        .content-form .content-vehicule-inner .step2-inner-padding .control-group-file input:-ms-input-placeholder {
-          color: #FFF;
-          text-align: center;
-          font-family: "proxima_nova_ltsemibold"; }
-        .content-form .content-vehicule-inner .step2-inner-padding .control-group-file span {
-          display: block;
-          font-size: 14px;
-          font-family: "proxima_nova_ltlight";
-          text-align: center;
-          margin-top: 20px; }
-    .content-form .content-vehicule-inner .file-imported {
-      margin-bottom: 20px;
+    .content-form .content-vehicule-inner .control-group-checkbox input[type="text"]::-moz-placeholder, .content-form .content-vehicule-inner .control-group-checkbox input[type="email"]::-moz-placeholder, .content-form .content-vehicule-inner .control-group-checkbox input[type="password"]::-moz-placeholder, .content-form .content-vehicule-inner .control-group-checkbox input[type="tel"]::-moz-placeholder, .content-form .content-vehicule-inner .control-group input[type="text"]::-moz-placeholder, .content-form .content-vehicule-inner .control-group input[type="email"]::-moz-placeholder, .content-form .content-vehicule-inner .control-group input[type="password"]::-moz-placeholder, .content-form .content-vehicule-inner .control-group input[type="tel"]::-moz-placeholder {
+      font-size: 14px; }
+    .content-form .content-vehicule-inner .control-group-checkbox input[type="text"]:-moz-placeholder, .content-form .content-vehicule-inner .control-group-checkbox input[type="email"]:-moz-placeholder, .content-form .content-vehicule-inner .control-group-checkbox input[type="password"]:-moz-placeholder, .content-form .content-vehicule-inner .control-group-checkbox input[type="tel"]:-moz-placeholder, .content-form .content-vehicule-inner .control-group input[type="text"]:-moz-placeholder, .content-form .content-vehicule-inner .control-group input[type="email"]:-moz-placeholder, .content-form .content-vehicule-inner .control-group input[type="password"]:-moz-placeholder, .content-form .content-vehicule-inner .control-group input[type="tel"]:-moz-placeholder {
+      font-size: 14px; }
+    .content-form .content-vehicule-inner .control-group-checkbox input[type="text"]:-ms-input-placeholder, .content-form .content-vehicule-inner .control-group-checkbox input[type="email"]:-ms-input-placeholder, .content-form .content-vehicule-inner .control-group-checkbox input[type="password"]:-ms-input-placeholder, .content-form .content-vehicule-inner .control-group-checkbox input[type="tel"]:-ms-input-placeholder, .content-form .content-vehicule-inner .control-group input[type="text"]:-ms-input-placeholder, .content-form .content-vehicule-inner .control-group input[type="email"]:-ms-input-placeholder, .content-form .content-vehicule-inner .control-group input[type="password"]:-ms-input-placeholder, .content-form .content-vehicule-inner .control-group input[type="tel"]:-ms-input-placeholder {
+      font-size: 14px; }
+    .content-form .content-vehicule-inner .control-group-checkbox .padding-right, .content-form .content-vehicule-inner .control-group .padding-right {
+      padding-right: 20px;
+      position: relative; }
+      .content-form .content-vehicule-inner .control-group-checkbox .padding-right .link-more, .content-form .content-vehicule-inner .control-group .padding-right .link-more {
+        right: 36px; }
+    .content-form .content-vehicule-inner .control-group-checkbox.error input[type="text"], .content-form .content-vehicule-inner .control-group-checkbox.error input[type="email"], .content-form .content-vehicule-inner .control-group-checkbox.error input[type="password"], .content-form .content-vehicule-inner .control-group-checkbox.error input[type="tel"], .content-form .content-vehicule-inner .control-group.error input[type="text"], .content-form .content-vehicule-inner .control-group.error input[type="email"], .content-form .content-vehicule-inner .control-group.error input[type="password"], .content-form .content-vehicule-inner .control-group.error input[type="tel"] {
+      color: #F32F00; }
+      .content-form .content-vehicule-inner .control-group-checkbox.error input[type="text"]::-webkit-input-placeholder, .content-form .content-vehicule-inner .control-group-checkbox.error input[type="email"]::-webkit-input-placeholder, .content-form .content-vehicule-inner .control-group-checkbox.error input[type="password"]::-webkit-input-placeholder, .content-form .content-vehicule-inner .control-group-checkbox.error input[type="tel"]::-webkit-input-placeholder, .content-form .content-vehicule-inner .control-group.error input[type="text"]::-webkit-input-placeholder, .content-form .content-vehicule-inner .control-group.error input[type="email"]::-webkit-input-placeholder, .content-form .content-vehicule-inner .control-group.error input[type="password"]::-webkit-input-placeholder, .content-form .content-vehicule-inner .control-group.error input[type="tel"]::-webkit-input-placeholder {
+        color: #F32F00; }
+      .content-form .content-vehicule-inner .control-group-checkbox.error input[type="text"]::-moz-placeholder, .content-form .content-vehicule-inner .control-group-checkbox.error input[type="email"]::-moz-placeholder, .content-form .content-vehicule-inner .control-group-checkbox.error input[type="password"]::-moz-placeholder, .content-form .content-vehicule-inner .control-group-checkbox.error input[type="tel"]::-moz-placeholder, .content-form .content-vehicule-inner .control-group.error input[type="text"]::-moz-placeholder, .content-form .content-vehicule-inner .control-group.error input[type="email"]::-moz-placeholder, .content-form .content-vehicule-inner .control-group.error input[type="password"]::-moz-placeholder, .content-form .content-vehicule-inner .control-group.error input[type="tel"]::-moz-placeholder {
+        color: #F32F00; }
+      .content-form .content-vehicule-inner .control-group-checkbox.error input[type="text"]:-moz-placeholder, .content-form .content-vehicule-inner .control-group-checkbox.error input[type="email"]:-moz-placeholder, .content-form .content-vehicule-inner .control-group-checkbox.error input[type="password"]:-moz-placeholder, .content-form .content-vehicule-inner .control-group-checkbox.error input[type="tel"]:-moz-placeholder, .content-form .content-vehicule-inner .control-group.error input[type="text"]:-moz-placeholder, .content-form .content-vehicule-inner .control-group.error input[type="email"]:-moz-placeholder, .content-form .content-vehicule-inner .control-group.error input[type="password"]:-moz-placeholder, .content-form .content-vehicule-inner .control-group.error input[type="tel"]:-moz-placeholder {
+        color: #F32F00; }
+      .content-form .content-vehicule-inner .control-group-checkbox.error input[type="text"]:-ms-input-placeholder, .content-form .content-vehicule-inner .control-group-checkbox.error input[type="email"]:-ms-input-placeholder, .content-form .content-vehicule-inner .control-group-checkbox.error input[type="password"]:-ms-input-placeholder, .content-form .content-vehicule-inner .control-group-checkbox.error input[type="tel"]:-ms-input-placeholder, .content-form .content-vehicule-inner .control-group.error input[type="text"]:-ms-input-placeholder, .content-form .content-vehicule-inner .control-group.error input[type="email"]:-ms-input-placeholder, .content-form .content-vehicule-inner .control-group.error input[type="password"]:-ms-input-placeholder, .content-form .content-vehicule-inner .control-group.error input[type="tel"]:-ms-input-placeholder {
+        color: #F32F00; }
+  .content-form .content-vehicule-inner input[type="text"], .content-form .content-vehicule-inner input[type="email"], .content-form .content-vehicule-inner input[type="password"], .content-form .content-vehicule-inner input[type="tel"] {
+    color: #333D47;
+    font-family: "proxima_nova_rgregular";
+    font-size: 14px; }
+  .content-form .content-vehicule-inner .step2-top {
+    padding: 30px; }
+  .content-form .content-vehicule-inner .step2-inner {
+    border-top: 1px solid #e2e2e2; }
+    .content-form .content-vehicule-inner .step2-inner.step2-right {
+      border-left: 1px solid #e2e2e2; }
+    .content-form .content-vehicule-inner .step2-inner ul {
+      padding: 0; }
+    .content-form .content-vehicule-inner .step2-inner li {
+      cursor: pointer;
+      display: block;
+      height: 60px;
+      line-height: 60px;
+      position: relative;
       width: 100%; }
-      .content-form .content-vehicule-inner .file-imported img {
-        max-width: 100%; }
-    .content-form .content-vehicule-inner .control-group-submit {
-      float: right;
-      width: 60%;
-      margin-top: 0; }
-      .content-form .content-vehicule-inner .control-group-submit a.cancel {
-        color: #9A9A9A;
+      .content-form .content-vehicule-inner .step2-inner li:last-child {
+        border-bottom: 1px solid #e2e2e2; }
+      .content-form .content-vehicule-inner .step2-inner li:after {
+        background: transparent;
+        content: "";
+        display: block;
+        position: absolute;
+        height: 10px;
+        width: 10px;
+        right: 10px;
+        top: 50%;
+        border-left: 3px solid #C7C7CC;
+        border-top: 3px solid #C7C7CC;
+        z-index: 2;
+        -webkit-transform: translateY(-50%) rotate(135deg);
+        -moz-transform: translateY(-50%) rotate(135deg);
+        -ms-transform: translateY(-50%) rotate(135deg);
+        -o-transform: translateY(-50%) rotate(135deg);
+        transform: translateY(-50%) rotate(135deg); }
+      .content-form .content-vehicule-inner .step2-inner li span {
+        color: #333D47;
         font-size: 14px;
-        font-family: "proxima_nova_ltsemibold";
-        line-height: 45px; }
+        font-family: "proxima_nova_ltlight";
+        padding: 0 25px 0 15px; }
+      .content-form .content-vehicule-inner .step2-inner li.check:after {
+        height: 10px;
+        width: 4px;
+        border-left: 3px solid #35D3B5;
+        border-top: 3px solid #35D3B5;
+        -webkit-transform: translateY(-50%) rotate(225deg);
+        -moz-transform: translateY(-50%) rotate(225deg);
+        -ms-transform: translateY(-50%) rotate(225deg);
+        -o-transform: translateY(-50%) rotate(225deg);
+        transform: translateY(-50%) rotate(225deg); }
+      .content-form .content-vehicule-inner .step2-inner li:hover, .content-form .content-vehicule-inner .step2-inner li.active {
+        background-color: #35D3B5;
+        -webkit-transition: background-color 0.4s;
+        -moz-transition: background-color 0.4s;
+        transition: background-color 0.4s; }
+        .content-form .content-vehicule-inner .step2-inner li:hover span, .content-form .content-vehicule-inner .step2-inner li.active span {
+          color: #FFF;
+          font-family: "proxima_nova_ltsemibold"; }
+        .content-form .content-vehicule-inner .step2-inner li:hover:after, .content-form .content-vehicule-inner .step2-inner li.active:after {
+          border-left: 3px solid #FFF;
+          border-top: 3px solid #FFF; }
+    .content-form .content-vehicule-inner .step2-inner li + li {
+      border-top: 1px solid #e2e2e2; }
+  .content-form .content-vehicule-inner .step2-inner-padding {
+    padding: 20px; }
+    .content-form .content-vehicule-inner .step2-inner-padding .control-group-file {
+      padding: 20px; }
+      .content-form .content-vehicule-inner .step2-inner-padding .control-group-file input::-webkit-input-placeholder {
+        color: #FFF;
+        text-align: center;
+        font-family: "proxima_nova_ltsemibold"; }
+      .content-form .content-vehicule-inner .step2-inner-padding .control-group-file input::-moz-placeholder {
+        color: #FFF;
+        text-align: center;
+        font-family: "proxima_nova_ltsemibold"; }
+      .content-form .content-vehicule-inner .step2-inner-padding .control-group-file input:-moz-placeholder {
+        color: #FFF;
+        text-align: center;
+        font-family: "proxima_nova_ltsemibold"; }
+      .content-form .content-vehicule-inner .step2-inner-padding .control-group-file input:-ms-input-placeholder {
+        color: #FFF;
+        text-align: center;
+        font-family: "proxima_nova_ltsemibold"; }
+      .content-form .content-vehicule-inner .step2-inner-padding .control-group-file span {
+        display: block;
+        font-size: 14px;
+        font-family: "proxima_nova_ltlight";
+        text-align: center;
+        margin-top: 20px; }
+  .content-form .content-vehicule-inner .file-imported {
+    margin-bottom: 20px;
+    width: 100%; }
+    .content-form .content-vehicule-inner .file-imported img {
+      max-width: 100%; }
+  .content-form .content-vehicule-inner .control-group-submit {
+    float: right;
+    width: 60%;
+    margin-top: 0; }
+    .content-form .content-vehicule-inner .control-group-submit a.cancel {
+      color: #9A9A9A;
+      font-size: 14px;
+      font-family: "proxima_nova_ltsemibold";
+      line-height: 45px; }
 
 .page-top {
   background: url("../images/home/background.png") top center no-repeat;

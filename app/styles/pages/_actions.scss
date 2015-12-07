@@ -1,0 +1,94 @@
+//
+// Actions page
+// --------------------------------------------------
+body.interne {
+	background-color: $gray-lightest;
+}
+.page-interne-actions {
+	margin: 50px auto;
+	max-width: 960px;
+}
+
+.interne-content-inner {
+	@include respond-to('medium') {
+		padding: 0 30px;
+	}
+}
+
+h2.block-title {
+	color: $blue-dark;
+	font-size: 22px;
+	font-family: $proxima-semibold;
+	padding-left: 30px;
+}
+
+ul.actions-content {
+	border-radius: 8px;
+	border: 1px solid $gray-border;
+	background-color: #F5F5F5;
+	padding: 0;
+	margin: 0 30px;
+	margin-top: 15px;
+	
+	li + li {
+		border-top: 1px solid $gray-border;
+	}
+
+	li {						
+		list-style: none;			
+		position: relative;		
+		a {
+			color: $blue-dark;
+			display: block;
+			font-size: 14px;
+			font-family: $proxima-semibold;
+			padding: 15px;
+
+			&.active {
+				.more {
+					@include transform(rotate(45deg));
+				}
+			}
+		}		
+
+		.more {
+			border-left: 2px solid $blue;
+			border-top: 2px solid $blue;
+			content: "";
+			height: 10px;
+			width: 10px;
+			position: absolute;
+			right: 30px;
+			top: 50%;
+			margin-top: -5px;
+			@include transform(rotate(225deg));
+		}		
+
+		.collapse {
+		    height: 0px;
+		    overflow: hidden;
+		    display: block;
+		    
+		    .collapse-inner {
+		    	background-color: $gray-lighter;
+		    	border-top: 1px solid $gray-light;
+		        display: block;
+		    }
+		}
+
+		.inner-ul {
+			background-color: $white;
+			padding: 30px;
+			.control-group {
+				height: 45px;
+				&:first-child {
+					margin-top: 0;
+				}
+				.btn-submit-wrapper {
+					float: right;
+					width: 130px;
+				}
+			}
+		}
+	}
+}

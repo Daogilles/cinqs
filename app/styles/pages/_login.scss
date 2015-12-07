@@ -40,3 +40,28 @@
 		}
 	}
 }
+
+.page-interne-login {
+	.logo {
+		background-color: transparent;
+		display: block;
+		height: 22px;
+		margin: 45px auto 0;
+	}
+
+	#form-login {
+		border-radius: 8px;
+		border:1px solid $gray-lighter;
+		background-color: $gray-lightest;
+		margin: 20px auto 0;
+		padding: 30px 20px;
+		height: 140px;
+		width: 330px;
+	}
+
+	.control-group {
+		&:nth-child(1) {
+			margin-top: 0;
+		}
+	}
+}

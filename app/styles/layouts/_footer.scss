@@ -7,7 +7,7 @@ footer {
 	ul {
 		height: 20px;
 		margin: 0 auto 20px;
-		width: 550px;
+		
 		li {
 			float: left;
 			list-style: none;
@@ -25,6 +25,39 @@ footer {
 
 		li + li {
 			margin-left: 35px;
+		}
+
+		&.footer-big {
+			display: block;
+			width: 550px;
+		}
+		&.footer-mobile {
+			background-color: $gray-lightest;
+			display: none;
+			height: 70px;
+			padding:20px;
+			width: 100%;
+			li {
+				text-align: center;
+				display: block;
+				width: 100%;
+			}
+
+			li + li {
+				margin-left: 0;
+				a {
+					color: $blue-dark;
+				}
+			}
+		}
+
+		@include respond-to('medium') {
+			&.footer-big {
+				display: none;
+			}
+			&.footer-mobile {
+				display: block;
+			}
 		}
 	}
 }

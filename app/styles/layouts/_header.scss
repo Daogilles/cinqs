@@ -7,8 +7,25 @@
 	width: 94px;	
 }
 
+body.interne {
+	.logo {
+		background-color: transparent;
+		height: 22px;
+		width: 104px;
+	}
+}
+
+.interne-header {
+	.logo {
+		position: absolute;
+		top: 50%;
+		@include transform(translateY(-50%));
+	}
+}
+
 header {
 	background-color: $white;
+	border-bottom: 1px solid $gray-border;
 	height: 60px;
 	line-height: 60px;
 	width: 100%;
@@ -35,7 +52,7 @@ header {
 		}
 	}
 
-	ul {
+	ul {		
 		display: inline-block;
 		height: 60px;
 		padding-left: 20px;
@@ -56,8 +73,10 @@ header {
 
 		li {
 			float: left;
-			line-height: 60px;
-			list-style: none;			
+			height: 59px;
+			line-height: 59px;
+			list-style: none;	
+			position: relative;		
 			&.active {
 				border-bottom: 1px solid $turquoise;
 			}
@@ -71,6 +90,36 @@ header {
 
 		li + li {
 			margin-left: 20px;
+		}
+	}
+
+	&.interne-header {
+		ul {
+			margin-left: 140px;
+
+			&:before {
+				display: none;
+			}
+
+			li {
+				&.gray-circle {
+
+					margin-right: 20px;
+
+					&:after {
+						background-color: $gray-light;
+						border-radius: 100%;
+						content: '';
+						display: block;
+						width: 8px;
+						height: 8px;
+						position: absolute;
+						right: -20px;
+						top: 50%;
+						@include transform(translateY(-50%));
+					}
+				}
+			}
 		}
 	}
 }
