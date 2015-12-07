@@ -1,0 +1,149 @@
+//
+// Typography
+// --------------------------------------------------
+
+p, h1, h2, h3, h4, h5, h6, ul, ol, img, form, input, button, address, .alert, .table, .btn {
+    margin: 0;
+    margin-top: 15px;
+    
+    &:first-child, &.no-gap {
+        margin-top: 0;
+    }
+}
+
+h1, h2, h3, h4, p, a {
+    -ms-word-wrap: break-word;
+        word-wrap: break-word;
+}
+
+// Body text
+// -------------------------
+
+p {
+    color: $gray;
+    font-family: $proxima-regular;
+    line-height: 1.6;
+    font-size: $font-size-base;
+    
+    strong {
+        font-family: $proxima-semibold;
+    }
+
+    small {
+        font-size: $font-size-small;
+    }
+    
+    b {
+        font-weight: $bold;
+    }
+    
+    i, em {
+        font-style: italic;
+    }
+}
+
+span {
+    color: $gray;
+    font-family: $proxima-regular;
+    line-height: 1.2;
+    font-size: $font-size-base;
+}
+
+// Headings
+// -------------------------
+
+h1, .h1 {
+    font-family: $proxima-bold;
+    font-size: $font-size-h1;
+    line-height: 1.2;
+}
+
+h2, .h2 {
+    font-family: $proxima-regular;
+    font-size: $font-size-h2;
+    line-height: 1.2;
+}
+
+
+h3, .h3 {
+    font-family: $proxima-regular;
+    font-size: $font-size-h3;
+    line-height: 1.4;
+}
+
+h4, .h4 {
+    font-family: $proxima-regular;
+    font-size: $font-size-h4;
+    line-height: 1.4;
+}
+
+// List
+// -------------------------
+
+ul, ol {
+    padding-left: 15px;
+
+    li {
+        line-height: 1.6;
+        color: $black;
+    }
+}
+
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+
+    & > li {
+        display: inline-block;
+        padding: 0 5px;
+        
+        &:first-child {
+            padding-left: 0;
+        }
+    }
+}
+
+.list-unstyled {
+    padding: 0;
+    list-style-type: none;
+}
+
+// Font style
+// -------------------------
+
+.underline {
+    text-decoration: underline;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+// Others styles
+// -------------------------
+
+address {
+    font-style: $normal;
+}
+
+// Titles
+// -------------------------
+
+p {
+    line-height: 140%;
+}
+
+.bold {
+    font-weight: $bold;
+}
+.semibold {
+    font-weight: $semibold !important;
+}

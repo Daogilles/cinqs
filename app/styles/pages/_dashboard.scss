@@ -1,0 +1,165 @@
+//
+// Dashboard page
+// --------------------------------------------------
+
+.page-dashboard {
+	background-color: $gray-lightest;
+	height: 100%;
+	width: 100%;
+
+	.logo {
+		margin-right: 20px;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		@include transform(translateY(-50%));
+	}
+}
+
+.content-form {
+	background-color: $white;
+	border:1px solid $gray-border;
+	border-radius: 8px;
+	height: 100%;
+	margin: 50px auto 90px;
+
+
+	.content-dashboard-inner {
+		border-left: 1px solid $gray-border;
+		display: none;
+		padding: 30px;
+
+		&.active {
+			display: block;
+		}
+
+		h2 {
+			color: $blue-dark;
+			font-size: 20px;
+			font-family: $proxima-semibold;
+			text-align: center;
+		}
+
+		p {
+			color: $blue-dark;
+			font-family: $proxima-light;
+			font-size: 14px;
+		}
+
+		span {
+			color: #999999;
+			font-size: 14px;
+			font-family: $proxima-regular;
+			&.text {
+				line-height: 45px;
+				color: $blue-dark;
+			}
+			&.sep {
+				background-color: $gray-border;
+				height: 2px;
+				float: right;
+				margin: 20px 0;
+			}
+		}
+		.inner-left {
+			text-align: right;
+			line-height: 45px;
+		}
+		.inner-right {
+			padding-left: 20px;
+			span.status {
+				color: $orange;
+				line-height: 45px;
+			}
+			span.more-text {
+				margin-top: 10px;
+				display: block;
+			}
+
+			.btn-file {
+				font-size: 14px;
+				font-family: $proxima-semibold;
+				width: 130px;
+			}
+		}
+
+		input[type="text"], input[type="email"], input[type="password"], input[type="tel"] {
+			color: $blue-dark;
+			font-family: $proxima-regular;
+			font-size: 14px;
+		}
+		
+		&.step2 {
+			.control-group {
+				margin-top: 10px;
+			}
+		}
+
+		&.step3, &.step4 {
+			p {
+				color: $blue-dark;
+				font-size: 16px;
+				font-family: $proxima-semibold;
+			}
+			span {
+				display: block;
+				margin: 20px 0;
+			}
+
+			.btn-file {
+				width: 130px;
+			}
+		}
+
+		&.step3 {
+			padding-bottom: 0;
+			a.orange {
+				color: $orange-true;
+				font-family: $proxima-semibold;
+				font-size: 14px;
+				margin-left: 30px;
+			}
+			.control-group-big {
+				margin-bottom: 20px;
+				&:nth-child(1) {
+					margin-top: 40px;
+				}				
+
+				p {
+					display: inline-block;
+				}
+				.check {
+					background: transparent;
+			        display: inline-block;
+			        height: 10px;
+			        width: 6px;
+			        right: 10px;
+			        border-left: 3px solid $turquoise;
+			        border-top: 3px solid $turquoise;
+					margin: 0;
+					margin-left: 20px;			        
+			        z-index: 2;
+
+			        @include transform(rotate(225deg));
+				}
+			}
+			.control-group-big + .control-group-big {
+				border-top: 1px solid $gray-border;
+				padding-top: 20px;
+			}
+		}
+
+		.control-group-submit {
+			float: right;
+			width: 60%;
+			margin-top: 0;
+
+			a.cancel {
+				color: $gray;
+				font-size: 14px;
+				font-family: $proxima-semibold;
+				line-height: 45px;
+			}
+		}
+	}
+}

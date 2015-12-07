@@ -1,0 +1,46 @@
+//
+// Tables
+// --------------------------------------------------
+
+table {
+    max-width: 100%;
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.table {
+    width: 100%;
+  
+    th, td {
+        padding: 12px 0;
+        line-height: 1.2;
+        text-align: center;
+        vertical-align: top;
+        font-size: $font-size-base;
+        color: $black;
+
+        border: 1px solid $gray-light;
+        vertical-align: middle;
+        
+        &.minor {
+            color: $gray-light;
+        }
+
+        a {
+            color: $black;
+        }
+    }
+
+    th {
+        font-weight: bold;
+    }
+
+    thead th {
+        vertical-align: bottom;
+    }
+}
+
+.table-striped tbody > tr:nth-child(odd) > td, .table-striped tbody > tr:nth-child(odd) > th {
+    background-color: $gray-light;
+}

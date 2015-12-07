@@ -1,0 +1,10 @@
+{
+  "name": "Big-Starter",
+  "private": true,
+  "dependencies": {
+    "gsap": "~1.14.2",
+    "jquery": "~2.1.3",
+    "SelectOrDie": "~0.1.8",
+    "icheck": "~1.0.2"
+  }
+}

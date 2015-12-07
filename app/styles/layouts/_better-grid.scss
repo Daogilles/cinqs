@@ -1,0 +1,177 @@
+/**
+ * Better grid
+ */
+@each $value in $gutter-sizes {
+    .row-xs-#{$value} {
+        @include make-custom-row(xs, $value * 1px);
+
+        > [class^="col-"],
+        > [class*=" col-"] {
+                padding-left: ($value / 2) + px;
+                padding-right: ($value / 2) + px;
+        }
+
+        > .col-xs-12 + .col-xs-12 { margin-top: $value * 1px; }
+    }
+}
+
+@media (max-width: $screen-sm) {
+    @each $value in $gutter-sizes {
+        .row-sm-#{$value} {
+            @include make-custom-row(sm, $value * 1px);
+
+            > [class^="col-"],
+            > [class*=" col-"] {
+                padding-left: ($value / 2) + px;
+                padding-right: ($value / 2) + px;
+            }
+
+            > .col-xs-12 + .col-xs-12 { margin-top: 0; }
+
+            > .col-sm-12 + .col-sm-12 { margin-top: $value * 1px; }
+        }
+    }
+
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .table-container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .hidden-sm { display: none; }
+}
+
+@media (max-width: $screen-md) and (min-width: $screen-sm) {
+    @each $value in $gutter-sizes {
+        .row-md-#{$value} {
+            @include make-custom-row(md, $value * 1px);
+
+            > [class^="col-"],
+            > [class*=" col-"] {
+                padding-left: ($value / 2) + px;
+                padding-right: ($value / 2) + px;
+            }
+
+            > .col-xs-12 + .col-xs-12,
+            > .col-sm-12 + .col-sm-12 { margin-top: 0; }
+
+            > .col-md-12 + .col-md-12 { margin-top: $value * 1px; }
+        }
+    }
+
+    .container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .table-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .hidden-sm { display: block; }
+    .hidden-md { display: none; }
+}
+
+@media (min-width: $screen-md) {
+    @each $value in $gutter-sizes {
+        .row-lg-#{$value} {
+            @include make-custom-row(lg, $value * 1px);
+
+            > [class^="col-"],
+            > [class*=" col-"] {
+                padding-left: ($value / 2) + px;
+                padding-right: ($value / 2) + px;
+            }
+
+            > .col-xs-12 + .col-xs-12,
+            > .col-sm-12 + .col-sm-12,
+            > .col-lg-12 + .col-lg-12 { margin-top: 0; }
+
+            > .col-lg-12 + .col-lg-12 { margin-top: $value * 1px; }
+        }
+    }
+
+    .container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .hidden-sm { display: block; }
+    .hidden-md { display: block; }
+    .hidden-lg { display: none; }
+}
+
+.grid-16 { //16 columns grid system - hack for big menu
+    @for $value from 1 through 16 {
+        > [class^="row-xs"],
+        > [class*=" row-xs"] {
+            > .col-xs-#{$value} { width: percentage($value / 16); }
+        }
+    }
+
+    @media (min-width: $break--xSmall) {
+        @for $value from 1 through 16 {
+            > [class^="row-sm"],
+            > [class*=" row-sm"] {
+                > .col-sm-#{$value} { width: percentage($value / 16); }
+            }
+        }
+    }
+
+    @media (min-width: $break--small) {
+        @for $value from 1 through 16 {
+            > [class^="row-md"],
+            > [class*=" row-md"] {
+                > .col-md-#{$value} { width: percentage($value / 16); }
+            }
+        }
+    }
+
+    @media (min-width: $break--medium) {
+        @for $value from 1 through 16 {
+            > [class^="row-lg"],
+            > [class*=" row-lg"] {
+                > .col-lg-#{$value} { width: percentage($value / 16); }
+            }
+        }
+    }
+}
+
+.same-sizes-columns {
+    display:table;
+
+    > [class^="col-"],
+    > [class*=" col-"] {
+        display: table-cell;
+        float: none;
+
+        position: relative;
+
+        vertical-align: top;
+    }
+}
+
+section .container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/* Free container */
+.container-free {
+    width: $screen-sm;
+
+    margin: 0 auto;
+}
+
+@media #{$tablet-landscape} {
+    .container-free { width: $screen-md; }
+}
+
+@media #{$desktop} {
+    .container-free { width: $screen-lg; }
+}

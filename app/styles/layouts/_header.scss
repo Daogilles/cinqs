@@ -1,0 +1,76 @@
+//
+// Header
+// --------------------------------------------------
+.logo {
+	background-color: $gray-light;	
+	height: 50px;
+	width: 94px;	
+}
+
+header {
+	background-color: $white;
+	height: 60px;
+	line-height: 60px;
+	width: 100%;
+
+	p {
+		color: $blue-dark;
+		display: inline-block;
+		font-size: 16px;
+		font-family: $proxima-regular;
+		padding-left: 20px;
+		position: relative;
+		text-transform: uppercase;
+
+		&:before {
+			background-color: $gray-border;
+			content: "";
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			@include translate(-50%, -50%);
+			height: 50px;
+			width: 1px;
+		}
+	}
+
+	ul {
+		display: inline-block;
+		height: 60px;
+		padding-left: 20px;
+		margin-left: 114px;
+		margin-top: 0;
+		position: relative;
+		&:before {
+			background-color: $gray-border;
+			content: "";
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			@include translate(-50%, -50%);
+			height: 50px;
+			width: 2px;
+		}
+
+		li {
+			float: left;
+			line-height: 60px;
+			list-style: none;			
+			&.active {
+				border-bottom: 1px solid $turquoise;
+			}
+			a {
+				color: $blue-dark;			
+				font-size: 13px;
+				font-family: $brandon-medium;
+				text-transform: uppercase;
+			}
+		}
+
+		li + li {
+			margin-left: 20px;
+		}
+	}
+}

@@ -1,0 +1,27 @@
+//
+// Alert
+// --------------------------------------------------
+
+.alert {
+    padding: 10px 15px;
+    background-color: $gray-light;
+    
+    text-align: center;
+    
+    p {
+        color: $white;
+        line-height: 1.4;
+    }
+    
+    &.error p {
+        color: $brand;
+    }
+}
+
+.text-error {
+    span {
+        color: $blue;
+        font-size: 16px;
+        font-weight: $medium;
+    }
+}

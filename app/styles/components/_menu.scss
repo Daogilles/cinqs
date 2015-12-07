@@ -1,0 +1,53 @@
+//
+// Menu
+// --------------------------------------------------
+.content-form-menu {
+	display: none;
+	height:100%;
+	padding: 30px !important;
+
+	&.active {
+		display: block;
+	}
+
+	p {
+		color: $blue-dark;
+		font-family: $proxima-light;
+		font-size: 14px;
+		&.step {
+			font-family: $proxima-semibold;
+		}
+		
+	}
+	ul {
+		padding: 0;
+		li {
+			list-style: none;						
+			p {
+				display: inline-block;
+				padding-left: 10px;
+				margin-top: 0;
+			}
+			&.done {
+				p, span {
+					color: $blue-dark;
+				}					
+			}
+			&.not-done {
+				p, span {
+					color: $gray-light;	
+				}					
+			}
+			&.active {
+				p, span {
+					color: $blue-dark;
+					font-family: $proxima-semibold;	
+				}					
+			}
+		}
+		li + li {
+			margin-top: 25px;	
+		}
+	}
+
+}

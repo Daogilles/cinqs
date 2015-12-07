@@ -1,0 +1,103 @@
+@mixin grid-clearfix() {
+    &:before, &:after {
+        content: " "; // 1
+        display: table; // 2
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+
+/// Responsive manager.
+/// @access public
+/// @param {String} $breakpoint - Breakpoint
+/// @requires $breakpoints
+
+@mixin respond-to($breakpoint) {
+
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media #{inspect(map-get($breakpoints, $breakpoint))} {
+          @content;
+        }
+    }
+
+    @else {
+        @error 'No value found for `#{$breakpoint}`. '
+             + 'Please make sure it is defined in `$breakpoints` map.';
+    }
+}
+
+/**
+ * Custom rows
+ * @param  {[type]} $screen  [description]
+ * @param  {[type]} $gutter: $grid-gutter-width [description]
+ * @return {[type]}          [description]
+ */
+@mixin make-custom-row($screen, $gutter: $grid-gutter-width) {
+    @include make-row($gutter);
+
+    @if ($screen == xs) {
+        @for $i from 1 to 13 {
+            .col-xs-#{$i} {
+                width: percentage($i/12);
+            }
+        }
+    }
+
+    @if ($screen == sm) {
+        @for $i from 1 to 13 {
+            .col-sm-#{$i} {
+                width: percentage($i/12);
+            }
+        }
+    }
+
+    @if ($screen == md) {
+        @for $i from 1 to 13 {
+            .col-md-#{$i} {
+                width: percentage($i/12);
+            }
+        }
+    }
+
+    @if ($screen == lg) {
+        @for $i from 1 to 13 {
+            .col-lg-#{$i} {
+                width: percentage($i/12);
+            }
+        }
+    }
+}
+
+@mixin translate( $valX, $valY) {
+       -moz-transform: translate($valX, $valY);
+         -o-transform: translate($valX, $valY);
+        -ms-transform: translate($valX, $valY);
+    -webkit-transform: translate($valX, $valY);
+            transform: translate($valX, $valY);
+}
+
+//use (http://sass-guidelin.es/)
+
+// .foo {
+//   color: red;
+
+//   @include respond-to('small') {
+//     color: blue;
+//   }
+// }
+
+
+// output ====
+
+// .foo {
+//   color: red;
+// }
+
+// @media (max-width: 800px) {
+//   .foo {
+//     color: blue;
+//   }
+// }

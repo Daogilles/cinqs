@@ -1,0 +1,42 @@
+//
+// Home page
+// --------------------------------------------------
+
+.page-login {	
+
+	.logo {
+		display: block;
+		margin: 45px auto 0;
+	}
+
+	#form-login {
+		border-radius: 8px;
+		border:1px solid $gray-lighter;
+		background-color: $gray-lightest;
+		height: 334px;
+		margin: 20px auto 0;
+		padding: 30px 20px;
+		width: 330px;
+		
+		.sep {
+			background-color: #E2E2E2;
+			display: block;
+			margin: 20px auto;
+			height: 2px;
+			width: 120px;
+		}
+
+		p {
+			color: $black-light;
+			font-size: $font-size-large;
+			text-align: center;
+		}
+
+		.btn {
+			-moz-box-shadow: 0px 2px 4px 0px #000000;
+			-webkit-box-shadow: 0px 2px 4px 0px #000000;
+			-o-box-shadow: 0px 2px 4px 0px #000000;
+			box-shadow: 0px 2px 4px 0px #000000;
+		}
+	}
+}

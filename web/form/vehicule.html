@@ -1,0 +1,294 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie10 lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie10 lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]><html class="no-js lt-ie10" lang="en"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>CINQS</title>
+        <meta name="description" content="">
+        <link rel="author" href="humans.txt" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="user-scalable=no, initial-scale = 1, minimum-scale = 1, maximum-scale = 1, width=device-width">
+        
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link href="favicon.png" rel="icon" type="image/png" />
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        
+        <meta property="og:site_name" content="">
+        <meta property="og:title" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:type" content="" />
+        <meta property="og:image" content="" />
+        <meta property="og:locale" content="fr_FR">
+        
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@">
+        <meta name="twitter:title" content="">
+        <meta name="twitter:description" content="">
+        <meta name="twitter:image:src" content="/images/share.jpg">
+
+        <link rel="stylesheet" href="../styles/vendor/selectordie.css">
+        <link rel="stylesheet" href="../styles/main.css">
+            
+        <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    </head>
+    <body class="page-form">
+        <!--[if lt IE 9]>
+        <div id="browsehappy">
+            <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/"><span>upgrade your browser</span></a> to improve your experience.</p>
+        </div>
+        <![endif]-->        
+        
+        <!--<section id="orientation">
+            <p>This website is optimized for a landscape orientation, please turn your device.</p>
+        </section> -->
+        
+        <header>
+            <div class="wrapper">
+                <a href="" class="logo valign"></a>
+                <ul>
+                    <li><a href="./dashboard.html">Mon Compte</a></li>
+                    <li><a href="#">Factures</a></li>
+                    <li class="active"><a href="./vehicule.html">Véhicules</a></li>
+                    <li><a href="#">Chauffeurs</a></li>
+                </ul>
+            </div>            
+        </header>     
+    
+        <div class="content-form wrapper row">
+            <div class="vehicule-wrapper content-form-menu active col-4 col-md-4 col-xs-12">
+                <div class="control-group">
+                    <div class="btn-submit-wrapper">
+                        <input type="text" class="btn turquoise icn-plus" value="Ajouter un véhicule">
+                    </div>   
+                </div>
+                <ul>
+                    <li class="active">
+                        <a href="#" data-step='1'>
+                            <p>Audi A6</p>
+                        </a>
+                    </li>
+                    <li class="not-done">
+                        <a href="#" data-step='2'>
+                            <p>Volkswagen Passat</p>
+                        </a>
+                    </li>
+                    <li class="not-done">
+                        <a href="#" data-step='3'>
+                            <p>Skoda Superb</p>
+                        </a>
+                    </li>
+                </ul>                
+            </div>
+
+            <div class="vehicule-wrapper content-form-menu  col-4 col-md-4 col-xs-12">
+                <p class="step">2/4 étapes</p>
+
+                <div class="progress-bar">
+                    <span class="progress-bar-empty"></span>
+                    <span class="progress-bar-full step2"></span>
+                </div>
+
+                <ul>
+                    <li class="done">
+                        <a href="#" data-step='1'>
+                            <span>1</span>
+                            <p>Ajouter un véhicule</p>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#" data-step='2'>
+                            <span>2</span>
+                            <p>Documents du véhicule</p>
+                        </a>
+                    </li>                    
+                </ul>
+
+                <div class="control-group">
+                    <div class="btn-submit-wrapper">
+                        <input type="submit" class="btn gray-light btn-submit" value="Soumettre mon inscription">
+                    </div>   
+                </div>
+            </div>
+
+
+
+            <div class="content-vehicule-inner dashboard active col-8 col-md-8 col-xs-12">
+                <h2 class="step-title">Audi A6</h2>
+                
+                <div class="col-12 col-md-12 col-xs-12"> 
+
+                    <div class="control-group-big">
+                        <p>Plaque d'immatriculation</p>
+
+                        <span class="more-text">AB-123-CD</span>
+                    </div>                    
+                    
+                    <div class="control-group-big">
+                        <p>Carte grise du véhicule</p>
+                        <span class="check"></span>
+
+                        <span class="more-text">Sont acceptés : Carte nationale d’identité ou Passeport délivré(e) par un pays de l’Union Européenne, Titre de séjour avec autorisation de travail sur le sol français.</span>
+
+                        <div class="inner-wrapper">
+                            <input type="submit" class="btn gray-light btn-file" value="Télécharger">
+                            <a href="#" class="orange">Modifier</a>
+                        </div>
+                    </div>
+
+                    <div class="control-group-big">
+                        <p>Carte verte du véhicule</p>
+                        <span class="check"></span>
+
+                        <span class="more-text">La carte professionnelle est obligatoire si vous êtes chauffeur VTC et doit être à votre nom et en cours de validité.</span>
+
+                        <div class="inner-wrapper">
+                            <input type="submit" class="btn gray-light btn-file" value="Télécharger">
+                            <a href="#" class="orange">Modifier</a>
+                        </div>
+                    </div>
+
+                    <div class="control-group-big">
+                        <p>Attestation d’assurance responsabilité civile circulation de votre véhicule</p>
+                        <span class="check"></span>
+
+                        <span class="more-text">La carte professionnelle est obligatoire si vous êtes chauffeur VTC et doit être à votre nom et en cours de validité.</span>
+
+                        <div class="inner-wrapper">
+                            <input type="submit" class="btn gray-light btn-file" value="Télécharger">
+                            <a href="#" class="orange">Modifier</a>
+                        </div>
+                    </div>                    
+                   
+                </div>
+            </div>
+
+
+            <div class="content-vehicule-inner step1 col-8 col-md-8 col-xs-8">
+                <h2 class="step-title">Ajouter un véhicule</h2>
+
+                <div class="col-6 col-md-6 col-xs-6">
+
+                    <form action="#">
+                        <div class="control-group-checkbox">
+                            <span class="label">Année</span>
+                            <select name="year" id="year-select" class="sod_select">
+                                <option value="2015" selected>2015</option>
+                                <option value="2014">2014</option>
+                                <option value="2013">2013</option>
+                                <option value="2012">2012</option>
+                                <option value="2014">2014</option>
+                                <option value="2013">2013</option>
+                                <option value="2012">2012</option>
+                                <option value="2014">2014</option>
+                                <option value="2013">2013</option>
+                                <option value="2012">2012</option>
+                                <option value="2014">2014</option>                                                            
+                            </select>
+                        </div>
+
+                        <div class="control-group-checkbox">
+                            <span class="label">Marque</span>
+                            <select name="marque" id="marque-select" class="select">
+                                <option value="Audi" selected>Audi</option>
+                                <option value="BMW">BMW</option>
+                                <option value="Mercedes">Mercedes</option>
+                                <option value="Peugeot">Peugeot</option>
+                            </select>
+                        </div>
+
+                        <div class="control-group-checkbox">
+                            <span class="label">Modèle</span>
+                            <select name="model" id="modele-select" class="select">
+                                <option value="Modele1" selected>Modele</option>
+                                <option value="Modele2">Modele</option>
+                                <option value="Modele3">Modele</option>
+                                <option value="Modele4">Modele</option>
+                            </select>
+                        </div>
+
+                        <div class="control-group">
+                            <span class="label">N° d’immatriculation</span>
+                            <input type="text" name="immatriculation" placeholder="AB-123-CD">
+                        </div>
+
+                        <div class="control-group">
+                            <div class="btn-submit-wrapper">
+                                <input type="submit" class="btn turquoise btn-submit" value="Continuer">
+                            </div>   
+                        </div>
+                    </form>                    
+                </div>
+            </div>        
+
+
+            <div class="content-vehicule-inner step2 col-8 col-md-8 col-xs-8">
+                <div class="step2-top">
+                    <h2 class="step-title">Étape 2 : Documents du véhicule</h2>
+                    <p>Les documents demandés nous permettent de vérifier l’exactitude des informations remplient précedemments, d’assurer les chauffeurs et les passagers à bord.</p>
+
+                    <p><strong>Merci de télécharger l’ensemble des documents pour terminer votre inscription.</strong></p>
+                </div>                
+
+                <div class="step2-inner step2-left col-6 col-md-6 col-xs-12">
+                    <ul>
+                        <li class="check"><span class="valign">La carte grise du véhicule AB-123-CD</span></li>
+                        <li><span class="valign">Attestation d’assurance du véhicule etmention « transport de personne à titre onéreux » visible</span></li>
+                        <li><span class="valign">Carte verte (correspondant à l’attestation d’assurance)</span></li>
+                        
+                    </ul>
+                </div>
+                
+                <div class="step2-inner step2-right col-6 col-md-6 col-xs-12">
+                    <div class="step2-inner-padding">
+                        <p><strong>Merci de prendre en photo une pièce d’identité en cours de validité.</strong></p>  
+
+                        <p>Sont acceptés : Carte nationale d’identité ou Passeport délivré(e) par un pays de l’Union Européenne, Titre de séjour avec autorisation de travail sur le sol français.</p>
+
+                        <div class="control-group-file">
+                            <input type="text" class="btn gray-light" placeholder="Modifier le fichier">
+                            <span>ou Glisser-Déposer</span>
+                        </div>
+                    </div>
+                    
+                    <div class="file-imported">
+                        <img src="../images/home/ci.png" alt="">
+                    </div>
+                </div>
+            </div>
+                
+
+
+        </div>
+        
+
+        <footer>
+            <ul>
+                <li><span>Copyright © 2015 CINQS. Tous droits réservés.</span></li>
+                <li><a href="">Conditions d’utilisation</a></li>
+                <li><a href="">Mention légales</a></li>
+            </ul>
+        </footer>
+
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+        
+        <script src="../scripts/bundle.js"></script>
+
+    </body>
+</html>

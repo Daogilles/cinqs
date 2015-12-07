@@ -1,0 +1,193 @@
+//
+// Dashboard page
+// --------------------------------------------------
+
+.page-dashboard {
+	background-color: $gray-lightest;
+	height: 100%;
+	width: 100%;
+
+	.logo {
+		margin-right: 20px;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		@include transform(translateY(-50%));
+	}
+}
+
+.content-form {
+	background-color: $white;
+	border:1px solid $gray-border;
+	border-radius: 8px;
+	height: 100%;
+	margin: 50px auto 90px;	
+
+	.content-facture-inner {
+		border-left: 1px solid $gray-border;
+		display: none;
+		padding: 30px 0;
+
+		&.step3 {
+			padding: 30px 0 0;
+		}
+
+		&.active {
+			display: block;
+		}
+
+		h2 {
+			color: $blue-dark;
+			font-size: 20px;
+			font-family: $proxima-semibold;
+			text-align: center;
+		}
+
+		p {
+			color: $blue-dark;
+			font-family: $proxima-light;
+			font-size: 14px;
+		}
+
+		span {
+			color: #999999;
+			font-size: 14px;
+			font-family: $proxima-regular;
+			&.text {
+				line-height: 45px;
+				color: $blue-dark;
+			}
+			&.sep {
+				background-color: $gray-border;
+				height: 2px;
+				float: right;
+				margin: 20px 0;
+			}
+		}		
+
+		input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="date"] {
+			color: $blue-dark;
+			font-family: $proxima-regular;
+			font-size: 14px;
+		}
+		
+		&.step1, &.step2 {
+			.inner-step {
+				float: none;
+				margin: 0 auto;
+				width: 90%;
+			}
+			span.sep {
+				height: 1px;
+				float: none;
+				display: block;
+				width: 100%;
+			}
+
+			.control-group-date {				
+				span {
+					color: $blue-dark;
+					display: inline-block;
+					margin: 0 12px;
+				}
+				input[type="date"] {
+					display: inline-block;
+					width: 45%;
+					text-transform: uppercase;
+				}
+			}
+
+			.control-group-submit {
+				.btn-submit-wrapper {
+					float: right;
+					width: 220px;
+				}
+			}
+		}
+		
+		.control-group-submit {
+			float: right;
+			width: 60%;
+			margin-top: 0;
+
+			a.cancel {
+				color: $gray;
+				font-size: 14px;
+				font-family: $proxima-semibold;
+				line-height: 45px;
+			}
+		}
+
+		.tab-inner {
+			padding: 0 20px 0 30px;
+		}
+
+		.tab-title {
+			.row {
+				height: 50px;
+				line-height: 50px;
+			}
+		}
+
+		.tab-tab {
+			border-top: 1px solid $gray-border;
+			
+			.row {
+				height: 50px;
+				line-height: 50px;
+			}
+			span {
+				color: $blue-dark;
+				font-size: 14px;
+				font-family: $proxima-regular;
+			}
+
+			.tab-prix {
+				position: relative;
+				
+				&:after {
+					background: transparent;
+			        content: "";
+			        display: block;
+			        position: absolute;
+			        height: 7px;
+			        width: 7px;
+			        right: 0;
+			        top: 50%;
+			        border-left: 3px solid #C7C7CC;
+			        border-top: 3px solid #C7C7CC;
+			        
+			        z-index: 2;
+			        // @include transform(translateY(-50%));
+			        @include transform(translateY(-50%) rotate(135deg));
+				}
+			}
+		}
+
+		.pagination {
+			border-top: 1px solid $gray-border;
+			padding: 0;
+			margin:0; 
+			height: 45px;
+			line-height: 45px;
+			text-align: center;
+			li {
+				display: inline-block;
+				list-style: none;
+				a {
+					color: #999999;
+					font-size: 14px;
+					font-family: $proxima-regular;
+				}
+				&.active, &:hover {
+					a {
+						color: $blue-dark;
+					}
+				}
+			}
+			li + li {
+				margin-left: 20px;
+			}
+		}
+	}
+}

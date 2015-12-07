@@ -1,0 +1,118 @@
+//
+// Custom select or die
+// --------------------------------------------------
+
+.sod_select {
+    border-radius: 8px;
+    border: 1px solid $gray-border;    
+    background-color: $white;
+    height: 45px;
+    line-height: 45px;
+    
+    padding: 0;
+    text-transform: none;
+
+    width: 100%;
+
+    &:hover {
+        border: 1px solid $gray-border;
+    }
+    
+    .sod_label {
+        height: 45px;
+        line-height: 45px;
+        width: 100%;
+        padding: 0 10px;
+        color: $gray;
+        font-family: $proxima-light;
+        position: relative;
+        
+        cursor: pointer;
+        &:after {
+            content: " ";
+            display: block;
+            height: 45px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 45px;
+            z-index: 1;
+        }
+    }
+
+    &.open {
+        .sod_label {
+            &:after {
+                background-color: transparent;
+            }
+        }
+    }
+
+    &.focus {
+        box-shadow: none;        
+    }
+    
+    &:before {
+        background: transparent;
+        content: " ";
+        display: none;
+    }
+
+    &:after {
+        background: transparent;
+        content: " ";
+        display: block;
+        height: 10px;
+        width: 10px;
+        right: 15px;
+        top: 15px;
+        border-left: 2px solid $gray;
+        border-top: 2px solid $gray;
+        
+        z-index: 2;
+        @include transform(rotate(225deg));
+    }
+
+    .sod_list_wrapper {
+        border: 1px solid $gray-border;
+        width: 100%;
+        margin: 0;
+        margin-top: -1px;
+        z-index: 3;
+        
+        .sod_list {
+            position: relative;
+            display: block;
+        }
+    }
+
+    .sod_option {
+        
+        &:hover {
+            color: $gray;
+        }
+        &:last-child {
+            border-bottom: none;
+        }
+        
+        
+        &.active, &.selected {
+            background-color: transparent;
+            font-weight: $semibold;
+            color: $gray;
+            
+            span:after {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        &.disabled {
+            color: $gray-light !important;
+            
+            span:after {
+                display: none;
+            }
+        }
+    }
+}

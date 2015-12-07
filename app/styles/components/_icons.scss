@@ -1,0 +1,15 @@
+//
+// Spritesheet images
+// --------------------------------------------------
+
+span.icon {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+
+//
+// NON RETINA ICONS
+// -------------------------------------------------
+
+@include icon-classes();

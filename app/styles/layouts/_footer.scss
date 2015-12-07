@@ -1,0 +1,30 @@
+//
+// Footer
+// --------------------------------------------------
+
+
+footer {
+	ul {
+		height: 20px;
+		margin: 0 auto 20px;
+		width: 550px;
+		li {
+			float: left;
+			list-style: none;
+			span {
+				color: #878787;
+				font-size: 12px;
+				font-family: "Helvetica";
+			}
+			a {
+				color: #666666;
+				font-size: 12px;
+				font-family: "Helvetica";
+			}
+		}
+
+		li + li {
+			margin-left: 35px;
+		}
+	}
+}

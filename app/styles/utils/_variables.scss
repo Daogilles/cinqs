@@ -1,0 +1,263 @@
+//
+// Variables
+// --------------------------------------------------
+/* Sizes */
+$grid-gutter-width: 0; //reset grid gutter
+$max-width: 1240px;
+$break--medium: 1239px;
+$break--small: 1023px;
+$break--xSmall: 767px;
+
+$screen-xs: 670px;
+$screen-sm: 768px;
+$screen-md: 1024px;
+$screen-lg: 1240px;
+
+$container-tablet:         $screen-sm;
+$container-desktop:        $screen-md;
+$container-large-desktop:  $screen-lg;
+
+/* Medias queries */
+$desktop: "only screen and (min-width : " + $screen-md + ")";
+$tablet-landscape: "only screen and (max-width : " + $screen-md + ") and (min-width : " + $screen-sm + ")";
+$tablet-portrait: "only screen and (min-width : " + $break--xSmall + ")";
+
+/* Grid */
+$gutter-sizes: (
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    60,
+    80
+);
+
+$url: '../images/';
+
+// Brand colors
+// -------------------------
+
+$gray-dark:		   #232c30;
+$gray:			     #9A9A9A;
+$gray-light:	   #DDDDDD;
+$gray-lighter:   #EDEDED;
+$gray-border:    #e2e2e2;
+$gray-lightest:  #FAFAFA;
+
+$gray-placeholder:  #A9A9A9;
+
+$blue-dark:     #333D47;
+$blue:			    #1e343e;
+
+$brand:         #074276;
+$brand-hover:   #FFF;
+
+$red:           #F32F00;
+$red-light:     #FFEDE8;
+
+$orange-true:   #FD9426;
+$orange:        #FF8964;
+$rose:          #F66969;
+$turquoise:     #35D3B5;
+
+$white :        #FFF;
+$black :        #000;
+$black-light:   #111111;
+$black-lighter: #1A1A1A;
+
+
+// Typography
+// -------------------------
+
+$font-heading:       "proxima_nova_rgregular", Helvetica, Arial, sans-serif;
+$font-sans-serif:    "proxima_nova_rgregular", Helvetica, Arial, sans-serif;
+$font-serif:         Georgia, serif;
+
+$proxima-light:       "proxima_nova_ltlight";
+$proxima-regular:     "proxima_nova_rgregular";
+$proxima-semibold:    "proxima_nova_ltsemibold";
+$proxima-bold:        "proxima_nova_rgbold";
+
+$brandon-light:       "brandon_grotesquelight";
+$brandon-regular:     "brandon_grotesque_regularRg";
+$brandon-medium:      "brandon_grotesquemedium";
+$brandon-bold:        "brandon_grotesquebold";
+
+
+$ultra-light: 200;
+$light: 300;
+$normal: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+$heavy: 800;
+$extra-bold: 900;
+
+$font-size-base: 14px;
+$font-size-large: 18px;
+$font-size-small: 12px;
+
+$font-size-h1: 48px;
+$font-size-h2: 30px;
+$font-size-h3: 28px;
+$font-size-h4: 16px;
+// $font-size-h5: 13px;
+// $font-size-h6: 12px;
+
+
+// breakpoints
+// -------------------------
+
+$breakpoints: (
+  'small': (max-width: 767px),
+  'medium': (max-width: 1023px),
+  'large': (max-width: 1100px),
+  'huge': (min-width: 1131px)
+);
+
+
+// Easing
+// -------------------------
+
+$linear:         cubic-bezier(0.250, 0.250, 0.750, 0.750);
+$easeInQuad:     cubic-bezier(0.550, 0.085, 0.680, 0.530);
+$easeInCubic:    cubic-bezier(0.550, 0.055, 0.675, 0.190);
+$easeInQuart:    cubic-bezier(0.895, 0.030, 0.685, 0.220);
+$easeInQuint:    cubic-bezier(0.755, 0.050, 0.855, 0.060);
+$easeInSine:     cubic-bezier(0.470, 0.000, 0.745, 0.715);
+$easeInExpo:     cubic-bezier(0.950, 0.050, 0.795, 0.035);
+$easeInCirc:     cubic-bezier(0.600, 0.040, 0.980, 0.335);
+$easeInBack:     cubic-bezier(0.600, 0, 0.735, 0.045);
+
+$easeOutQuad:    cubic-bezier(0.250, 0.460, 0.450, 0.940);
+$easeOutCubic:   cubic-bezier(0.215, 0.610, 0.355, 1.000); 
+$easeOutQuart:   cubic-bezier(0.165, 0.840, 0.440, 1.000); 
+$easeOutQuint:   cubic-bezier(0.230, 1.000, 0.320, 1.000); 
+$easeOutSine:    cubic-bezier(0.390, 0.575, 0.565, 1.000); 
+$easeOutExpo:    cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+$easeOutCirc:    cubic-bezier(0.075, 0.820, 0.165, 1.000); 
+$easeOutBack:    cubic-bezier(0.175, 0.885, 0.320, 1);
+
+$easeInOutQuad:  cubic-bezier(0.455, 0.030, 0.515, 0.955); 
+$easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1.000); 
+$easeInOutQuart: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
+$easeInOutQuint: cubic-bezier(0.860, 0.000, 0.070, 1.000); 
+$easeInOutSine:  cubic-bezier(0.445, 0.050, 0.550, 0.950); 
+$easeInOutExpo:  cubic-bezier(1.000, 0.000, 0.000, 1.000); 
+$easeInOutCirc:  cubic-bezier(0.785, 0.135, 0.150, 0.860); 
+$easeInOutBack:  cubic-bezier(0.680, 0, 0.265, 1);
+
+
+/*
+ * FONTS
+ */
+
+
+@font-face {
+    font-family: 'proxima_nova_ltsemibold';
+    src: url('../fonts/proxima-nova-semibold-webfont.eot');
+    src: url('../fonts/proxima-nova-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proxima-nova-semibold-webfont.woff2') format('woff2'),
+         url('../fonts/proxima-nova-semibold-webfont.woff') format('woff'),
+         url('../fonts/proxima-nova-semibold-webfont.ttf') format('truetype'),
+         url('../fonts/proxima-nova-semibold-webfont.svg#proxima_nova_ltsemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'proxima_nova_rgregular';
+    src: url('../fonts/proxima-nova-regular-webfont.eot');
+    src: url('../fonts/proxima-nova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proxima-nova-regular-webfont.woff2') format('woff2'),
+         url('../fonts/proxima-nova-regular-webfont.woff') format('woff'),
+         url('../fonts/proxima-nova-regular-webfont.ttf') format('truetype'),
+         url('../fonts/proxima-nova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'proxima_nova_rgbold';
+    src: url('../fonts/proxima-nova-bold-webfont.eot');
+    src: url('../fonts/proxima-nova-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proxima-nova-bold-webfont.woff2') format('woff2'),
+         url('../fonts/proxima-nova-bold-webfont.woff') format('woff'),
+         url('../fonts/proxima-nova-bold-webfont.ttf') format('truetype'),
+         url('../fonts/proxima-nova-bold-webfont.svg#proxima_nova_rgbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'proxima_nova_ltlight';
+    src: url('../fonts/proxima-nova-light-webfont.eot');
+    src: url('../fonts/proxima-nova-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proxima-nova-light-webfont.woff2') format('woff2'),
+         url('../fonts/proxima-nova-light-webfont.woff') format('woff'),
+         url('../fonts/proxima-nova-light-webfont.ttf') format('truetype'),
+         url('../fonts/proxima-nova-light-webfont.svg#proxima_nova_ltlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+@font-face {
+    font-family: 'brandon_grotesquebold';
+    src: url('../fonts/brandon_bld-webfont.eot');
+    src: url('../fonts/brandon_bld-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/brandon_bld-webfont.woff2') format('woff2'),
+         url('../fonts/brandon_bld-webfont.woff') format('woff'),
+         url('../fonts/brandon_bld-webfont.ttf') format('truetype'),
+         url('../fonts/brandon_bld-webfont.svg#brandon_grotesquebold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'brandon_grotesquelight';
+    src: url('../fonts/brandon_light-webfont.eot');
+    src: url('../fonts/brandon_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/brandon_light-webfont.woff2') format('woff2'),
+         url('../fonts/brandon_light-webfont.woff') format('woff'),
+         url('../fonts/brandon_light-webfont.ttf') format('truetype'),
+         url('../fonts/brandon_light-webfont.svg#brandon_grotesquelight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'brandon_grotesquemedium';
+    src: url('../fonts/brandon_med-webfont.eot');
+    src: url('../fonts/brandon_med-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/brandon_med-webfont.woff2') format('woff2'),
+         url('../fonts/brandon_med-webfont.woff') format('woff'),
+         url('../fonts/brandon_med-webfont.ttf') format('truetype'),
+         url('../fonts/brandon_med-webfont.svg#brandon_grotesquemedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'brandon_grotesque_regularRg';
+    src: url('../fonts/brandon_reg-webfont.eot');
+    src: url('../fonts/brandon_reg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/brandon_reg-webfont.woff2') format('woff2'),
+         url('../fonts/brandon_reg-webfont.woff') format('woff'),
+         url('../fonts/brandon_reg-webfont.ttf') format('truetype'),
+         url('../fonts/brandon_reg-webfont.svg#brandon_grotesque_regularRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

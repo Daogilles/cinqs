@@ -1,0 +1,62 @@
+//
+// Default form
+// --------------------------------------------------
+
+.control-group {
+	margin-top: 20px;
+}
+
+.control-group-checkbox {
+	label {
+		color: $gray-placeholder;
+		font-size: $font-size-base;
+		font-family: $proxima-regular;
+	}
+	input[type="checkbox"] {
+		border: 1px solid $gray-border;
+		background-color: $white;
+		height: 16px;
+		width: 16px;
+		margin-right: 10px;
+	}
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="date"] {
+    height: 45px;
+    line-height: 45px;
+    border: 1px solid $gray-border;
+    background-color: $white;
+    margin: 0;
+    
+    padding: 0 10px;
+    display: block;
+    
+    -webkit-appearance: none;
+    border-radius: 5px;
+
+    color: $gray;
+    font-size: 18px;
+    font-family: $proxima-regular;
+    width: 100%;
+
+    &:focus {
+        outline: none;
+        // box-shadow: 0 0 5px rgba(0,0,0,.2);
+        background-color: $gray-lightest;
+        @include placeholder {
+            color: $gray-placeholder;
+        }
+    }
+
+    @include placeholder {
+        color: $gray-placeholder;
+        line-height: 45px;
+        
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        
+        font-size: 18px;
+        font-family: $proxima-light;
+    }
+}
+

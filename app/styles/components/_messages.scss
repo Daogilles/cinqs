@@ -1,0 +1,49 @@
+//
+// Messages
+// --------------------------------------------------
+
+#orientation, #browsehappy {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: $white;
+    display: none;
+    opacity: 1;
+    
+    z-index: 9999;
+    
+    p {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 400px;
+        padding: 20px;
+        
+        color: $brand;
+        
+        text-align: center;
+        
+        z-index: 99999;
+        
+        text-transform: uppercase;
+        font-weight: $extra-bold;
+        
+        @include transform(translate(-50%, -50%));
+
+        a {
+            display: inline-block;
+            text-decoration: underline;
+        }
+    }
+}
+
+#browsehappy {
+    z-index: 99999;
+    display: block;
+    
+    p {
+        margin-left: -200px;
+    }
+}

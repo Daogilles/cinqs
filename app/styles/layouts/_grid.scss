@@ -1,0 +1,193 @@
+//
+// Grid system
+// --------------------------------------------------
+
+// Mixins
+// -------------------------
+
+@mixin make-row($gutter: $grid-gutter-width) {
+    margin-top: $gutter;
+    margin-left:  ($gutter / -2);
+    margin-right: ($gutter / -2);
+    
+    *zoom: 1;
+    
+    @include grid-clearfix();
+    
+    [class*="col-"] {
+        // position: relative;
+        float: left;
+        // min-height: 1px;
+        padding-left:  ($gutter / 2);
+        padding-right: ($gutter / 2);
+    }
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+@mixin make-col($columns, $grid-columns) {
+    width: percentage(($columns / $grid-columns));
+}
+
+@mixin make-col-offset($columns, $grid-columns) {
+    margin-left: percentage(($columns / $grid-columns));
+}
+
+// Styles
+// -------------------------
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    
+    max-width: 1100px;
+    
+    padding: 0 15px;
+    
+    @include respond-to('huge') {
+        padding: 0;
+    }
+}
+
+.container-mini {
+    width: 750px;
+    margin: 0 auto;
+    margin-top: 40px;
+    
+    @include respond-to('medium') {
+        width: 100%;
+    }
+    
+    .row {
+        margin-top: 20px;
+        
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}
+
+.row {
+    @include make-row(0);
+}
+
+.grid-50 {
+    .row {
+       @include make-row(50px);
+    }
+}
+
+.grid-30 {
+    .row {
+       @include make-row(30px);
+    }
+}
+
+.grid-15 {
+    .row {
+       @include make-row(15px);
+    }
+}
+
+.grid-6 {
+    .row {
+       @include make-row(6px);
+    }
+}
+
+.grid-0 {
+    .row {
+       @include make-row(0);
+    }
+}
+
+
+// Remove margin top on a specific row
+// -------------------------
+.no-gap {
+    margin-top: 0 !important;
+}
+
+.gap {
+    margin-top: 30px;
+}
+
+// Column grid 12
+// -------------------------
+
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        @include make-col($i, 12);
+    }
+
+    @include respond-to('medium') {
+        .col-md-#{$i} {
+            @include make-col($i, 12);
+        }
+
+        .col-md-12 {
+            margin-top: 25px;
+            
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+
+    @include respond-to('small') {
+        .col-xs-#{$i} {
+            @include make-col($i, 12);
+        }
+
+        .col-xs-12 {
+            margin-top: 25px;
+            
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+@for $i from 1 through 10 {
+    .col-ten-#{$i} {
+        @include make-col($i, 10);
+    }
+
+    @include respond-to('medium') {
+        .col-ten-md-#{$i} {
+            @include make-col($i, 10);
+        }
+    }
+
+    @include respond-to('small') {
+        .col-ten-xs-#{$i} {
+            @include make-col($i, 10);
+        }
+
+        .col-ten-xs-12 {
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+
+
+// Offset column grid 12
+// -------------------------
+
+@for $i from 1 through 11 {
+    .col-offset-#{$i} {
+        @include make-col-offset($i, 12);
+    }
+
+    @include respond-to('small') {
+        .col-offset-xs-#{$i} {
+            @include make-col($i, 12);
+        }
+    }
+}

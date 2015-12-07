@@ -1,0 +1,113 @@
+.icheckbox {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    
+    margin-right: 10px;
+    
+    display: inline-block;
+    vertical-align: text-bottom;
+    background-color: $gray-light;
+    
+    // &:before {
+    //     content: '';
+    //     position: absolute;
+    //     left:0;
+    //     top: 0px;
+    //     width: 12px;
+    //     height: 12px;
+    //     border: 1px solid $gray-lighter;
+    //     background: $white;
+    //     visibility: visible;
+    //     display: inline-block;
+    // }
+
+    &:after {
+        background-image: url(../images/sprite.png);
+        background-position: -421px -91px;
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 16px;
+        height: 15px;
+        margin-left: -8px;
+        margin-top: -8px;
+    
+        visibility: visible;
+        @include transition(all 200ms ease);
+        display: inline-block;
+        
+        opacity: 0;
+        @include transform(scale(0));
+    }
+
+    &.checked {
+        &:after {
+            opacity: 1;
+            @include transform(scale(1));
+        }
+    }
+
+    &.disabled {
+        opacity: 0.5;
+    }
+}
+
+.iradio {
+    position: relative;
+    width: 14px;
+    height: 14px;
+    
+    margin-right: 5px;
+    
+    display: inline-block;
+    vertical-align: text-bottom;
+
+    
+    &:before {
+        content: '';
+        position: absolute;
+        left:0;
+        top: 0px;
+        width: 12px;
+        height: 12px;
+        border: 1px solid $gray-light;
+        background: $white;
+        visibility: visible;
+        display: inline-block;
+        
+        -webkit-border-radius: 50%;
+            border-radius: 50%;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 8px;
+        height: 8px;
+        background-color: $gray-light;
+        visibility: visible;
+        @include transition(all 200ms ease);
+        display: inline-block;
+        
+        -webkit-border-radius: 50%;
+            border-radius: 50%;
+        
+        opacity: 0;
+        @include transform(scale(0));
+    }
+
+    &.checked {
+        &:after {
+             opacity: 1;
+            @include transform(scale(1));
+        }
+    }
+
+    &.disabled {
+        opacity: 0.5;
+    }
+}

@@ -1,0 +1,380 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie10 lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie10 lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]><html class="no-js lt-ie10" lang="en"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>CINQS</title>
+        <meta name="description" content="">
+        <link rel="author" href="humans.txt" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="user-scalable=no, initial-scale = 1, minimum-scale = 1, maximum-scale = 1, width=device-width">
+        
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link href="favicon.png" rel="icon" type="image/png" />
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        
+        <meta property="og:site_name" content="">
+        <meta property="og:title" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:type" content="" />
+        <meta property="og:image" content="" />
+        <meta property="og:locale" content="fr_FR">
+        
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@">
+        <meta name="twitter:title" content="">
+        <meta name="twitter:description" content="">
+        <meta name="twitter:image:src" content="/images/share.jpg">
+
+        <link rel="stylesheet" href="../styles/vendor/selectordie.css">
+        <link rel="stylesheet" href="../styles/main.css">
+            
+        <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    </head>
+    <body class="page-dashboard">
+        <!--[if lt IE 9]>
+        <div id="browsehappy">
+            <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/"><span>upgrade your browser</span></a> to improve your experience.</p>
+        </div>
+        <![endif]-->        
+        
+        <!--<section id="orientation">
+            <p>This website is optimized for a landscape orientation, please turn your device.</p>
+        </section> -->
+        
+        <header>
+            <div class="wrapper">
+                <a href="" class="logo valign"></a>
+                <ul>
+                    <li class="active"><a href="#">Mon Compte</a></li>
+                    <li><a href="./facture.html">Factures</a></li>
+                    <li><a href="./vehicule.html">Véhicules</a></li>
+                    <li><a href="#">Chauffeurs</a></li>
+                </ul>
+            </div>            
+        </header>     
+    
+        <div class="content-form wrapper row">
+            <div class="infos-wrapper content-form-menu active col-4 col-md-4 col-xs-12">
+
+                <ul>
+                    <li class="done">
+                        <a href="#" data-step='1'>
+                            <p>Modifier le profil</p>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#" data-step='2'>
+                            <p>Informations bancaires</p>
+                        </a>
+                    </li>
+                    <li class="not-done">
+                        <a href="#" data-step='3'>
+                            <p>Document téléchargés</p>
+                        </a>
+                    </li>
+                    <li class="not-done">
+                        <a href="#" data-step='4'>
+                            <p>Contrats</p>
+                        </a>
+                    </li>
+                </ul>
+                
+            </div>            
+
+
+            <div class="content-dashboard-inner step1 active col-8 col-md-8 col-xs-12">
+                <h2 class="step-title">Modifier le profil</h2>
+                
+                <div class="col-12 col-md-12 col-xs-12">
+                    <form action="">                        
+
+                        <div class="control-group row gap-40">
+                            <div class="inner-left col-3 col-md-3 col-xs-3">
+                                <span class="label">Status</span>    
+                            </div>
+                            <div class="inner-right col-9 col-md-9 col-xs-9">
+                                <span class="status">En attente</span>
+                            </div>                        
+                        </div>
+
+                        <div class="control-group row">
+                            <div class="inner-left col-3 col-md-3 col-xs-3">
+                                <span class="label">Prénom</span>    
+                            </div>
+                            <div class="inner-right col-9 col-md-9 col-xs-9">
+                                <input type="text" placeholder="Charles" name="prenom">    
+                            </div>
+                        </div>
+
+                        <div class="control-group row">
+                            <div class="inner-left col-3 col-md-3 col-xs-3">
+                                <span class="label">Nom</span>    
+                            </div>
+                            <div class="inner-right col-9 col-md-9 col-xs-9">
+                                <input type="text" placeholder="Ganem" name="nom">    
+                            </div>                      
+                        </div>                    
+                        
+                        <div class="control-group row error">
+                            <div class="inner-left col-3 col-md-3 col-xs-3">
+                                <span class="label">Numéro de téléphone</span>    
+                            </div>
+                            <div class="inner-right col-9 col-md-9 col-xs-9">
+                                <input type="text" placeholder="06 12 34 56 78" name="tel">  
+                                <span class="more-text">Ces informations sont partagées avec vos client pour leur permettre de vous contacter en cas de problème.</span>  
+                            </div>
+                        </div>
+
+                        <div class="control-group row">
+                            <div class="inner-left col-3 col-md-3 col-xs-3">
+                                <span class="label">Adresse e-mail</span>    
+                            </div>
+                            <div class="inner-right col-9 col-md-9 col-xs-9">
+                                <input type="email" placeholder="charles@cinq-s.com" name="email">    
+                            </div>
+                        </div>                        
+
+                        <div class="control-group row">
+                            <div class="inner-left col-3 col-md-3 col-xs-3">
+                                <span class="label">Mot de passe</span>    
+                            </div>
+                            <div class="inner-right col-9 col-md-9 col-xs-9">
+                                <input type="password" placeholder="Mot de passe" name="pwd">    
+                            </div>
+                        </div>
+
+                        <div class="control-group row">
+                            <div class="inner-left col-3 col-md-3 col-xs-3">
+                                <span class="label">Addresse de domicile</span>    
+                            </div>
+                            <div class="inner-right col-9 col-md-9 col-xs-9">
+                                <input type="password" placeholder="1 Rue du Nil, 75001, Paris" name="address">   
+                                <span class="more-text">Ces informations permettent de vous connecter à l’application CINQS et de recevoir du courrier à votre domicile et sur votre boîte e-mail.</span> 
+                            </div>
+                        </div>
+
+                        <div class="control-group row">
+                            <div class="inner-left col-3 col-md-3 col-xs-3">
+                                <span class="label">Numéro de TVA</span>    
+                            </div>
+                            <div class="inner-right col-9 col-md-9 col-xs-9">
+                                <input type="text" placeholder="Optionnel" name="tva">   
+                                <span class="more-text">Texte optionnel</span>  
+                            </div>
+                        </div>                
+
+                        <span class="sep col-9 col-md-9 col-xs-9"></span>           
+
+                        <div class="control-group control-group-submit row">
+                            <div class="col-3 col-md-3 col-xs-3">
+                                <a href="#" class="cancel">Annuler</a>
+                            </div>
+                            <div class="btn-submit-wrapper col-9 col-md-9 col-xs-9">                                
+                                <input type="submit" class="btn turquoise btn-submit" value="Enregistrer les modifications">
+                            </div>   
+                        </div>
+                    </form>                    
+                </div>
+            </div>
+
+
+
+
+            <div class="content-dashboard-inner step2  col-8 col-md-8 col-xs-12">
+                <h2 class="step-title">Informations bancaires</h2>
+                
+                <div class="col-12 col-md-12 col-xs-12">                     
+
+                    <div class="control-group row gap-40">
+                        <div class="inner-left col-3 col-md-3 col-xs-3">
+                            <span class="label">IBAN</span>    
+                        </div>
+                        <div class="inner-right col-9 col-md-9 col-xs-9">
+                            <span class="text">FR76 1515 7001 5578 6578 1234 987</span>
+                        </div>                        
+                    </div>
+
+                    <div class="control-group row">
+                        <div class="inner-left col-3 col-md-3 col-xs-3">
+                            <span class="label">SWIFT/BIC</span>    
+                        </div>
+                        <div class="inner-right col-9 col-md-9 col-xs-9">
+                            <span class="text">BREDFRPPYYY</span> 
+                        </div>
+                    </div>
+
+                    <div class="control-group row">
+                        <div class="inner-left col-3 col-md-3 col-xs-3">
+                            <span class="label">Titulaire du compte</span>    
+                        </div>
+                        <div class="inner-right col-9 col-md-9 col-xs-9">
+                            <span class="text">Charles Ganem</span>   
+                        </div>                      
+                    </div>                    
+                    
+                    <div class="control-group row">
+                        <div class="inner-left col-3 col-md-3 col-xs-3">
+                            <span class="label">Document RIB</span>    
+                        </div>
+                        <div class="inner-right col-9 col-md-9 col-xs-9">
+                            <input type="submit" class="btn gray-light btn-file" value="Voir le document">
+                            <span class="more-text">Ces informations sont confidentielles et nous permettent de réaliser les transactions vers votre compte.</span>  
+                        </div>
+                    </div>
+                    
+                    <span class="sep col-9 col-md-9 col-xs-9"></span>                                                            
+                
+                    <div class="control-group control-group-submit row">                        
+                        <div class="btn-submit-wrapper">                                
+                            <input type="submit" class="btn orange-true btn-submit" value="Modifier les informations">
+                        </div>   
+                    </div>
+                   
+                </div>
+            </div>
+
+
+
+            
+            <div class="content-dashboard-inner step3  col-8 col-md-8 col-xs-12">
+                <h2 class="step-title">Document téléchargés</h2>
+                
+                <div class="col-12 col-md-12 col-xs-12">                     
+                    
+                    <div class="control-group-big">
+                        <p>Pièce d’identité en cours de validité</p>
+                        <span class="check"></span>
+
+                        <span class="more-text">Sont acceptés : Carte nationale d’identité ou Passeport délivré(e) par un pays de l’Union Européenne, Titre de séjour avec autorisation de travail sur le sol français.</span>
+
+                        <div class="inner-wrapper">
+                            <input type="submit" class="btn gray-light btn-file" value="Télécharger">
+                            <a href="#" class="orange">Modifier</a>
+                        </div>
+                    </div>
+
+                    <div class="control-group-big">
+                        <p>Permis de conduire (coté photo)</p>
+                        <span class="check"></span>
+
+                        <span class="more-text">Votre permis de conduire doit mentionner votre nom et être en cours de validité. Sont acceptés uniquement les permis délivrés par les pays de l’Union Européenne. Les permis provisoires ne sont pas acceptés.</span>
+
+                        <div class="inner-wrapper">
+                            <input type="submit" class="btn gray-light btn-file" value="Télécharger">
+                            <a href="#" class="orange">Modifier</a>
+                        </div>
+                    </div>
+
+                    <div class="control-group-big">
+                        <p>Carte professionnelle VTC</p>
+                        <span class="check"></span>
+
+                        <span class="more-text">La carte professionnelle est obligatoire si vous êtes chauffeur VTC et doit être à votre nom et en cours de validité.</span>
+
+                        <div class="inner-wrapper">
+                            <input type="submit" class="btn gray-light btn-file" value="Télécharger">
+                            <a href="#" class="orange">Modifier</a>
+                        </div>
+                    </div>
+
+                    <div class="control-group-big">
+                        <p>Extrait de casier judiciaire français (bulletin n°3 datant de moins de 3 mois)</p>
+                        <span class="check"></span>
+
+                        <span class="more-text">Vous pouvez faire votre demande d’extrait de casier judiciaire sur t.uber.com/ecj. Ne sont acceptés que les extraits délivrés par une entité française, datant de moins de trois mois. Le délai de réception est d’environ une semaine pour les ressortissants français, et trois semaines pour les citoyens d’autres pays.</span>
+
+                        <div class="inner-wrapper">
+                            <input type="submit" class="btn gray-light btn-file" value="Télécharger">
+                            <a href="#" class="orange">Modifier</a>
+                        </div>
+                    </div>
+
+                    <div class="control-group-big">
+                        <p>Extrait KBIS de votre société ou votre relévé INSEE</p>
+
+                        <span class="more-text">Le document doit mentionner votre nom parmi les gérants de l’entreprise, votre SIREN et votre secteur d’activité (transport de personnes). Sa date d’émission doit être la plus récente possible.</span>
+
+                        <div class="inner-wrapper">
+                            <input type="submit" class="btn gray-light btn-file" value="Télécharger">
+                            <a href="#" class="orange">Modifier</a>
+                        </div>
+                    </div>
+
+                    <div class="control-group-big">
+                        <p>Licence Atout France ou Certificat d’inscription au registre VTC</p>
+
+                        <span class="more-text">Le document doit être à votre nom ou à celui de votre société, et être en cours de validité.</span>
+
+                        <div class="inner-wrapper">
+                            <input type="submit" class="btn gray-light btn-file" value="Télécharger">
+                            <a href="#" class="orange">Modifier</a>
+                        </div>
+                    </div>
+
+                    <div class="control-group-big">
+                        <p>Assurance de Résponsabilité Civile Professionnelle de votre entreprise ou autoentreprise</p>
+
+                        <span class="more-text">L’assurance RC Exploitation ou RC Professionnelle couvre votre entreprise dans le cadre de votre activité de transport de personnes à titre onéreux. Le document doit être au nom de votre société et mentionner explicitement l’activité de transport de personnes à titre onéreux.</span>
+
+                        <div class="inner-wrapper">
+                            <input type="submit" class="btn gray-light btn-file" value="Télécharger">
+                            <a href="#" class="orange">Modifier</a>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+
+
+            
+            <div class="content-dashboard-inner step4  col-8 col-md-8 col-xs-12">
+                <h2 class="step-title">Contrats</h2>
+                
+                <div class="col-12 col-md-12 col-xs-12">                     
+                    <p class="gap-40">Contrats de Partenariats</p>
+                    
+                    <span class="more-text">Sont acceptés : Carte nationale d’identité ou Passeport délivré(e) par un pays de l’Union Européenne, Titre de séjour avec autorisation de travail sur le sol français.</span>
+
+                    <input type="submit" class="btn gray-light btn-file" value="Télécharger">
+                   
+                </div>
+            </div>
+
+
+
+
+        </div>
+        
+
+        <footer>
+            <ul>
+                <li><span>Copyright © 2015 CINQS. Tous droits réservés.</span></li>
+                <li><a href="">Conditions d’utilisation</a></li>
+                <li><a href="">Mention légales</a></li>
+            </ul>
+        </footer>
+
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+        
+        <script src="../scripts/bundle.js"></script>
+
+    </body>
+</html>

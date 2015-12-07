@@ -1,0 +1,58 @@
+{
+  "name": "cinqs",
+  "version": "0.0.0",
+  "description": "cinqs - dashboard",
+  "author": "Gilles DAO DUC",
+  "gulp": {
+    "proxy": "",
+    "app": "./app",
+    "tmp": "./web/",
+    "dist": "./web/"
+  },
+  "browserify": {},
+  "browserify-shim": {
+    "fancybox": "fancybox",
+    "selectordie": "selectordie",
+    "icheck": "icheck",
+    "jquery": {
+      "exports": "$"
+    }
+  },
+  "browser": {
+    "fancybox": "./bower_components/fancybox/source/jquery.fancybox.js",
+    "selectordie": "./bower_components/selectordie/_src/selectordie.js",
+    "icheck": "./bower_components/icheck/icheck.min.js",
+    "jquery": "./bower_components/jquery/dist/jquery.js"
+  },
+  "dependencies": {
+    "gsap": "^1.15.1",
+    "jquery": "^2.1.3"
+  },
+  "devDependencies": {
+    "browser-sync": "*",
+    "browserify": "*",
+    "browserify-shim": "*",
+    "connect-modrewrite": "*",
+    "del": "*",
+    "gulp": "*",
+    "gulp-jshint": "*",
+    "gulp-notify": "*",
+    "gulp-plumber": "*",
+    "gulp-sass": "^2.0.1",
+    "gulp-streamify": "*",
+    "gulp-uglify": "*",
+    "gulp-util": "*",
+    "gulp-watch": "*",
+    "gulp.spritesmith": "^2.5.0",
+    "html-browserify": "*",
+    "jshint-stylish": "*",
+    "node-bourbon": "*",
+    "pretty-hrtime": "*",
+    "require-dir": "*",
+    "run-sequence": "*",
+    "stringify": "*",
+    "vinyl-source-stream": "*",
+    "watchify": "*"
+  },
+  "private": true
+}
