@@ -9,6 +9,7 @@
 	font-size: 18px;
 	font-family: $proxima-semibold;
 	height: 45px;
+	padding:0;
 	width: 100%;	
 
 	&.orange {
@@ -25,5 +26,9 @@
 	}
 	&.gray-light {
 		background-color: $gray-light;
+	}
+	&.white {
+		background-color: $white;
+		color: $blue-dark;
 	}
 }

@@ -1,0 +1,286 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie10 lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie10 lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]><html class="no-js lt-ie10" lang="en"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>CINQS</title>
+        <meta name="description" content="">
+        <link rel="author" href="humans.txt" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="user-scalable=no, initial-scale = 1, minimum-scale = 1, maximum-scale = 1, width=device-width">
+        
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link href="favicon.png" rel="icon" type="image/png" />
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        
+        <meta property="og:site_name" content="">
+        <meta property="og:title" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:type" content="" />
+        <meta property="og:image" content="" />
+        <meta property="og:locale" content="fr_FR">
+        
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@">
+        <meta name="twitter:title" content="">
+        <meta name="twitter:description" content="">
+        <meta name="twitter:image:src" content="/images/share.jpg">
+
+        <!-- <link rel="stylesheet" href="/styles/plugin/selectordie.css"> -->
+        <link rel="stylesheet" href="../styles/main.css">
+    
+        
+        <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    </head>
+    <body class="interne">
+        <!--[if lt IE 9]>
+        <div id="browsehappy">
+            <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/"><span>upgrade your browser</span></a> to improve your experience.</p>
+        </div>
+        <![endif]-->        
+        
+        <!--<section id="orientation">
+            <p>This website is optimized for a landscape orientation, please turn your device.</p>
+        </section> -->
+
+        <header class="interne-header">
+            <div class="wrapper">
+                <a href="#" class="logo">
+                    <img src="../images/logo.png" alt="">
+                </a>
+                <ul>
+                    <li class="gray-circle active"><a href="./map.html">LIVE MAP</a></li>
+                    <li class="gray-circle"><a href="./encours.html">EN COURS</a></li>
+                    <li class=""><a href="#">RÉSERVATIONS À L’AVANCE</a></li>
+                    <li><a href="./actions.html">ACTIONS</a></li>
+                </ul>
+
+                <div class="account">
+                    <p>Charles</p>
+                </div>
+            </div>            
+        </header>    
+        
+        <div class="page-interne-avance">
+            <div class="interne-content">
+                <ul class="panel panel-first">
+                    <li>
+                        <div class="map-tab-search">                        
+                            <div class="control-group-search valign">
+                                <input type="text" placeholder="Rechercher ...">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="rose">
+                        <div class="panel-first-label valign">
+                            <p>Libre</p>
+                            <span class="number rose">3</span>
+                        </div>                                        
+                    </li>
+                    <li class="red">
+                        <div class="panel-first-label valign">
+                            <p>En attente</p>
+                            <span class="number red">3</span>
+                        </div>  
+                    </li>
+                    <li class="orange">
+                        <div class="panel-first-label valign">
+                            <p>En chemin</p>
+                            <span class="number orange">7</span>
+                        </div>  
+                    </li>
+                    <li class="purple">
+                        <div class="panel-first-label valign">
+                            <p>Sur Site</p>
+                            <span class="number purple">3</span>
+                        </div>  
+                    </li>
+                    <li class="green">
+                        <div class="panel-first-label valign">
+                            <p>En course</p>
+                            <span class="number green">6</span>
+                        </div>  
+                    </li>
+                    <li class="gray">
+                        <div class="panel-first-label valign">
+                            <p>Terminé</p>
+                            <span class="number gray">1</span>
+                        </div>  
+                    </li>
+                </ul>
+
+                <ul class="panel-second panel">
+                    <li><p class="valign">Jean René</p></li>
+                    <li><p class="valign">Charles Ganem</p></li>
+                    <li><p class="valign">Jean Martin</p></li>
+                    <li><p class="valign">John Doe</p></li>
+                    <li><p class="valign">Stéphane Chauf</p></li>
+                    <li><p class="valign">David Benichou</p></li>
+                </ul> 
+
+                <div id="map-container">
+                    <div id="map"></div>
+                    <div class="resume gray">
+                        <div class="row resume-tab">
+                            <div class="resume-tab-inner row">
+                                <div class="col-3 col-md-3 col-xs-3">
+                                    <p class="label">Status</p>
+                                </div>
+                                <div class="col-9 col-md-9 col-xs-9">
+                                    <p class="text">Sur site (depuis 5 mins)</p>
+                                </div>
+                            </div>                            
+                        </div>
+
+                        <div class="row resume-tab">
+                            <div class="resume-tab-inner">
+                                <div class="row">
+                                    <div class="col-3 col-md-3 col-xs-3">
+                                        <p class="label">Order Id</p>
+                                    </div>
+                                    <div class="col-9 col-md-9 col-xs-9">
+                                        <p class="text">563399150308311601d08745</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3 col-md-3 col-xs-3">
+                                        <p class="label">Date</p>
+                                    </div>
+                                    <div class="col-9 col-md-9 col-xs-9">
+                                        <p class="text">31.10.2015 16:16</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3 col-md-3 col-xs-3">
+                                        <p class="label">Prix</p>
+                                    </div>
+                                    <div class="col-9 col-md-9 col-xs-9">
+                                        <p class="text">fixedride, 65€</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3 col-md-3 col-xs-3">
+                                        <p class="label">Paiement</p>
+                                    </div>
+                                    <div class="col-9 col-md-9 col-xs-9">
+                                        <p class="text">À bord</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row resume-tab">
+                            <div class="resume-tab-inner">
+                                <div class="row">
+                                    <div class="col-3 col-md-3 col-xs-3">
+                                        <p class="label">Adresse</p>
+                                    </div>
+                                    <div class="col-9 col-md-9 col-xs-9">
+                                        <p class="text">8 Rue de Téhéran, Paris, France</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3 col-md-3 col-xs-3">
+                                        <p class="label">Arrivée</p>
+                                    </div>
+                                    <div class="col-9 col-md-9 col-xs-9">
+                                        <p class="text">Aéroport Roissy-Charles de Gaulle</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row resume-tab">
+                            <div class="resume-tab-inner">
+                                <div class="row">
+                                    <div class="col-3 col-md-3 col-xs-3">
+                                        <p class="label">Chauffeur</p>
+                                    </div>
+                                    <div class="col-9 col-md-9 col-xs-9">
+                                        <p class="text">Charles Ganem, 06 87 65 43 21</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3 col-md-3 col-xs-3">
+                                        <p class="label">Imma</p>
+                                    </div>
+                                    <div class="col-9 col-md-9 col-xs-9">
+                                        <p class="text">DJ-123-AB</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row resume-tab">
+                            <div class="resume-tab-inner">
+                                <div class="row">
+                                    <div class="col-3 col-md-3 col-xs-3">
+                                        <p class="label">Client</p>
+                                    </div>
+                                    <div class="col-9 col-md-9 col-xs-9">
+                                        <p class="text">Ethan Sebban, 06 12 34 56 78</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3 col-md-3 col-xs-3">
+                                        <p class="label">Notes</p>
+                                    </div>
+                                    <div class="col-9 col-md-9 col-xs-9">
+                                        <p class="text">Je mange du chocolat pendant la course car j’adore ça, il est possible que j’en mette partout.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row resume-tab">
+                            <div class="resume-tab-inner">
+                                <div class="row">
+                                    <div class="control-group col-6 col-md-6 col-xs-6">
+                                        <div class="btn-submit-wrapper">
+                                            <input type="submit" class="btn white btn-submit" value="Supprimer">
+                                        </div>   
+                                    </div>
+                                    <div class="control-group col-6 col-md-6 col-xs-6">
+                                        <div class="btn-submit-wrapper">
+                                            <input type="submit" class="btn white btn-submit" value="Redispatch">
+                                        </div>   
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div> <!-- End of resume -->
+
+                    <div class="resume-driver">
+                        <div class="resume-driver-inner">
+                            <p class="driver">Charles Ganem</p>
+                            <p class="phone">+33 6 12 34 56 78</p>
+                        </div>
+                    </div>
+                </div>  
+            </div>            
+        </div>
+
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+        
+        <script async defer src="https://maps.googleapis.com/maps/api/js"></script>
+        <script src="../scripts/bundle.js"></script>
+
+    </body>
+</html>

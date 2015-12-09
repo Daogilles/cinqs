@@ -121,5 +121,30 @@ header {
 				}
 			}
 		}
+
+		.account {
+			float: right;
+			p {
+				color: $blue-dark;			
+				font-size: 13px;
+				font-family: $brandon-medium;
+				text-transform: uppercase;
+				&:before {
+					display: none;
+				}
+				&:after {
+					border-left: 7px solid transparent;
+					border-right: 7px solid transparent;
+					border-top: 7px solid $blue-dark;
+					content: "";
+					height: 10px;
+					width: 0px;
+					position: absolute;
+					right: -20px;
+					top: 50%;
+					margin-top: -3px;
+				}			
+			}
+		}
 	}
 }

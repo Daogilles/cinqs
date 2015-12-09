@@ -1,11 +1,8 @@
 //
 // Actions page
 // --------------------------------------------------
-body.interne {
-	background-color: $gray-lightest;
-}
 .page-interne-actions {
-	margin: 50px auto;
+	margin: 50px 0;
 	max-width: 960px;
 }
 
@@ -24,8 +21,7 @@ h2.block-title {
 
 ul.actions-content {
 	border-radius: 8px;
-	border: 1px solid $gray-border;
-	background-color: #F5F5F5;
+	border: 1px solid $gray-border;	
 	padding: 0;
 	margin: 0 30px;
 	margin-top: 15px;
@@ -34,9 +30,14 @@ ul.actions-content {
 		border-top: 1px solid $gray-border;
 	}
 
-	li {						
+	li {					
+		background-color: #F5F5F5;	
 		list-style: none;			
 		position: relative;		
+
+		&:hover {
+			background-color: $gray-lighter;
+		}
 		a {
 			color: $blue-dark;
 			display: block;

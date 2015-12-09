@@ -1,0 +1,186 @@
+//
+// En cours page
+// --------------------------------------------------
+
+.interne-content-inner {
+	@include respond-to('medium') {
+		padding: 0 30px;
+	}
+}
+
+.page-interne-encours {
+
+	.encours-tab-content {
+		padding: 0 30px;
+	}
+
+	.encours-tab-search {
+		margin: 0 auto;
+		width: 300px;
+	}
+	
+	.column {
+		float: left;
+		padding: 0;
+		margin: 0;
+		position: relative;
+		width: 20%;
+		margin-bottom: 30px;
+		text-align: center;
+
+		@include respond-to('huge') {
+			width: 50%;
+		}
+		@include respond-to('small') {
+			width: 100%;
+		}
+
+		.column-title {
+			text-align: center;
+			p {
+				color: $blue-dark;
+				display: inline-block;
+				font-family: $brandon-medium;
+				font-size: 14px;
+				text-transform: uppercase;
+			}
+			span {
+				display: inline-block;
+				font-size: 14px;
+				font-family: $proxima-semibold;
+				padding-left: 6px;
+				&.green {
+					color: $green;
+				}
+				&.gray {
+					color: #868686;
+				}
+				&.purple {
+					color: $purple;
+				}
+				&.red {
+					color: $red;
+				}
+				&.orange {
+					color: $orange-true;
+				}
+			}
+		}
+	}
+
+	.column + .column{
+		margin-left: 20px;
+		width: calc(20% - 20px);
+
+		@include respond-to('huge') {
+			width: calc(50% - 20px);
+		}
+
+		@include respond-to('small') {
+			margin-left: 0;
+			width: 100%;
+		}
+	}
+
+	a.show-more {
+		color: $gray;		
+		font-family: $proxima-regular;
+		font-size: 12px;
+		margin: 10px auto;
+		text-align: center;
+		&:before {
+			border-left: 2px solid $gray-border;
+			border-top: 2px solid $gray-border;
+			content: "";
+			height: 7px;
+			width: 7px;
+			position: absolute;
+			left: -20px;
+			top: 50%;
+			margin-top: -7px;
+			@include transform(rotate(225deg));
+		}
+	}
+
+	.list {
+		border: 1px solid $gray-border;		
+		height: 100%;
+		width: 100%;
+		position: relative;
+		margin-top: 15px;	
+		text-align: left;			
+
+		.list-tab + .list-tab {
+			border-top: 1px solid $gray-border;
+		}
+
+		.list-tab-text {
+			height: 46px;
+			line-height: 46px;
+			p {			
+				font-size: 12px;			
+				&.name {
+					color: $blue-dark;
+					font-family: $proxima-semibold;	
+				}
+				&.time {
+					color: $gray;
+					font-family: $proxima-regular;
+				}
+			}
+			span.more-text {
+				color: $gray;
+				font-size: 10px;
+				font-family: $proxima-light;
+			}
+		}
+		.list-tab-time {
+			height: 46px;
+			line-height: 46px;
+		}
+
+		.list-tab {
+			background-color: $white;
+			cursor: pointer;
+			padding: 0 10px;
+			&:hover, &.active {
+				p, span {
+					color: $white;
+				}
+				&.red {
+					background-color: $red;
+				}
+				&.orange {
+					background-color: $orange-true;
+				}
+				&.purple {
+					background-color: $purple;
+				}
+				&.green {
+					background-color: $green;
+				}
+				&.gray {
+					background-color: #868686;
+				}
+			}
+
+			.icon {
+				height: 16px;
+				width: 16px;
+				margin-left: 10px;
+				&.big-smile {
+					background: url(../images/big-smile.png) center center no-repeat;
+					background-size: 100%;
+				}
+				&.happy {
+					background: url(../images/happy.png) center center no-repeat;
+					background-size: 100%;
+				}
+				&.dollar {
+					background: url(../images/dollar.png) center center no-repeat;
+					background-size: 100%;
+				}
+			}
+		}
+	}
+}

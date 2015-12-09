@@ -55,7 +55,10 @@ $blue:			#1e343e;
 $brand:         #074276;
 $brand-hover:   #FFF;
 
+$purple:        #9013FE;
+
 $green-white:   #E5F6F3;
+$green:         #20A330;
 
 $red:           #F32F00;
 $red-light:     #FFEDE8;
@@ -119,7 +122,7 @@ $breakpoints: (
   'small': (max-width: 767px),
   'medium': (max-width: 1023px),
   'large': (max-width: 1100px),
-  'huge': (min-width: 1131px)
+  'huge': (max-width: 1279px)
 );
 
 

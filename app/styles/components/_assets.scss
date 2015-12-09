@@ -1,0 +1,80 @@
+//
+// assets
+// --------------------------------------------------
+
+.resume {
+	border: 1px solid $gray-border;
+	border-radius: 8px;
+	height: auto;
+	width: 314px;
+	
+
+	p {
+		font-size: 13px;
+		font-family: $proxima-regular;
+		&.label {
+			color: $gray;
+			text-align: right;
+		}
+		&.text {
+			color: $blue-dark;
+			padding-left: 20px;
+		}
+	}
+
+	.resume-tab {
+		padding: 0 10px;
+		
+		.resume-tab-inner {
+			padding: 15px 0;			
+
+			.row + .row {
+				margin-top: 8px;
+			}
+		}
+
+	}
+
+	.resume-tab + .resume-tab {
+		border-top: 1px solid $gray-border;
+	}
+
+	&.gray {
+		background-color: #EFEFEF;
+	}
+
+	.control-group {
+		margin-top: 0;
+	}
+	.btn-submit-wrapper {
+		margin: 0 auto;
+		width: 120px;
+		input {
+			height: 22px;
+			line-height: 22px;
+			font-size: 13px;
+			font-family: $proxima-regular;
+		}
+	}
+}
+
+.resume-driver {
+	border-radius: 8px;
+	border:1px solid $gray-border;
+	background-color: $black-light;
+	padding: 6px 15px;
+	text-align: center;
+	p {
+		color: $white;
+		font-size: 13px;
+		margin-top: 0;
+
+		&.driver {
+			font-family: $proxima-semibold;
+		}
+		&.phone {
+			font-family: $proxima-light;
+		}
+	}
+
+}

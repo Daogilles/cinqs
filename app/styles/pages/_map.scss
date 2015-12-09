@@ -1,0 +1,195 @@
+//
+// A l'avance page
+// --------------------------------------------------
+
+.interne-content-inner {
+	@include respond-to('medium') {
+		padding: 0 30px;
+	}
+}
+
+.panel {
+	border-right: 1px solid $gray-border;
+	float: left;
+	padding: 0;
+	width: 200px;
+	height: 100vh;
+
+	li {
+		cursor: pointer;
+		height: 50px;
+		line-height: 50px;
+		list-style: none;		
+		position: relative;		
+
+		&:last-child {
+			border-bottom: 1px solid $gray-border;
+		}
+
+		.map-tab-search {
+			padding: 0 15px;
+			input {
+				font-size: 12px;
+				height: 26px;
+				line-height: 26px;
+				@include placeholder {
+					line-height: 26px;
+					font-size: 12px;
+				}
+			}
+		}
+		.panel-first-label {
+			padding: 0 15px;
+			p {
+				color: $blue-dark;
+				display: inline-block;
+				font-family: $brandon-medium;
+				font-size: 14px;
+				text-transform: uppercase;
+			}
+			span {
+				display: inline-block;
+				font-size: 14px;
+				font-family: $proxima-semibold;
+				padding-left: 6px;
+				&.green {
+					color: $green;
+				}
+				&.gray {
+					color: #868686;
+				}
+				&.purple {
+					color: $purple;
+				}
+				&.red {
+					color: $red;
+				}
+				&.orange {
+					color: $orange-true;
+				}
+			}
+		}
+
+		&:hover, &.active {
+			p, span {
+				color: $white !important;
+			}
+			&.red {
+				background-color: $red;
+			}
+			&.orange {
+				background-color: $orange-true;
+			}
+			&.purple {
+				background-color: $purple;
+			}
+			&.green {
+				background-color: $green;
+			}
+			&.gray {
+				background-color: #868686;
+			}
+			&.rose {
+				background-color: $rose;
+			}
+			&:after {
+				border-left: 2px solid $white;
+	        	border-top: 2px solid $white;
+			}
+		}
+	}
+
+	li + li {
+		border-top: 1px solid $gray-border;		
+	}
+
+	&.panel-first {
+		background-color: $gray-lightest;
+		position: relative;
+		z-index: 3;
+		li + li {
+			&:after {
+				background: transparent;
+		        content: "";
+		        display: block;
+		        position: absolute;
+		        height: 10px;
+		        width: 10px;
+		        right: 15px;
+		        top: 50%;
+		        border-left: 2px solid #C7C7CC;
+		        border-top: 2px solid #C7C7CC;
+		        
+		        z-index: 2;
+		        // @include transform(translateY(-50%));
+		        @include transform(translateY(-50%) rotate(135deg));
+			}
+		}
+	}
+
+	&.panel-second {
+		background-color: #F3F3F3;
+		margin-top: 0;
+		@include transform(translateX(0));
+		position: absolute;
+		z-index: 2;
+		
+		@include transition-property(transform);
+		@include transition-duration(0.4s);
+
+		&.active {
+			@include transform(translateX(200px));
+		}
+
+		li {
+			padding: 0 15px;
+
+			p {
+				color: $blue-dark;
+				font-size: 14px;
+				font-family: $proxima-semibold;			
+			}
+
+			&:hover, &.active {
+				background-color: #DEDFDF;
+				p {
+					color: $blue-dark !important;
+				}
+			}
+		}
+	}
+}
+
+#map-container {
+	left: 200px;
+	height: 100vh;
+	position: relative;
+	width: calc(100vw - 200px);
+	#map {
+		left: 0;
+		top: 0;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		z-index: 1;
+	}
+
+	.resume {
+		left: 50%;
+		position: absolute;
+		top: 50%;
+		z-index: 4;
+
+		@include transform(translate(-50%, -50%));
+	}
+
+	.resume-driver {
+		right: 5%;
+		position: absolute;
+		top: 50%;
+		z-index: 4;
+
+		@include transform(translate(-50%, -50%));
+	}
+}
+

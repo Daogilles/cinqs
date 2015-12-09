@@ -35,6 +35,7 @@
 @import
     'components/menu',
     'components/buttons',
+    'components/assets',
     'components/icons',
     'components/alerts',
     'components/loaders',
@@ -49,6 +50,8 @@
 
 // Pages
 @import
+    'pages/map',
+    'pages/encours',
     'pages/avance',
     'pages/actions',
     'pages/login',

@@ -78,7 +78,7 @@
 			margin-top: 100px;
 			padding:30px 20px;
 
-			@include respond-to('medium') {
+			@include respond-to('small') {
 				margin-top: -200px;
 				margin-bottom: 70px;
 			}
@@ -158,6 +158,11 @@
 		margin: 0 auto;
 		padding: 60px 0;
 		width: 100%;
+
+		@include respond-to('small') {
+			padding: 0 30px;
+		}
+
 		h3 {
 			text-align: center;
 		}
