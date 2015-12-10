@@ -112,7 +112,39 @@ function App() {
         $('.panel-second li').on('click', function() {
             $(this).addClass('active');
         })
-    };
+
+        $('.list-tab').on('click', function() {
+
+            
+            var wResume = $('.resume').width();
+            var hResume = $('.resume').height();
+            var size = $(this).offset();
+            var wWidth = window.innerWidth;
+            var pLeft = 0;
+            var pTop = 0;
+
+            if ( Math.floor(size.left) + $(this).width() + 30 + wResume > wWidth) {
+                // Si tooltip supérieur a la size de la window, on affiche tooltip a gauche
+                pLeft = Math.floor(size.left) - wResume - 10;
+            }else {
+                // Si tooltip inferieur a la size de la window, donc a droite
+                pLeft = Math.floor(size.left) + $(this).width() + 30;
+            }
+
+            if ( size.top - (hResume/2) < 50) {
+                pTop = size.top;
+            }else {
+                pTop = size.top - (hResume/2);
+            }
+            // console.log(Math.floor(size.left) + $(this).width() + 30 + wResume);
+            // console.log(size.top - (hResume/2))
+
+            $('.resume').css({
+                top: pTop,
+                left: pLeft
+            }).removeClass('not-active').addClass('active');
+        })
+    }; 
 
     //
     // Resize stage

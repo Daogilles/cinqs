@@ -2,7 +2,7 @@ var gulp   = require('gulp'),
     watch  = require('gulp-watch'),
     config = require('../../package.json').gulp;
 
-gulp.task('watch', ['setWatch', 'html', 'browserify', 'serve', 'copy'], function() {
+gulp.task('watch', ['setWatch', 'html', 'browserify', 'copy'], function() {
 
     watch(config.app+'/**/*.scss', function(){
         gulp.start('styles');

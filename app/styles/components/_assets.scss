@@ -3,10 +3,22 @@
 // --------------------------------------------------
 
 .resume {
+	background-color: $white;
 	border: 1px solid $gray-border;
 	border-radius: 8px;
 	height: auto;
 	width: 314px;
+
+	&.not-active {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	&.active {
+		position: absolute;
+		opacity: 1;
+		visibility: visible;
+	}
 	
 
 	p {
@@ -47,6 +59,8 @@
 		margin-top: 0;
 	}
 	.btn-submit-wrapper {
+		border:1px solid $gray-border;
+		border-radius: 5px;
 		margin: 0 auto;
 		width: 120px;
 		input {

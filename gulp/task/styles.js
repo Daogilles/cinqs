@@ -13,6 +13,7 @@ gulp.task('styles', function() {
     return gulp.src(config.app+'/styles/*.scss')
         .pipe(plumber({errorHandler: handleErrors}))
         .pipe(sass({
+            outputStyle: global.isWatching ? 'nested' : 'compressed',
             includePaths: require('node-bourbon').includePaths
         }))
         .pipe(gulp.dest(global.isWatching ? config.tmp+'/styles' : config.dist+'/styles'))

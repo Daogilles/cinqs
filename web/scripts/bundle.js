@@ -1,4 +1,4 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"/Library/WebServer/Documents/cinqs/app/scripts/app.js":[function(require,module,exports){
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"/Users/gillesdaoduc/Sites/cinqs/app/scripts/app.js":[function(require,module,exports){
 'use strict';
 
 //
@@ -113,7 +113,39 @@ function App() {
         $('.panel-second li').on('click', function() {
             $(this).addClass('active');
         })
-    };
+
+        $('.list-tab').on('click', function() {
+
+            
+            var wResume = $('.resume').width();
+            var hResume = $('.resume').height();
+            var size = $(this).offset();
+            var wWidth = window.innerWidth;
+            var pLeft = 0;
+            var pTop = 0;
+
+            if ( Math.floor(size.left) + $(this).width() + 30 + wResume > wWidth) {
+                // Si tooltip supérieur a la size de la window, on affiche tooltip a gauche
+                pLeft = Math.floor(size.left) - wResume - 10;
+            }else {
+                // Si tooltip inferieur a la size de la window, donc a droite
+                pLeft = Math.floor(size.left) + $(this).width() + 30;
+            }
+
+            if ( size.top - (hResume/2) < 50) {
+                pTop = size.top;
+            }else {
+                pTop = size.top - (hResume/2);
+            }
+            // console.log(Math.floor(size.left) + $(this).width() + 30 + wResume);
+            // console.log(size.top - (hResume/2))
+
+            $('.resume').css({
+                top: pTop,
+                left: pLeft
+            }).removeClass('not-active').addClass('active');
+        })
+    }; 
 
     //
     // Resize stage
@@ -148,7 +180,7 @@ function App() {
 $(window).load(function(){
     new App();
 });
-},{"gsap":"/Library/WebServer/Documents/cinqs/node_modules/gsap/src/uncompressed/TweenMax.js","icheck":"/Library/WebServer/Documents/cinqs/bower_components/icheck/icheck.min.js","jquery":"/Library/WebServer/Documents/cinqs/bower_components/jquery/dist/jquery.js","selectordie":"/Library/WebServer/Documents/cinqs/bower_components/selectordie/_src/selectordie.js"}],"/Library/WebServer/Documents/cinqs/bower_components/icheck/icheck.min.js":[function(require,module,exports){
+},{"gsap":"/Users/gillesdaoduc/Sites/cinqs/node_modules/gsap/src/uncompressed/TweenMax.js","icheck":"/Users/gillesdaoduc/Sites/cinqs/bower_components/icheck/icheck.min.js","jquery":"/Users/gillesdaoduc/Sites/cinqs/bower_components/jquery/dist/jquery.js","selectordie":"/Users/gillesdaoduc/Sites/cinqs/bower_components/selectordie/_src/selectordie.js"}],"/Users/gillesdaoduc/Sites/cinqs/bower_components/icheck/icheck.min.js":[function(require,module,exports){
 (function (global){
 ; var __browserify_shim_require__=require;(function browserifyShim(module, exports, require, define, browserify_shim__define__module__export__) {
 /*! iCheck v1.0.2 by Damir Sultanov, http://git.io/arlzeA, MIT Licensed */
@@ -168,7 +200,7 @@ b[_type],e=/wn|up/.test(d)?t:v;if(!c[n]){if(d==_click)A(a,!1,!0);else{if(/wn|er|
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],"/Library/WebServer/Documents/cinqs/bower_components/jquery/dist/jquery.js":[function(require,module,exports){
+},{}],"/Users/gillesdaoduc/Sites/cinqs/bower_components/jquery/dist/jquery.js":[function(require,module,exports){
 (function (global){
 ; var __browserify_shim_require__=require;(function browserifyShim(module, exports, require, define, browserify_shim__define__module__export__) {
 /*!
@@ -9387,7 +9419,7 @@ return jQuery;
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],"/Library/WebServer/Documents/cinqs/bower_components/selectordie/_src/selectordie.js":[function(require,module,exports){
+},{}],"/Users/gillesdaoduc/Sites/cinqs/bower_components/selectordie/_src/selectordie.js":[function(require,module,exports){
 (function (global){
 ; var __browserify_shim_require__=require;(function browserifyShim(module, exports, require, define, browserify_shim__define__module__export__) {
 /* ===========================================================
@@ -10046,7 +10078,7 @@ return jQuery;
 }).call(global, undefined, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],"/Library/WebServer/Documents/cinqs/node_modules/gsap/src/uncompressed/TweenMax.js":[function(require,module,exports){
+},{}],"/Users/gillesdaoduc/Sites/cinqs/node_modules/gsap/src/uncompressed/TweenMax.js":[function(require,module,exports){
 (function (global){
 /*!
  * VERSION: 1.18.0
@@ -17621,4 +17653,4 @@ if (_gsScope._gsDefine) { _gsScope._gsQueue.pop()(); } //necessary in case Tween
 
 })((typeof(module) !== "undefined" && module.exports && typeof(global) !== "undefined") ? global : this || window, "TweenMax");
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}]},{},["/Library/WebServer/Documents/cinqs/app/scripts/app.js"]);
+},{}]},{},["/Users/gillesdaoduc/Sites/cinqs/app/scripts/app.js"]);
