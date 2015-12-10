@@ -4,7 +4,7 @@
 .logo {
 	background-color: $gray-light;	
 	height: 50px;
-	width: 94px;	
+	width: 94px;		
 }
 
 body.interne {
@@ -20,6 +20,45 @@ body.interne {
 		position: absolute;
 		top: 50%;
 		@include transform(translateY(-50%));
+	}
+}
+
+.progress-bar {
+	border-radius: 30px;
+	position: relative;
+	height: 10px;
+	width: 100%;
+	margin-top: 10px;
+
+	.progress-bar-empty {
+		border-radius: 30px;
+		background-color: $gray-lighter;
+		display: block;
+		height: 100%;
+		width: 100%;
+	}
+
+	.progress-bar-full {
+		border-radius: 30px;
+		background-color: $turquoise;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		
+		&.step1 {
+			width: 25%;	
+		}
+		&.step2 {
+			width: 50%;	
+		}
+		&.step3 {
+			width: 75%;	
+		}
+		&.step4 {
+			width: 100%;	
+		}
 	}
 }
 
@@ -91,6 +130,40 @@ header {
 		li + li {
 			margin-left: 20px;
 		}
+
+		&.header-big {
+			@include respond-to('small') {
+				display: none;
+			}
+		}
+	}
+
+	.header-mobile {
+		display: none;
+		float: right;
+		width: 50%;
+		p {
+			color: $blue-dark;
+			font-size: 12px;
+			font-family: $proxima-semibold;
+			display: inline-block;
+			&:before {
+				display: none;
+			}
+		}
+
+		.progress-bar {
+			display: inline-block;
+			width: 75%;
+		}
+
+		@include respond-to('small') {
+			display: block;
+
+			.progress-bar {
+				margin-top: 0;
+			}
+		}
 	}
 
 	&.interne-header {
@@ -120,31 +193,32 @@ header {
 					}
 				}
 			}
-		}
+		}		
+	}
 
-		.account {
-			float: right;
-			p {
-				color: $blue-dark;			
-				font-size: 13px;
-				font-family: $brandon-medium;
-				text-transform: uppercase;
-				&:before {
-					display: none;
-				}
-				&:after {
-					border-left: 7px solid transparent;
-					border-right: 7px solid transparent;
-					border-top: 7px solid $blue-dark;
-					content: "";
-					height: 10px;
-					width: 0px;
-					position: absolute;
-					right: -20px;
-					top: 50%;
-					margin-top: -3px;
-				}			
+	.account {
+		float: right;
+		p {
+			color: $blue-dark;			
+			font-size: 13px;
+			font-family: $brandon-medium;
+			text-transform: uppercase;
+			&:before {
+				display: none;
 			}
+			&:after {
+				border-left: 7px solid transparent;
+				border-right: 7px solid transparent;
+				border-top: 7px solid $blue-dark;
+				content: "";
+				height: 10px;
+				width: 0px;
+				position: absolute;
+				right: -20px;
+				top: 50%;
+				margin-top: -3px;
+			}			
 		}
 	}
 }
+

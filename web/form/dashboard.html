@@ -61,10 +61,54 @@
                     <li><a href="./vehicule.html">Véhicules</a></li>
                     <li><a href="#">Chauffeurs</a></li>
                 </ul>
+
+                <div class="account">
+                    <p>Charles</p>
+                </div>
             </div>            
-        </header>     
+        </header>
+
+        <div class="content-form-partenaire wrapper">
+            <div class="row">
+                <div class="infos-wrapper content-form-menu active col-4 col-md-4 col-xs-12">
+                    <ul>
+                        <li class="done">
+                            <a href="#" data-step='1'>
+                                <p>Modifier le profil</p>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#" data-step='2'>
+                                <p>Informations bancaires</p>
+                            </a>
+                        </li>
+                        <li class="not-done">
+                            <a href="#" data-step='3'>
+                                <p>Document téléchargés</p>
+                            </a>
+                        </li>
+                        <li class="not-done">
+                            <a href="#" data-step='4'>
+                                <p>Contrats</p>
+                            </a>
+                        </li>
+                    </ul>                
+                </div>
+                <div class="content-dashboard-partenaire-inner col-8 col-md-12 col-xs-12">
+                    <div class="control-group top">
+                        <p>Conditions de partenaraits</p>
+                    </div>
+                    <div class="control-group bottom">
+                        <div class="inner-wrapper valign">
+                            <input type="submit" class="btn gray-light btn-file" value="Télécharger">
+                            <a href="#" class="orange">Modifier</a>
+                        </div>
+                    </div>
+                </div> 
+            </div>            
+        </div>
     
-        <div class="content-form wrapper row">
+        <div class="content-form wrapper active row">
             <div class="infos-wrapper content-form-menu active col-4 col-md-4 col-xs-12">
 
                 <ul>
@@ -93,7 +137,7 @@
             </div>            
 
 
-            <div class="content-dashboard-inner step1 active col-8 col-md-12 col-xs-12">
+            <div class="content-dashboard-inner step1 col-8 col-md-12 col-xs-12">
                 <h2 class="step-title">Modifier le profil</h2>
                 
                 <div class="col-12 col-md-12 col-xs-12">
@@ -186,12 +230,12 @@
                         </div>
                     </form>                    
                 </div>
-            </div>
+            </div> <!-- end of step1 -->
 
 
 
 
-            <div class="content-dashboard-inner step2  col-8 col-md-12 col-xs-12">
+            <div class="content-dashboard-inner step2 active col-8 col-md-12 col-xs-12">
                 <h2 class="step-title">Informations bancaires</h2>
                 
                 <div class="col-12 col-md-12 col-xs-12">                     
@@ -242,7 +286,64 @@
                     </div>
                    
                 </div>
-            </div>
+            </div> <!-- end of step2 -->
+
+
+            <div class="content-dashboard-inner step2-edit col-8 col-md-12 col-xs-12">
+                <h2 class="step-title">Informations bancaires</h2>
+                
+                <div class="col-12 col-md-12 col-xs-12">                     
+
+                    <div class="control-group row gap-40">
+                        <div class="inner-left col-3 col-md-3 col-xs-3">
+                            <span class="label">IBAN</span>    
+                        </div>
+                        <div class="inner-right col-9 col-md-9 col-xs-9">
+                            <input type="text" placeholder="FR76 1515 7001 5578 6578 1234 987">
+                        </div>                        
+                    </div>
+
+                    <div class="control-group row">
+                        <div class="inner-left col-3 col-md-3 col-xs-3">
+                            <span class="label">SWIFT/BIC</span>    
+                        </div>
+                        <div class="inner-right col-9 col-md-9 col-xs-9">
+                            <input type="text" placeholder="BREDFRPPYYY">
+                        </div>
+                    </div>
+
+                    <div class="control-group row">
+                        <div class="inner-left col-3 col-md-3 col-xs-3">
+                            <span class="label">Titulaire du compte</span>    
+                        </div>
+                        <div class="inner-right col-9 col-md-9 col-xs-9">
+                            <input type="text" placeholder="Charles Ganem">
+                        </div>                      
+                    </div>                    
+                    
+                    <div class="control-group row">
+                        <div class="inner-left col-3 col-md-3 col-xs-3">
+                            <span class="label">Document RIB</span>    
+                        </div>
+                        <div class="inner-right col-9 col-md-9 col-xs-9">
+                            <input type="submit" class="btn gray-light btn-file" value="Choisir le fichier">
+                            <span class="more-text">Ces informations sont partagées avec vos client pour leur permttre de vous contacter en cas de problème.</span>  
+                        </div>
+                    </div>
+                    
+                    <span class="sep col-9 col-md-9 col-xs-9"></span>                                                            
+                
+                    <div class="control-group control-group-submit row">
+                        <div class="col-3 col-md-3 col-xs-3">
+                            <a href="#" class="cancel">Annuler</a>
+                        </div>
+                        <div class="btn-submit-wrapper col-9 col-md-9 col-xs-9">                                
+                            <input type="submit" class="btn turquoise btn-submit" value="Enregistrer les modifications">
+                        </div>   
+                    </div>
+                   
+                </div>
+            </div> <!-- end of step2-edit -->
 
 
 
@@ -334,7 +435,7 @@
                     </div>
                    
                 </div>
-            </div>
+            </div> <!-- end of step3 -->
 
 
             
@@ -352,9 +453,7 @@
             </div>
 
 
-
-
-        </div>
+        </div> <!--  end of content-form -->
         
 
         <footer>

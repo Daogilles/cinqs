@@ -1,0 +1,66 @@
+//
+// popin
+// --------------------------------------------------
+
+.popin {
+	display: none;
+	height: 100%;
+	position: fixed;
+	width: 100%;
+	z-index: 9;
+	&.active {
+		display: block;
+	}
+}
+
+.popin-bg {
+	background-color: $black;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	opacity: 0.6;
+	z-index: 7;
+}
+
+.popin-inner {
+	background-color: $white;
+	border: 1px solid $gray-border;
+	border-radius: 8px;
+	height: 260px;
+	position: absolute;
+	width: 560px;
+	top: 100px;
+	left: 50%;	
+	z-index: 8;
+	@include transform(translateX(-50%));
+
+	.popin-container {
+		padding: 20px;
+	}
+
+	h2 {
+		color: $blue-dark;
+		font-family: $proxima-semibold;
+		font-size: 30px;
+		text-align: center;
+	}
+	p {
+		color: $gray;
+		font-size: 14px;
+		font-family: $proxima-light;
+		padding: 20px 30px;
+		margin-top: 0;
+	}
+
+	.control-group {
+		float: left;
+		margin-top: 0;
+		width: 50%;
+		&.left {
+			padding-right: 10px;
+		}
+		&.right {
+			padding-left: 10px;
+		}
+	}
+}

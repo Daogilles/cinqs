@@ -3293,6 +3293,35 @@ body.interne .logo {
   -o-transform: translateY(-50%);
   transform: translateY(-50%); }
 
+.progress-bar {
+  border-radius: 30px;
+  position: relative;
+  height: 10px;
+  width: 100%;
+  margin-top: 10px; }
+  .progress-bar .progress-bar-empty {
+    border-radius: 30px;
+    background-color: #EDEDED;
+    display: block;
+    height: 100%;
+    width: 100%; }
+  .progress-bar .progress-bar-full {
+    border-radius: 30px;
+    background-color: #35D3B5;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%; }
+    .progress-bar .progress-bar-full.step1 {
+      width: 25%; }
+    .progress-bar .progress-bar-full.step2 {
+      width: 50%; }
+    .progress-bar .progress-bar-full.step3 {
+      width: 75%; }
+    .progress-bar .progress-bar-full.step4 {
+      width: 100%; }
+
 header {
   background-color: #FFF;
   border-bottom: 1px solid #e2e2e2;
@@ -3357,6 +3386,28 @@ header {
         text-transform: uppercase; }
     header ul li + li {
       margin-left: 20px; }
+    @media (max-width: 767px) {
+      header ul.header-big {
+        display: none; } }
+  header .header-mobile {
+    display: none;
+    float: right;
+    width: 50%; }
+    header .header-mobile p {
+      color: #333D47;
+      font-size: 12px;
+      font-family: "proxima_nova_ltsemibold";
+      display: inline-block; }
+      header .header-mobile p:before {
+        display: none; }
+    header .header-mobile .progress-bar {
+      display: inline-block;
+      width: 75%; }
+    @media (max-width: 767px) {
+      header .header-mobile {
+        display: block; }
+        header .header-mobile .progress-bar {
+          margin-top: 0; } }
   header.interne-header ul {
     margin-left: 140px; }
     header.interne-header ul:before {
@@ -3378,16 +3429,16 @@ header {
         -ms-transform: translateY(-50%);
         -o-transform: translateY(-50%);
         transform: translateY(-50%); }
-  header.interne-header .account {
+  header .account {
     float: right; }
-    header.interne-header .account p {
+    header .account p {
       color: #333D47;
       font-size: 13px;
       font-family: "brandon_grotesquemedium";
       text-transform: uppercase; }
-      header.interne-header .account p:before {
+      header .account p:before {
         display: none; }
-      header.interne-header .account p:after {
+      header .account p:after {
         border-left: 7px solid transparent;
         border-right: 7px solid transparent;
         border-top: 7px solid #333D47;
@@ -3610,6 +3661,60 @@ table {
   .btn.white {
     background-color: #FFF;
     color: #333D47; }
+
+.popin {
+  display: none;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: 9; }
+  .popin.active {
+    display: block; }
+
+.popin-bg {
+  background-color: #000;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  opacity: 0.6;
+  z-index: 7; }
+
+.popin-inner {
+  background-color: #FFF;
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+  height: 260px;
+  position: absolute;
+  width: 560px;
+  top: 100px;
+  left: 50%;
+  z-index: 8;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%); }
+  .popin-inner .popin-container {
+    padding: 20px; }
+  .popin-inner h2 {
+    color: #333D47;
+    font-family: "proxima_nova_ltsemibold";
+    font-size: 30px;
+    text-align: center; }
+  .popin-inner p {
+    color: #9A9A9A;
+    font-size: 14px;
+    font-family: "proxima_nova_ltlight";
+    padding: 20px 30px;
+    margin-top: 0; }
+  .popin-inner .control-group {
+    float: left;
+    margin-top: 0;
+    width: 50%; }
+    .popin-inner .control-group.left {
+      padding-right: 10px; }
+    .popin-inner .control-group.right {
+      padding-left: 10px; }
 
 .resume {
   border: 1px solid #e2e2e2;
@@ -4785,35 +4890,9 @@ ul.actions-content {
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     transform: translateY(-50%); }
-
-.content-form .step-wrapper .progress-bar {
-  border-radius: 30px;
-  position: relative;
-  height: 10px;
-  width: 100%;
-  margin-top: 10px; }
-  .content-form .step-wrapper .progress-bar .progress-bar-empty {
-    border-radius: 30px;
-    background-color: #EDEDED;
-    display: block;
-    height: 100%;
-    width: 100%; }
-  .content-form .step-wrapper .progress-bar .progress-bar-full {
-    border-radius: 30px;
-    background-color: #35D3B5;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%; }
-    .content-form .step-wrapper .progress-bar .progress-bar-full.step1 {
-      width: 25%; }
-    .content-form .step-wrapper .progress-bar .progress-bar-full.step2 {
-      width: 50%; }
-    .content-form .step-wrapper .progress-bar .progress-bar-full.step3 {
-      width: 75%; }
-    .content-form .step-wrapper .progress-bar .progress-bar-full.step4 {
-      width: 100%; }
+    @media (max-width: 767px) {
+      .page-form .logo {
+        left: 15px; } }
 
 .content-form .step-wrapper .control-group {
   display: none; }
@@ -4824,8 +4903,6 @@ ul.actions-content {
   border-left: 1px solid #e2e2e2;
   display: none;
   padding: 30px; }
-  .content-form .content-form-inner.step4 {
-    padding: 0; }
   .content-form .content-form-inner.active {
     display: block; }
   .content-form .content-form-inner h2 {
@@ -4899,8 +4976,51 @@ ul.actions-content {
       font-size: 14px;
       font-family: "proxima_nova_ltlight";
       margin-top: 10px; }
+  .content-form .content-form-inner.step4 {
+    padding: 0; }
+    @media (max-width: 767px) {
+      .content-form .content-form-inner.step4 {
+        display: none; } }
+  .content-form .content-form-inner.step4-mobile {
+    display: none; }
+    .content-form .content-form-inner.step4-mobile p {
+      font-size: 16px;
+      font-family: "proxima_nova_ltlight"; }
+      .content-form .content-form-inner.step4-mobile p.step4-mobile-title {
+        color: #9A9A9A;
+        font-family: "proxima_nova_ltsemibold"; }
+      .content-form .content-form-inner.step4-mobile p.file-name {
+        color: #9A9A9A; }
+    .content-form .content-form-inner.step4-mobile .control-group + .control-group {
+      margin-top: 30px; }
+    .content-form .content-form-inner.step4-mobile .btn::-webkit-input-placeholder {
+      color: #FFF;
+      font-size: 16px;
+      font-family: "proxima_nova_ltsemibold";
+      text-align: center; }
+    .content-form .content-form-inner.step4-mobile .btn::-moz-placeholder {
+      color: #FFF;
+      font-size: 16px;
+      font-family: "proxima_nova_ltsemibold";
+      text-align: center; }
+    .content-form .content-form-inner.step4-mobile .btn:-moz-placeholder {
+      color: #FFF;
+      font-size: 16px;
+      font-family: "proxima_nova_ltsemibold";
+      text-align: center; }
+    .content-form .content-form-inner.step4-mobile .btn:-ms-input-placeholder {
+      color: #FFF;
+      font-size: 16px;
+      font-family: "proxima_nova_ltsemibold";
+      text-align: center; }
+    @media (max-width: 767px) {
+      .content-form .content-form-inner.step4-mobile.active {
+        display: block; } }
   .content-form .content-form-inner .step4-top {
     padding: 30px; }
+    @media (max-width: 767px) {
+      .content-form .content-form-inner .step4-top {
+        padding: 0; } }
   .content-form .content-form-inner .step4-inner {
     border-top: 1px solid #e2e2e2; }
     .content-form .content-form-inner .step4-inner.step4-left {
@@ -5025,104 +5145,165 @@ ul.actions-content {
     -o-transform: translateY(-50%);
     transform: translateY(-50%); }
 
-.content-form .content-dashboard-inner {
-  border-left: 1px solid #e2e2e2;
-  display: none;
-  padding: 30px; }
-  .content-form .content-dashboard-inner.active {
+.content-form-partenaire {
+  display: none; }
+  .content-form-partenaire.active {
     display: block; }
-  .content-form .content-dashboard-inner h2 {
-    color: #333D47;
-    font-size: 20px;
-    font-family: "proxima_nova_ltsemibold";
-    text-align: center; }
-  .content-form .content-dashboard-inner p {
-    color: #333D47;
-    font-family: "proxima_nova_ltlight";
-    font-size: 14px; }
-  .content-form .content-dashboard-inner span {
-    color: #999999;
-    font-size: 14px;
-    font-family: "proxima_nova_rgregular"; }
-    .content-form .content-dashboard-inner span.text {
-      line-height: 45px;
-      color: #333D47; }
-    .content-form .content-dashboard-inner span.sep {
-      background-color: #e2e2e2;
-      height: 2px;
-      float: right;
-      margin: 20px 0; }
-  .content-form .content-dashboard-inner .inner-left {
-    text-align: right;
-    line-height: 45px; }
-  .content-form .content-dashboard-inner .inner-right {
-    padding-left: 20px; }
-    .content-form .content-dashboard-inner .inner-right span.status {
-      color: #FF8964;
-      line-height: 45px; }
-    .content-form .content-dashboard-inner .inner-right span.more-text {
-      margin-top: 10px;
+  .content-form-partenaire .content-dashboard-partenaire-inner {
+    border: 1px solid #e2e2e2;
+    margin: 30px 0; }
+    .content-form-partenaire .content-dashboard-partenaire-inner .control-group {
+      margin-top: 0;
+      position: relative; }
+      .content-form-partenaire .content-dashboard-partenaire-inner .control-group.top {
+        border-bottom: 1px solid #e2e2e2;
+        background-color: #F5F5F5;
+        height: 50px; }
+        .content-form-partenaire .content-dashboard-partenaire-inner .control-group.top p {
+          color: #333D47;
+          display: inline-block;
+          line-height: 50px;
+          font-size: 16px;
+          font-family: "proxima_nova_ltsemibold";
+          padding-left: 20px; }
+        .content-form-partenaire .content-dashboard-partenaire-inner .control-group.top:after {
+          background: transparent;
+          content: '';
+          position: absolute;
+          height: 10px;
+          width: 6px;
+          right: 20px;
+          top: 50%;
+          border-left: 3px solid #35D3B5;
+          border-top: 3px solid #35D3B5;
+          margin: 0;
+          margin-left: 20px;
+          z-index: 2;
+          -webkit-transform: translateY(-50%) rotate(225deg);
+          -moz-transform: translateY(-50%) rotate(225deg);
+          -ms-transform: translateY(-50%) rotate(225deg);
+          -o-transform: translateY(-50%) rotate(225deg);
+          transform: translateY(-50%) rotate(225deg); }
+      .content-form-partenaire .content-dashboard-partenaire-inner .control-group.bottom {
+        background-color: #FFF;
+        height: 70px;
+        line-height: 70px;
+        padding: 0 20px; }
+        .content-form-partenaire .content-dashboard-partenaire-inner .control-group.bottom input {
+          width: 130px; }
+        .content-form-partenaire .content-dashboard-partenaire-inner .control-group.bottom a.orange {
+          color: #FD9426;
+          font-family: "proxima_nova_ltsemibold";
+          font-size: 14px;
+          margin-left: 30px; }
+
+.content-form {
+  display: none; }
+  .content-form.active {
+    display: block; }
+  .content-form .content-dashboard-inner {
+    border-left: 1px solid #e2e2e2;
+    display: none;
+    padding: 30px; }
+    .content-form .content-dashboard-inner.active {
       display: block; }
-    .content-form .content-dashboard-inner .inner-right .btn-file {
-      font-size: 14px;
+    .content-form .content-dashboard-inner h2 {
+      color: #333D47;
+      font-size: 20px;
       font-family: "proxima_nova_ltsemibold";
-      width: 130px; }
-  .content-form .content-dashboard-inner input[type="text"], .content-form .content-dashboard-inner input[type="email"], .content-form .content-dashboard-inner input[type="password"], .content-form .content-dashboard-inner input[type="tel"] {
-    color: #333D47;
-    font-family: "proxima_nova_rgregular";
-    font-size: 14px; }
-  .content-form .content-dashboard-inner.step2 .control-group {
-    margin-top: 10px; }
-  .content-form .content-dashboard-inner.step3 p, .content-form .content-dashboard-inner.step4 p {
-    color: #333D47;
-    font-size: 16px;
-    font-family: "proxima_nova_ltsemibold"; }
-  .content-form .content-dashboard-inner.step3 span, .content-form .content-dashboard-inner.step4 span {
-    display: block;
-    margin: 20px 0; }
-  .content-form .content-dashboard-inner.step3 .btn-file, .content-form .content-dashboard-inner.step4 .btn-file {
-    width: 130px; }
-  .content-form .content-dashboard-inner.step3 {
-    padding-bottom: 0; }
-    .content-form .content-dashboard-inner.step3 a.orange {
-      color: #FD9426;
-      font-family: "proxima_nova_ltsemibold";
+      text-align: center; }
+    .content-form .content-dashboard-inner p {
+      color: #333D47;
+      font-family: "proxima_nova_ltlight";
+      font-size: 14px; }
+    .content-form .content-dashboard-inner span {
+      color: #999999;
       font-size: 14px;
-      margin-left: 30px; }
-    .content-form .content-dashboard-inner.step3 .control-group-big {
-      margin-bottom: 20px; }
-      .content-form .content-dashboard-inner.step3 .control-group-big:nth-child(1) {
-        margin-top: 40px; }
-      .content-form .content-dashboard-inner.step3 .control-group-big p {
-        display: inline-block; }
-      .content-form .content-dashboard-inner.step3 .control-group-big .check {
-        background: transparent;
-        display: inline-block;
-        height: 10px;
-        width: 6px;
-        right: 10px;
-        border-left: 3px solid #35D3B5;
-        border-top: 3px solid #35D3B5;
-        margin: 0;
-        margin-left: 20px;
-        z-index: 2;
-        -webkit-transform: rotate(225deg);
-        -moz-transform: rotate(225deg);
-        -ms-transform: rotate(225deg);
-        -o-transform: rotate(225deg);
-        transform: rotate(225deg); }
-    .content-form .content-dashboard-inner.step3 .control-group-big + .control-group-big {
-      border-top: 1px solid #e2e2e2;
-      padding-top: 20px; }
-  .content-form .content-dashboard-inner .control-group-submit {
-    float: right;
-    width: 60%;
-    margin-top: 0; }
-    .content-form .content-dashboard-inner .control-group-submit a.cancel {
-      color: #9A9A9A;
-      font-size: 14px;
-      font-family: "proxima_nova_ltsemibold";
+      font-family: "proxima_nova_rgregular"; }
+      .content-form .content-dashboard-inner span.text {
+        line-height: 45px;
+        color: #333D47; }
+      .content-form .content-dashboard-inner span.sep {
+        background-color: #e2e2e2;
+        height: 2px;
+        float: right;
+        margin: 20px 0; }
+    .content-form .content-dashboard-inner .inner-left {
+      text-align: right;
       line-height: 45px; }
+    .content-form .content-dashboard-inner .inner-right {
+      padding-left: 20px; }
+      .content-form .content-dashboard-inner .inner-right span.status {
+        color: #FF8964;
+        line-height: 45px; }
+      .content-form .content-dashboard-inner .inner-right span.more-text {
+        margin-top: 10px;
+        display: block; }
+      .content-form .content-dashboard-inner .inner-right .btn-file {
+        font-size: 14px;
+        font-family: "proxima_nova_ltsemibold";
+        width: 130px; }
+    .content-form .content-dashboard-inner input[type="text"], .content-form .content-dashboard-inner input[type="email"], .content-form .content-dashboard-inner input[type="password"], .content-form .content-dashboard-inner input[type="tel"] {
+      color: #333D47;
+      font-family: "proxima_nova_rgregular";
+      font-size: 14px; }
+    .content-form .content-dashboard-inner.step2 .control-group {
+      margin-top: 10px; }
+    .content-form .content-dashboard-inner.step2 .text {
+      text-transform: uppercase; }
+    .content-form .content-dashboard-inner.step2 .btn-submit-wrapper {
+      float: right;
+      width: 220px; }
+    .content-form .content-dashboard-inner.step3 p, .content-form .content-dashboard-inner.step4 p {
+      color: #333D47;
+      font-size: 16px;
+      font-family: "proxima_nova_ltsemibold"; }
+    .content-form .content-dashboard-inner.step3 span, .content-form .content-dashboard-inner.step4 span {
+      display: block;
+      margin: 20px 0; }
+    .content-form .content-dashboard-inner.step3 .btn-file, .content-form .content-dashboard-inner.step4 .btn-file {
+      width: 130px; }
+    .content-form .content-dashboard-inner.step3 {
+      padding-bottom: 0; }
+      .content-form .content-dashboard-inner.step3 a.orange {
+        color: #FD9426;
+        font-family: "proxima_nova_ltsemibold";
+        font-size: 14px;
+        margin-left: 30px; }
+      .content-form .content-dashboard-inner.step3 .control-group-big {
+        margin-bottom: 20px; }
+        .content-form .content-dashboard-inner.step3 .control-group-big:nth-child(1) {
+          margin-top: 40px; }
+        .content-form .content-dashboard-inner.step3 .control-group-big p {
+          display: inline-block; }
+        .content-form .content-dashboard-inner.step3 .control-group-big .check {
+          background: transparent;
+          display: inline-block;
+          height: 10px;
+          width: 6px;
+          right: 10px;
+          border-left: 3px solid #35D3B5;
+          border-top: 3px solid #35D3B5;
+          margin: 0;
+          margin-left: 20px;
+          z-index: 2;
+          -webkit-transform: rotate(225deg);
+          -moz-transform: rotate(225deg);
+          -ms-transform: rotate(225deg);
+          -o-transform: rotate(225deg);
+          transform: rotate(225deg); }
+      .content-form .content-dashboard-inner.step3 .control-group-big + .control-group-big {
+        border-top: 1px solid #e2e2e2;
+        padding-top: 20px; }
+    .content-form .content-dashboard-inner .control-group-submit {
+      float: right;
+      width: 60%;
+      margin-top: 0; }
+      .content-form .content-dashboard-inner .control-group-submit a.cancel {
+        color: #9A9A9A;
+        font-size: 14px;
+        font-family: "proxima_nova_ltsemibold";
+        line-height: 45px; }
 
 .page-dashboard {
   background-color: #FAFAFA;
@@ -5535,10 +5716,21 @@ ul.actions-content {
   background-size: cover;
   height: 680px;
   width: 100%; }
+  @media (max-width: 767px) {
+    .page-top {
+      height: 300px; } }
   .page-top .logo {
     position: absolute;
     top: 25px;
     left: 0; }
+    @media (max-width: 1023px) {
+      .page-top .logo {
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%); } }
   .page-top .menu {
     position: absolute;
     top: 25px;
@@ -5546,6 +5738,9 @@ ul.actions-content {
     width: 250px;
     height: 30px;
     line-height: 30px; }
+    @media (max-width: 1023px) {
+      .page-top .menu {
+        display: none; } }
     .page-top .menu a {
       color: #FFF;
       font-family: "brandon_grotesquemedium";
@@ -5571,13 +5766,25 @@ ul.actions-content {
         height: 100%;
         width: 100%;
         z-index: 1; }
+  @media (max-width: 767px) {
+    .page-top .content-top {
+      margin: 0 15px; } }
   .page-top .content-top h1, .page-top .content-top h4 {
     color: #FFF; }
   .page-top .content-top .title {
     height: 680px;
     line-height: 680px; }
+    @media (max-width: 767px) {
+      .page-top .content-top .title {
+        height: 300px;
+        line-height: 300px; } }
     .page-top .content-top .title .title-wrapper {
       padding-right: 20px; }
+      @media (max-width: 767px) {
+        .page-top .content-top .title .title-wrapper {
+          text-align: center; }
+          .page-top .content-top .title .title-wrapper h1 {
+            font-size: 24px; } }
       @media (max-width: 1023px) {
         .page-top .content-top .title .title-wrapper h4 {
           display: none; } }
@@ -5590,7 +5797,7 @@ ul.actions-content {
     padding: 30px 20px; }
     @media (max-width: 767px) {
       .page-top .content-top .subscribe {
-        margin-top: -200px;
+        margin-top: -100px;
         margin-bottom: 70px; } }
     .page-top .content-top .subscribe .sep {
       background-color: #E2E2E2;
@@ -5646,7 +5853,9 @@ ul.actions-content {
   width: 100%; }
   @media (max-width: 767px) {
     .page-bottom .bottom-bottom {
-      padding: 0 30px; } }
+      border-top: none;
+      padding: 0 30px;
+      margin: 15px 0; } }
   .page-bottom .bottom-bottom h3 {
     text-align: center; }
   .page-bottom .bottom-bottom .text-wrapper {

@@ -8,10 +8,18 @@
 	height: 680px;
 	width: 100%;
 
+	@include respond-to('small') {
+		height: 300px;
+	}
+
 	.logo {
 		position: absolute;
 		top: 25px;
 		left: 0;
+		@include respond-to('medium') {
+			left: 50%;
+			@include transform(translateX(-50%));
+		}
 	}
 	.menu {
 		position: absolute;
@@ -20,6 +28,10 @@
 		width: 250px;
 		height: 30px;
 		line-height: 30px;
+
+		@include respond-to('medium') {
+			display: none;
+		}
 		a {
 			color: $white;
 			font-family: $brandon-medium;
@@ -51,6 +63,10 @@
 		}		
 	}
 	.content-top {
+		@include respond-to('small') {
+			margin: 0 15px;
+		}
+
 		h1, h4 {
 			color: $white;
 		}
@@ -58,8 +74,20 @@
 		.title {
 			height: 680px;
 			line-height: 680px;
+
+			@include respond-to('small') {
+				height: 300px;
+				line-height: 300px;
+			}
 			.title-wrapper {
 				padding-right: 20px;
+
+				@include respond-to('small') {
+					text-align: center;
+					h1 {
+						font-size: 24px;
+					}
+				}
 
 				h4 {
 					@include respond-to('medium') {
@@ -79,7 +107,7 @@
 			padding:30px 20px;
 
 			@include respond-to('small') {
-				margin-top: -200px;
+				margin-top: -100px;
 				margin-bottom: 70px;
 			}
 
@@ -160,7 +188,9 @@
 		width: 100%;
 
 		@include respond-to('small') {
+			border-top: none;
 			padding: 0 30px;
+			margin: 15px 0;
 		}
 
 		h3 {
