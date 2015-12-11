@@ -8,18 +8,22 @@
 	border-radius: 8px;
 	height: auto;
 	width: 314px;
+	@include transition(opacity 0.4s);
 
 	&.not-active {
 		opacity: 0;
 		visibility: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
 	}
 
 	&.active {
 		position: absolute;
 		opacity: 1;
 		visibility: visible;
-	}
-	
+	}	
 
 	p {
 		font-size: 13px;
@@ -31,6 +35,30 @@
 		&.text {
 			color: $blue-dark;
 			padding-left: 20px;
+		}
+	}
+
+	&.resume-info {
+		
+		max-width: 225px;
+		.bg {
+			border-radius: 8px;
+			background-color: $black-light;
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			opacity: 0.7;
+			left: 0;
+			z-index: 1;
+		}
+		p.text {
+			color: $white;
+			font-family: $proxima-light;
+			font-size: 14px;
+			padding: 11px 14px;
+			position: relative;
+			z-index: 2;
 		}
 	}
 
@@ -61,6 +89,7 @@
 	.btn-submit-wrapper {
 		border:1px solid $gray-border;
 		border-radius: 5px;
+		height: 26px;
 		margin: 0 auto;
 		width: 120px;
 		input {

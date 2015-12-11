@@ -54,12 +54,14 @@ function App() {
     // Events
     // -------------------------
     App.prototype.events = function() {
+        var scope = this;
         $('.step-wrapper a').on('click', function(e) {
             e.preventDefault();
             var active = $(this).attr('data-step');
 
             active == 4 ? $('.step-wrapper .control-group').addClass('active') : $('.step-wrapper .control-group').removeClass('active');
             
+            $('.resume').removeClass('active').addClass('not-active');
             $('.step-wrapper li').removeClass('active');
             $(this).parent().addClass('active');
             $('.content-form-inner').removeClass('active');
@@ -70,6 +72,7 @@ function App() {
             e.preventDefault();
             var active = $(this).attr('data-step');
             
+            $('.resume').removeClass('active').addClass('not-active');
             $('.infos-wrapper li').removeClass('active');
             $(this).parent().addClass('active');
             $('.content-dashboard-inner').removeClass('active');
@@ -80,6 +83,7 @@ function App() {
             e.preventDefault();
             var active = $(this).attr('data-step');
             
+            $('.resume').removeClass('active').addClass('not-active');
             $('.facture-wrapper li').removeClass('active');
             $(this).parent().addClass('active');
             $('.content-facture-inner').removeClass('active');
@@ -90,6 +94,7 @@ function App() {
             e.preventDefault();
             var active = $(this).attr('data-step');
             
+            $('.resume').removeClass('active').addClass('not-active');
             $('.vehicule-wrapper li').removeClass('active');
             $(this).parent().addClass('active');
             $('.content-vehicule-inner').removeClass('active');
@@ -106,45 +111,91 @@ function App() {
         })
 
         $('.panel-first li').on('click', function() {
-            $('.panel-second').addClass('active');
+            if ( $(this).hasClass('active') ) {
+                $(this).removeClass('active');
+                $('.panel-second').removeClass('active');
+            }else {
+                $('.panel-first').removeClass('active');
+                $(this).addClass('active');
+                $('.panel-second').addClass('active');
+            }                    
         });
 
         $('.panel-second li').on('click', function() {
             $(this).addClass('active');
         })
 
-        $('.list-tab').on('click', function() {
+        // Tooltip page en cours et action
+        $('.list-tab, .avance-tab').on('click', function() {            
 
+            var wResume = $('.resume').width();
+            var hResume = $('.resume').height();
+            var size = $(this).offset();
+            var targetSizeWidth = $(this).width();
+            
+            if ( $(this).hasClass('active') ) {
+                $('.list-tab, .avance-tab').removeClass('active');
+                $('.resume').removeClass('active').addClass('not-active');
+            }else {
+
+                $('.list-tab, .avance-tab').removeClass('active');
+                $(this).addClass('active');
+
+                var position = scope.calculateTooltip( size.left, size.top, targetSizeWidth, wResume, hResume, false );
+
+                $('.resume').css({
+                    top: position.top,
+                    left: position.left
+                }).removeClass('not-active').addClass('active');
+            }        
+            
+        });
+
+        // Tooltip page apply -> informations bancaire
+        $('a.link-more').on('click', function() {            
             
             var wResume = $('.resume').width();
             var hResume = $('.resume').height();
             var size = $(this).offset();
-            var wWidth = window.innerWidth;
-            var pLeft = 0;
-            var pTop = 0;
-
-            if ( Math.floor(size.left) + $(this).width() + 30 + wResume > wWidth) {
-                // Si tooltip supérieur a la size de la window, on affiche tooltip a gauche
-                pLeft = Math.floor(size.left) - wResume - 10;
+            var targetSizeWidth = $(this).width();
+                    
+            if ( $(this).hasClass('active') ) {
+                $('a.link-more').removeClass('active');
+                $('.resume').removeClass('active').addClass('not-active');
             }else {
-                // Si tooltip inferieur a la size de la window, donc a droite
-                pLeft = Math.floor(size.left) + $(this).width() + 30;
-            }
+                $('a.link-more').removeClass('active');
+                $(this).addClass('active');
+                
+                var position = scope.calculateTooltip( size.left, size.top, targetSizeWidth, wResume, hResume, true );
 
-            if ( size.top - (hResume/2) < 50) {
-                pTop = size.top;
-            }else {
-                pTop = size.top - (hResume/2);
+                $('.resume').css({
+                    top: position.top,
+                    left: position.left
+                }).removeClass('not-active').addClass('active');    
             }
-            // console.log(Math.floor(size.left) + $(this).width() + 30 + wResume);
-            // console.log(size.top - (hResume/2))
+        });
 
-            $('.resume').css({
-                top: pTop,
-                left: pLeft
-            }).removeClass('not-active').addClass('active');
-        })
     }; 
+
+
+
+
+
+    // Calcul x position
+            // if ( Math.floor(size.left) + $(this).width() + 30 + wResume > wWidth) {
+            //     // Si tooltip supérieur a la size de la window, on affiche tooltip a gauche
+            //     pLeft = Math.floor(size.left) - wResume - 10;
+            // }else {
+            //     // Si tooltip inferieur a la size de la window, donc a droite
+            //     pLeft = Math.floor(size.left) + $(this).width() + 30;
+            // }
+
+            // // calcul y position
+            // if ( size.top - (hResume/2) < 50) {
+            //     pTop = size.top;
+            // }else {
+            //     pTop = size.top - (hResume/2);
+            // }
 
     //
     // Resize stage
@@ -161,6 +212,38 @@ function App() {
         return { width: srcWidth*ratio, height: srcHeight*ratio };
     };
 
+    App.prototype.calculateTooltip = function(sizeLeft, sizeTop, targetSize, tooltipWidth, tooltipHeight, tooltipInfo ) {
+        var pTop = 0,
+            pLeft = 0,
+            wWidth = window.innerWidth;
+
+        // Calcul x position
+        if ( tooltipInfo ) {
+            wWidth < 768 ? pLeft = Math.floor(sizeLeft) - tooltipWidth - 10 : pLeft = Math.floor(sizeLeft) + targetSize + 30;            
+        }else {
+            if ( Math.floor(sizeLeft) + targetSize + 30 + tooltipWidth > wWidth) {
+                // Si tooltip supérieur a la size de la window, on affiche tooltip a gauche
+                pLeft = Math.floor(sizeLeft) - tooltipWidth - 10;
+            }else {
+                // Si tooltip inferieur a la size de la window, donc a droite
+                pLeft = Math.floor(sizeLeft) + targetSize + 30;
+            }
+        }        
+
+        // calcul y position
+        if ( sizeTop - (tooltipHeight/2) < 50) {
+            pTop = sizeTop;
+        }else {
+            pTop = sizeTop - (tooltipHeight/2);
+        }
+
+        var position = {
+            top: pTop,
+            left: pLeft
+        }
+
+        return position;
+    };
 
     App.prototype.initMap = function() {
         // Create a map object and specify the DOM element for display.
