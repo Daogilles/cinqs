@@ -16,7 +16,7 @@ input[type="text"], input[type="email"], input[type="password"], input[type="tel
     border-radius: 5px;
 
     color: $gray;
-    font-size: 18px;
+    font-size: 16px;
     font-family: $proxima-regular;
     width: 100%;
 
@@ -36,7 +36,7 @@ input[type="text"], input[type="email"], input[type="password"], input[type="tel
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         
-        font-size: 18px;
+        font-size: 16px;
         font-family: $proxima-light;
     }
 }
@@ -62,17 +62,20 @@ input[type="text"], input[type="email"], input[type="password"], input[type="tel
 
 .control-group-search {
     position: relative;
-    &:before {
-        background: url('../images/search.png') left center no-repeat;
-        content:'';
-        display: block;
-        height: 10px;
-        width: 10px;
-        position: absolute;
-        left:10px;
-        top: 50%;
-        @include transform(translateY(-50%));
+    .control-group-search-inner {
+        &:before {
+            background: url('../images/search.png') left center no-repeat;
+            content:'';
+            display: block;
+            height: 10px;
+            width: 10px;
+            position: absolute;
+            left:10px;
+            top: 50%;
+            @include transform(translateY(-50%));
+        }
     }
+    
     input {
         padding-left: 30px;         
     }

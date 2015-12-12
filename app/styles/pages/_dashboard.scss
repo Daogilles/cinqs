@@ -71,7 +71,7 @@
 				a.orange {
 					color: $orange-true;
 					font-family: $proxima-semibold;
-					font-size: 14px;
+					font-size: 16px;
 					margin-left: 30px;
 				}
 			}
@@ -105,12 +105,12 @@
 		p {
 			color: $blue-dark;
 			font-family: $proxima-light;
-			font-size: 14px;
+			font-size: 16px;
 		}
 
 		span {
 			color: #999999;
-			font-size: 14px;
+			font-size: 16px;
 			font-family: $proxima-regular;
 			&.text {
 				line-height: 45px;
@@ -139,7 +139,7 @@
 			}
 
 			.btn-file {
-				font-size: 14px;
+				font-size: 16px;
 				font-family: $proxima-semibold;
 				width: 130px;
 			}
@@ -148,7 +148,7 @@
 		input[type="text"], input[type="email"], input[type="password"], input[type="tel"] {
 			color: $blue-dark;
 			font-family: $proxima-regular;
-			font-size: 14px;
+			font-size: 16px;
 		}
 		
 		&.step2 {
@@ -185,7 +185,7 @@
 			a.orange {
 				color: $orange-true;
 				font-family: $proxima-semibold;
-				font-size: 14px;
+				font-size: 16px;
 				margin-left: 30px;
 			}
 			.control-group-big {
@@ -225,7 +225,7 @@
 
 			a.cancel {
 				color: $gray;
-				font-size: 14px;
+				font-size: 16px;
 				font-family: $proxima-semibold;
 				line-height: 45px;
 			}

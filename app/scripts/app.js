@@ -55,11 +55,19 @@ function App() {
     // -------------------------
     App.prototype.events = function() {
         var scope = this;
+
+        $('.btn-scrolltop').on('click', function() {
+            console.log('in')
+            $('html, body').animate({
+                scrollTop:0
+            }, 'slow');
+        })
+
         $('.step-wrapper a').on('click', function(e) {
             e.preventDefault();
             var active = $(this).attr('data-step');
 
-            active == 4 ? $('.step-wrapper .control-group').addClass('active') : $('.step-wrapper .control-group').removeClass('active');
+            active == 4 ? $('.step-wrapper .control-group .btn').removeClass('gray-light').addClass('turquoise') : $('.step-wrapper .control-group .btn').removeClass('turquoise').addClass('gray-light');
             
             $('.resume').removeClass('active').addClass('not-active');
             $('.step-wrapper li').removeClass('active');
@@ -101,6 +109,14 @@ function App() {
             $('.content-vehicule-inner.step'+active).addClass('active');
         }); 
 
+        // Click on "ajouter un vehicule"
+        $('.vehicule-wrapper .btn').on('click', function() {
+            $('.vehicule-wrapper').removeClass('active');
+            $('.vehicule-wrapper-step').addClass('active');
+            $('.content-vehicule-inner.dashboard').removeClass('active');
+            $('.content-vehicule-inner.step1').addClass('active');
+        })
+
 
         $('a.show-more').on('click', function() {
             var list = $(this).attr('data-list');
@@ -115,7 +131,7 @@ function App() {
                 $(this).removeClass('active');
                 $('.panel-second').removeClass('active');
             }else {
-                $('.panel-first').removeClass('active');
+                $('.panel-first li').removeClass('active');
                 $(this).addClass('active');
                 $('.panel-second').addClass('active');
             }                    

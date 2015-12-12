@@ -28,6 +28,10 @@
 			&.active {
 				display: block;
 			}
+
+			.btn {
+				font-size: 14px;
+			}
 		}
 	}
 
@@ -49,7 +53,7 @@
 		p {
 			color: $blue-dark;
 			font-family: $proxima-light;
-			font-size: 14px;
+			font-size: 16px;
 		}
 
 		.link-more {
@@ -67,15 +71,17 @@
 			span.label {
 				color: $blue-dark;
 				display: block;
-				font-size: 14px;
+				font-size: 16px;
 				font-family: $proxima-semibold;
 			}
 			.sod_select, input {
 				margin-top: 10px;
 			}
 			input[type="text"], input[type="email"], input[type="password"], input[type="tel"] {
+				color: $blue-dark;
+				font-size: 16px;
 				@include placeholder {
-					font-size: 14px;
+					font-size: 16px;
 				}
 			}
 			.padding-right {
@@ -113,13 +119,13 @@
 			p {
 				color: $blue-dark;
 				display: block;
-				font-size: 14px;
+				font-size: 16px;
 				font-family: $proxima-semibold;
 			}
 			span {
 				color: $blue-dark;
 				display: block;
-				font-size: 14px;
+				font-size: 16px;
 				font-family: $proxima-light;
 				margin-top: 10px;
 			}
@@ -206,7 +212,7 @@
 
 				span {
 					color: $blue-dark;
-					font-size: 14px;
+					font-size: 16px;
 					font-family: $proxima-light;
 					padding:0 25px 0 15px;
 				}
@@ -257,7 +263,7 @@
 				}
 				span {
 					display: block;
-					font-size: 14px;
+					font-size: 16px;
 					font-family: $proxima-light;
 					text-align: center;
 					margin-top: 20px;

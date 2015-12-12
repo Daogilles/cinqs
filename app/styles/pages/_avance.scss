@@ -29,8 +29,24 @@
 	}
 
 	.control-group-search {
+		height: 46px;
+		line-height: 46px;		
 		float: right;
-		width: 70%;
+
+		.control-group-search-inner {
+			
+			position: relative;
+			width: 300px;
+		}
+		input {
+			height: 26px;
+			line-height: 26px;
+			font-size: 12px;
+			@include placeholder {
+				font-size: 12px;
+				line-height: 26px;
+			}
+		}
 	}
 }
 .avance-tab {
@@ -46,7 +62,7 @@
 
 	.avance-tab-inner {
 		background-color: $white;
-		border: 1px solid $gray;
+		border: 1px solid $gray-border;
 		height: 100%;
 		line-height: 46px;
 		width: 100%;

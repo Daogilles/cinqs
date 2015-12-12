@@ -3,7 +3,7 @@
 // --------------------------------------------------
 
 .page-top {
-	background: url('../images/home/background.png') top center no-repeat;
+	background: url('../images/home/background.jpg') top center no-repeat;
 	background-size: cover;
 	height: 680px;
 	width: 100%;
@@ -43,7 +43,7 @@
 		}
 		.menu-btn {
 			border:1px solid $white;
-			border-radius: 8px;
+			border-radius: 4px;
 			float: right;
 			position: relative;
 			height: 30px;
@@ -140,6 +140,7 @@
 			}
 			span.subtitle {
 				color: $gray;
+				display: block;
 				font-size: 17px;
 				font-family: $proxima-regular;
 				margin-top: 10px;
@@ -224,6 +225,11 @@
 					padding: 0;
 				}
 			}
+		}
+
+		.btn-submit-wrapper {
+			margin: 20px auto 0;
+			width: 220px;
 		}
 	}
 }

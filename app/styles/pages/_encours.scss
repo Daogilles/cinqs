@@ -16,7 +16,20 @@
 
 	.encours-tab-search {
 		margin: 0 auto;
-		width: 300px;
+		width: 300px;		
+		.control-group-search-inner {			
+			position: relative;
+			width: 300px;
+		}
+		input {
+			height: 26px;
+			line-height: 26px;
+			font-size: 12px;
+			@include placeholder {
+				font-size: 12px;
+				line-height: 26px;
+			}
+		}
 	}
 	
 	.column {
