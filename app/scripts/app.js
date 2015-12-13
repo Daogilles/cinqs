@@ -191,6 +191,10 @@ function App() {
             }
         });
 
+        $('.interne-header .logo').on('click', function() {
+            $('.dropdown-logo').hasClass('active') ? $('.dropdown-logo').removeClass('active') : $('.dropdown-logo').addClass('active');
+        })
+
     }; 
 
 
@@ -233,25 +237,43 @@ function App() {
             pLeft = 0,
             wWidth = window.innerWidth;
 
-        // Calcul x position
-        if ( tooltipInfo ) {
-            wWidth < 768 ? pLeft = Math.floor(sizeLeft) - tooltipWidth - 10 : pLeft = Math.floor(sizeLeft) + targetSize + 30;            
-        }else {
-            if ( Math.floor(sizeLeft) + targetSize + 30 + tooltipWidth > wWidth) {
-                // Si tooltip supérieur a la size de la window, on affiche tooltip a gauche
-                pLeft = Math.floor(sizeLeft) - tooltipWidth - 10;
-            }else {
-                // Si tooltip inferieur a la size de la window, donc a droite
-                pLeft = Math.floor(sizeLeft) + targetSize + 30;
-            }
-        }        
+
+        $('.resume-arrow').removeClass('right').removeClass('left').removeAttr('style');
 
         // calcul y position
         if ( sizeTop - (tooltipHeight/2) < 50) {
             pTop = sizeTop;
+            $('.resume-arrow').css({ top : 0 });
         }else {
             pTop = sizeTop - (tooltipHeight/2);
         }
+    
+        // Calcul x position
+        if ( tooltipInfo ) {
+            if ( wWidth < 768 ) {
+                pLeft = tooltipWidth - 30;
+                $('.resume-arrow').addClass('right'); 
+            }else {
+                pLeft = Math.floor(sizeLeft) + targetSize + 30;
+                $('.resume-arrow').addClass('left'); 
+            }                                
+        }else {
+            if ( wWidth < 768 ) {                
+                pLeft = tooltipWidth - sizeLeft;
+                $('.resume-arrow').addClass('right');
+            }else {
+                if ( Math.floor(sizeLeft) + targetSize + 30 + tooltipWidth > wWidth) {
+                    // Si tooltip supérieur a la size de la window, on affiche tooltip a gauche
+                    pLeft = Math.floor(sizeLeft) - tooltipWidth - 10;
+                    $('.resume-arrow').addClass('right');
+                }else {
+                    // Si tooltip inferieur a la size de la window, donc a droite
+                    pLeft = Math.floor(sizeLeft) + targetSize + 30;                    
+                    $('.resume-arrow').addClass('left');
+                }
+            }            
+        }
+
 
         var position = {
             top: pTop,

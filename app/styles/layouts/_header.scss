@@ -21,6 +21,54 @@ body.interne {
 		top: 50%;
 		@include transform(translateY(-50%));
 	}
+	.dropdown-logo {
+		display: none;
+		background-color: $white;
+		border-radius: 4px;
+		border: 1px solid $gray-border;
+		height: 50px;
+		line-height: 50px;
+		position: absolute;
+		width: 120px;
+		top: 65px;
+		z-index: 4;
+
+		.dropdown-logo-inner {
+			height: 50px;
+			line-height: 50px;
+			position: relative;
+			width: 100%;
+			&:before {
+				content: '';
+				height: 0px;
+				width: 0px;
+				position: absolute;
+				top: -20px;
+				margin-top: 10px;
+				border-left: 10px solid transparent;
+				border-right: 10px solid transparent;
+				border-bottom: 10px solid $gray-border;
+				left:50%;
+				@include transform(translateX(-50%));
+			}
+		}
+
+		&.active {
+			display: block;
+		}
+
+		
+		.bloc {
+			background-color: $gray-light;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			height: 34px;
+			width: 80px;
+
+			@include transform(translate(-50%,-50%));
+		}
+	}
 }
 
 .progress-bar {
