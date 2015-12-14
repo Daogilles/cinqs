@@ -25,9 +25,12 @@ function App() {
         this.events();  
 
         console.log('in app.js')
-        $("select").selectOrDie({
-            size: 5
-        });
+
+        if ( $('.content-form-inner.step2').hasClass('active') || $('.content-vehicule-inner.step1').hasClass('active') ) {
+            $(".select").selectOrDie({
+                size: 5
+            });
+        }
 
         
         var column = document.querySelectorAll('.column');
@@ -74,6 +77,13 @@ function App() {
             $(this).parent().addClass('active');
             $('.content-form-inner').removeClass('active');
             $('.content-form-inner.step'+active).addClass('active');
+
+            if ( $('.content-form-inner.step2').hasClass('active') ) {                
+                $(".select").selectOrDie({
+                    size: 5
+                });
+            }
+
         });
 
         $('.infos-wrapper a').on('click', function(e) {
@@ -107,6 +117,12 @@ function App() {
             $(this).parent().addClass('active');
             $('.content-vehicule-inner').removeClass('active');
             $('.content-vehicule-inner.step'+active).addClass('active');
+
+            if ( $('.content-vehicule-inner.step1').hasClass('active') ) {
+                $(".select").selectOrDie({
+                    size: 5
+                });
+            }
         }); 
 
         // Click on "ajouter un vehicule"
@@ -115,6 +131,9 @@ function App() {
             $('.vehicule-wrapper-step').addClass('active');
             $('.content-vehicule-inner.dashboard').removeClass('active');
             $('.content-vehicule-inner.step1').addClass('active');
+            $(".select").selectOrDie({
+                size: 5
+            });
         })
 
 
@@ -168,7 +187,7 @@ function App() {
         });
 
         // Tooltip page apply -> informations bancaire
-        $('a.link-more').on('click', function() {            
+        $('a.link-more').on('mouseover click', function() {          
             
             var wResume = $('.resume').width();
             var hResume = $('.resume').height();
@@ -189,6 +208,11 @@ function App() {
                     left: position.left
                 }).removeClass('not-active').addClass('active');    
             }
+        });
+
+        $('a.link-more').on('mouseout', function() {                  
+            $('a.link-more').removeClass('active');
+            $('.resume').removeClass('active').addClass('not-active');
         });
 
         $('.interne-header .logo').on('click', function() {

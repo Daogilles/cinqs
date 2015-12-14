@@ -20,6 +20,10 @@
 }
 
 .content-form {
+	width: 1000px;
+	@include respond-to('medium') {
+		width: 90%;
+	}
 
 	.step-wrapper {			
 
@@ -39,6 +43,11 @@
 		border-left: 1px solid $gray-border;
 		display: none;
 		padding: 30px;		
+		width: 730px;
+
+		@include respond-to('medium') {
+			width: 100%;
+		}
 
 		&.active {
 			display: block;
@@ -113,7 +122,7 @@
 		.control-group-error {
 			background-color: $red-light;
 			border:1px solid $red;
-			border-radius: 8px;
+			border-radius: 4px;
 			padding: 12px;
 			margin-top: 30px;
 			p {
@@ -179,6 +188,10 @@
 			border-top: 1px solid $gray-border;
 			&.step4-left {				
 				border-right: 1px solid $gray-border;
+				width: 258px;
+			}
+			&.step4-right {
+				width: 470px;
 			}
 			
 			ul {
@@ -194,20 +207,21 @@
 				width: 100%;
 
 				&:after {
-					background: transparent;
+					// background: transparent;
+					background: url('../images/arrow.png') center center no-repeat;
 			        content: "";
 			        display: block;
 			        position: absolute;
 			        height: 10px;
-			        width: 10px;
+			        width: 7px;
 			        right: 10px;
 			        top: 50%;
-			        border-left: 3px solid #C7C7CC;
-			        border-top: 3px solid #C7C7CC;
+			        // border-left: 3px solid #C7C7CC;
+			        // border-top: 3px solid #C7C7CC;
 			        
 			        z-index: 2;
 			        // @include transform(translateY(-50%));
-			        @include transform(translateY(-50%) rotate(135deg));
+			        // @include transform(translateY(-50%) rotate(135deg));
 				}
 
 				span {
@@ -218,13 +232,14 @@
 				}
 
 				&.check {
-					&:after {						
+					&:after {			
+						background: url('../images/check.png') center center no-repeat;
 				        height: 10px;
-				        width: 4px;				        
-				        border-left: 3px solid $turquoise;
-				        border-top: 3px solid $turquoise;
+				        width: 13px;				        
+				        // border-left: 3px solid $turquoise;
+				        // border-top: 3px solid $turquoise;
 
-				        @include transform(translateY(-50%) rotate(225deg));
+				        // @include transform(translateY(-50%) rotate(225deg));
 					}
 				}				
 
@@ -237,9 +252,12 @@
 						color: $white;
 						font-family: $proxima-semibold;
 					}
-					&:after {
-						border-left: 3px solid $white;
-			        	border-top: 3px solid $white;
+					&.check {
+						&:after {
+							// border-left: 3px solid $white;
+				   //      	border-top: 3px solid $white;
+				        	background: url('../images/check-white.png') center center no-repeat;
+			        	}
 					}
 				}
 			}
@@ -254,6 +272,8 @@
 
 			.control-group-file {
 				padding: 20px;
+				margin: 0 auto;
+				width: 292px;
 				input {
 					@include placeholder {
 						color: $white;

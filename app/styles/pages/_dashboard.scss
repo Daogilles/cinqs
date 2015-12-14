@@ -90,6 +90,11 @@
 		border-left: 1px solid $gray-border;
 		display: none;
 		padding: 30px;
+		width: 730px;
+
+		@include respond-to('medium') {
+			width: 100%;
+		}
 
 		&.active {
 			display: block;

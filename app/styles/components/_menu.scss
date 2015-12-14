@@ -5,6 +5,11 @@
 	display: none;
 	height:100%;
 	padding: 30px !important;
+	width: 265px;
+
+	@include respond-to('medium') {
+		width: 100%;
+	}
 
 	&.active {
 		display: block;
