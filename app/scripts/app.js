@@ -72,13 +72,11 @@ function App() {
 
             active == 4 ? $('.step-wrapper .control-group .btn').removeClass('gray-light').addClass('turquoise') : $('.step-wrapper .control-group .btn').removeClass('turquoise').addClass('gray-light');
             
-            $('.content-form').removeClass('step2').removeClass('step3').removeClass('step4');
             $('.resume').removeClass('active').addClass('not-active');
             $('.step-wrapper li').removeClass('active');
             $(this).parent().addClass('active');
             $('.content-form-inner').removeClass('active');
             $('.content-form-inner.step'+active).addClass('active');
-            $('.content-form').addClass('step'+active);
 
             if ( $('.content-form-inner.step2').hasClass('active') ) {                
                 $(".select").selectOrDie({
@@ -114,13 +112,11 @@ function App() {
             e.preventDefault();
             var active = $(this).attr('data-step');
             
-            $('.content-form').removeClass('step1').removeClass('step2');
             $('.resume').removeClass('active').addClass('not-active');
             $('.vehicule-wrapper li').removeClass('active');
             $(this).parent().addClass('active');
             $('.content-vehicule-inner').removeClass('active');
             $('.content-vehicule-inner.step'+active).addClass('active');
-            $('.content-form').addClass('step'+active);
 
             if ( $('.content-vehicule-inner.step1').hasClass('active') ) {
                 $(".select").selectOrDie({

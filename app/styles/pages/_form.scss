@@ -20,7 +20,7 @@
 }
 
 .content-form {
-	width: 1000px;
+	width: 1202px;
 	@include respond-to('medium') {
 		width: 90%;
 	}
@@ -39,22 +39,11 @@
 		}
 	}
 
-	&.step2, &.step3 {
-		.content-form-inner {
-			width: 730px;
-		}
-	}
-	&.step4 {
-		width: 1202px;
-		.content-form-inner {
-			width: 935px;
-		}
-	}
-
 	.content-form-inner {
 		border-left: 1px solid $gray-border;
 		display: none;
-		padding: 30px;		
+		padding: 30px;	
+		width: 935px;	
 		
 		@include respond-to('medium') {
 			width: 100%;

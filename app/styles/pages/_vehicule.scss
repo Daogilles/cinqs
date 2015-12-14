@@ -66,12 +66,11 @@
 		}
 	}
 
-
 	.content-vehicule-inner {
 		border-left: 1px solid $gray-border;
 		display: none;
 		padding: 30px;
-		width: 730px;
+		width: 935px;
 
 		@include respond-to('medium') {
 			width: 100%;
@@ -347,13 +346,6 @@
 				font-family: $proxima-semibold;
 				line-height: 45px;
 			}
-		}
-	}
-
-	&.step2 {
-		width: 1202px;
-		.content-vehicule-inner {
-			width: 935px;
 		}
 	}
 }
