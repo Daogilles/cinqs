@@ -224,7 +224,7 @@
 				width: 470px;
 			}
 			&.step2-left {				
-				width: 258px;
+				width: 463px;
 			}			
 			
 			ul {
@@ -347,6 +347,13 @@
 				font-family: $proxima-semibold;
 				line-height: 45px;
 			}
+		}
+	}
+
+	&.step2 {
+		width: 1202px;
+		.content-vehicule-inner {
+			width: 935px;
 		}
 	}
 }
