@@ -127,10 +127,10 @@
 			.panel-first-bg {
 				opacity: 0.3;
 			}
-			&:after {
-				border-left: 2px solid $white;
-	        	border-top: 2px solid $white;
-			}
+			// &:after {
+			// 	border-left: 2px solid $white;
+	  //       	border-top: 2px solid $white;
+			// }
 		}
 	}
 
@@ -144,20 +144,22 @@
 		z-index: 3;
 		li + li {
 			&:after {
-				background: transparent;
+				// background: transparent;
+				background: url('../images/arrow.png') center center no-repeat;
 		        content: "";
 		        display: block;
 		        position: absolute;
 		        height: 10px;
-		        width: 10px;
+			    width: 7px;
 		        right: 15px;
 		        top: 50%;
-		        border-left: 2px solid #C7C7CC;
-		        border-top: 2px solid #C7C7CC;
+		        // border-left: 2px solid #C7C7CC;
+		        // border-top: 2px solid #C7C7CC;
 		        
 		        z-index: 2;
-		        // @include transform(translateY(-50%));
-		        @include transform(translateY(-50%) rotate(135deg));
+		        @include transform(translateY(-50%));
+		        // @include transform(translateY(-50%) rotate(135deg));
+		        
 			}
 		}
 	}

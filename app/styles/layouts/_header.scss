@@ -10,8 +10,12 @@
 body.interne {
 	.logo {
 		background-color: transparent;
-		height: 22px;
-		width: 104px;
+		height: 15px;
+		width: 71px;
+		img {
+			max-height: 100%;
+			max-width: 100%;
+		}
 	}
 }
 

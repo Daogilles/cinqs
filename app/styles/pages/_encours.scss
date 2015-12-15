@@ -139,6 +139,7 @@
 				&.time {
 					color: $gray;
 					font-family: $proxima-regular;
+					font-size: 12px;
 				}
 			}
 			span.more-text {
@@ -150,16 +151,30 @@
 		.list-tab-time {
 			height: 46px;
 			line-height: 46px;
+			p {
+				&.time {
+					color: $gray;
+					font-family: $proxima-regular;
+					font-size: 12px;
+				}
+			}
 		}
 
 		.list-tab {
 			background-color: $white;
 			cursor: pointer;
 			padding: 0 10px;
-			&:hover, &.active {
-				p, span {
-					color: $white;
-				}
+			position: relative;
+
+			.list-tab-bg {
+				height: 100%;
+				width: 100%;
+				top: 0;
+				left: 0;
+				position: absolute;
+				opacity: 0;
+				z-index: 1;
+				@include transition(opacity 0.3s);
 				&.red {
 					background-color: $red;
 				}
@@ -174,6 +189,18 @@
 				}
 				&.gray {
 					background-color: #868686;
+				}
+			}
+			.list-tab-inner {
+				position: relative;
+				z-index: 2;
+			}
+			&:hover, &.active {
+				// p, span {
+				// 	color: $white;
+				// }
+				.list-tab-bg {
+					opacity: 0.3;
 				}
 			}
 

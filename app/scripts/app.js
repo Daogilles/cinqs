@@ -166,7 +166,7 @@ function App() {
             var wResume = $('.resume').width();
             var hResume = $('.resume').height();
             var size = $(this).offset();
-            var targetSizeWidth = $(this).width();
+            var targetSizeWidth = $(this).width();            
             
             if ( $(this).hasClass('active') ) {
                 $('.list-tab, .avance-tab').removeClass('active');
@@ -192,7 +192,7 @@ function App() {
             var wResume = $('.resume').width();
             var hResume = $('.resume').height();
             var size = $(this).offset();
-            var targetSizeWidth = $(this).width();
+            var targetSizeWidth = $(this).width();            
                     
             if ( $(this).hasClass('active') ) {
                 $('a.link-more').removeClass('active');
@@ -282,8 +282,10 @@ function App() {
                 $('.resume-arrow').addClass('left'); 
             }                                
         }else {
-            if ( wWidth < 768 ) {                
-                pLeft = tooltipWidth - sizeLeft;
+            if ( wWidth < 768 ) {
+            console.log(sizeLeft)
+            console.log(targetSize + sizeLeft - tooltipWidth)            
+                pLeft = targetSize + sizeLeft - tooltipWidth;
                 $('.resume-arrow').addClass('right');
             }else {
                 if ( Math.floor(sizeLeft) + targetSize + 30 + tooltipWidth > wWidth) {

@@ -8,6 +8,7 @@
 	border-radius: 4px;
 	height: auto;
 	width: 314px;
+	z-index: 9;
 	@include transition(opacity 0.4s);
 
 	&.not-active {
