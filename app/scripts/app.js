@@ -161,7 +161,7 @@ function App() {
         })
 
         // Tooltip page en cours et action
-        $('.list-tab, .avance-tab').on('click', function() {            
+        $('.list-tab, .avance-tab').on('mouseenter click', function() {            
 
             var wResume = $('.resume').width();
             var hResume = $('.resume').height();

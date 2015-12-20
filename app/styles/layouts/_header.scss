@@ -12,9 +12,21 @@ body.interne {
 		background-color: transparent;
 		height: 15px;
 		width: 71px;
+		
+		@include respond-to('small') {
+			height: auto;
+			width: 45px;
+		}
+
 		img {
 			max-height: 100%;
 			max-width: 100%;
+		}
+	}
+
+	.wrapper {
+		@include respond-to('medium') {
+			width: 96%;
 		}
 	}
 }
@@ -149,7 +161,8 @@ header {
 		padding-left: 20px;
 		margin-left: 114px;
 		margin-top: 0;
-		position: relative;
+		position: relative;		
+
 		&:before {
 			background-color: $gray-border;
 			content: "";
@@ -180,7 +193,7 @@ header {
 		}
 
 		li + li {
-			margin-left: 20px;
+			margin-left: 20px;			
 		}
 
 		&.header-big {
@@ -221,12 +234,28 @@ header {
 	&.interne-header {
 		ul {
 			margin-left: 140px;
+			@include respond-to('small') {
+				margin-left: 50px;				
+				padding-left: 7px;	
+			}
 
 			&:before {
 				display: none;
 			}
 
 			li {
+
+				@include respond-to('small') {
+					max-width: 70px;
+					overflow: hidden;
+				}
+
+				a {
+					@include respond-to('small') {
+						font-size: 10px;
+						overflow: hidden;
+					}
+				}
 				&.gray-circle {
 
 					margin-right: 20px;
@@ -245,6 +274,12 @@ header {
 					}
 				}
 			}
+
+			li + li {
+				@include respond-to('small') {
+					margin-left: 7px;
+				}
+			}
 		}		
 	}
 
@@ -255,6 +290,11 @@ header {
 			font-size: 13px;
 			font-family: $brandon-medium;
 			text-transform: uppercase;
+
+			@include respond-to('small') {
+				display: none;
+			}
+
 			&:before {
 				display: none;
 			}
@@ -270,6 +310,21 @@ header {
 				top: 50%;
 				margin-top: -3px;
 			}			
+		}
+
+		@include respond-to('small') {
+			&:after {
+				border-left: 7px solid transparent;
+				border-right: 7px solid transparent;
+				border-top: 7px solid $blue-dark;
+				content: "";
+				height: 10px;
+				width: 0px;
+				position: absolute;
+				right: 0;
+				top: 50%;
+				margin-top: -3px;
+			}	
 		}
 	}
 }
