@@ -1,0 +1,235 @@
+//
+// Home page
+// --------------------------------------------------
+
+.page-top {
+	background: url('../images/home/background.jpg') top center no-repeat;
+	background-size: cover;
+	height: 680px;
+	width: 100%;
+
+	@include respond-to('small') {
+		height: 300px;
+	}
+
+	.logo {
+		position: absolute;
+		top: 25px;
+		left: 0;
+		@include respond-to('medium') {
+			left: 50%;
+			@include transform(translateX(-50%));
+		}
+	}
+	.menu {
+		position: absolute;
+		top: 25px;
+		right: 0;
+		width: 250px;
+		height: 30px;
+		line-height: 30px;
+
+		@include respond-to('medium') {
+			display: none;
+		}
+		a {
+			color: $white;
+			font-family: $brandon-medium;
+			font-size: 13px;
+			text-transform: uppercase;
+			&#connect {
+				float: left;
+			}
+		}
+		.menu-btn {
+			border:1px solid $white;
+			border-radius: 4px;
+			float: right;
+			position: relative;
+			height: 30px;
+			line-height: 30px;
+			width: 120px;
+			text-align: center;
+			.bg-transparent {
+				background-color: $white;
+				opacity: 0.2;
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				z-index: 1;
+			}
+		}		
+	}
+	.content-top {
+		@include respond-to('small') {
+			margin: 0 15px;
+		}
+
+		h1, h4 {
+			color: $white;
+		}
+
+		.title {
+			height: 680px;
+			line-height: 680px;
+
+			@include respond-to('small') {
+				height: 300px;
+				line-height: 300px;
+			}
+			.title-wrapper {
+				padding-right: 20px;
+
+				@include respond-to('small') {
+					text-align: center;
+					h1 {
+						font-size: 24px;
+					}
+				}
+
+				h4 {
+					@include respond-to('medium') {
+						display: none;
+					}
+				}
+			}
+		}
+
+		.subscribe {
+			border:1px solid $gray-border;
+			border-radius: 8px;
+			background-color: $gray-lightest;
+
+			height: 680px;
+			margin-top: 100px;
+			padding:30px 20px;
+
+			@include respond-to('small') {
+				margin-top: -100px;
+				margin-bottom: 70px;
+			}
+
+			.sep {
+				background-color: #E2E2E2;
+				display: block;
+				margin: 20px auto;
+				height: 2px;
+				width: 120px;
+			}
+
+			.control-group {
+				margin-top: 15px;
+			}
+
+			p {
+				color: $gray;
+				font-size: 12px;
+				font-family: $proxima-regular;
+				line-height: 15px;
+
+				a {
+					color: $orange;
+				}
+				&.big {
+					color: $black;
+					font-family: $proxima-bold;
+					font-size: 20px;
+				}
+			}
+			span.subtitle {
+				color: $gray;
+				display: block;
+				font-size: 17px;
+				font-family: $proxima-regular;
+				margin-top: 10px;
+			}
+		}
+	}
+}
+
+.page-bottom {
+	.bottom-top {
+		h3 {
+			color: $blue-dark;
+			@include respond-to('medium') {
+				text-align: center;
+			}
+		}
+
+		.inner {
+			margin:60px auto;
+			width: 80%;
+
+			.picto {
+				text-align: center;
+				img {
+					margin:0 auto;
+				}
+				p {
+					color: $blue;
+					font-size: 20px;
+					font-family: $proxima-bold;
+				}
+				span {
+					display: block;
+					font-size: 18px;
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+
+	.driver-bottom {
+		border-top: 1px solid $gray-border;
+		margin: 0 auto;
+		padding: 60px 0;
+		width: 100%;
+
+		@include respond-to('small') {
+			border-top: none;
+			padding: 0 30px;
+			margin: 15px 0;
+		}
+
+		h3 {
+			text-align: center;
+		}
+
+		.text-wrapper {
+			margin: 35px auto 0;
+			width: 80%;
+
+			@include respond-to('medium') {
+				width: 100%;
+			}
+
+			&:nth-child(2) {
+				margin-top: 70px;
+			}
+
+			p {
+				color: $blue-dark;
+				font-size: 18px;
+				font-family: $proxima-semibold;
+			}
+
+			span {
+				display: block;
+				padding-left: 40px;
+				margin-top: 15px;
+				font-size: 18px;
+				@include respond-to('medium') {
+					padding: 0;
+				}
+			}
+		}
+
+		.btn-submit-wrapper {
+			margin: 60px auto 0;
+			width: 220px;
+		}
+	}
+}
+

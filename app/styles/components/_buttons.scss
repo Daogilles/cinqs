@@ -31,4 +31,11 @@
 		background-color: $white;
 		color: $blue-dark;
 	}
+	&.black-light {
+		background-color: $black-light;
+		color: $white;
+	}
+	&.no-radius {
+		border-radius: 0;
+	}
 }
