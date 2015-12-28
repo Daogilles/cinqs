@@ -1,0 +1,151 @@
+//
+// Business page
+// --------------------------------------------------
+
+.business-header {
+	height: 55px;
+	margin: 40px auto 15px;
+	width: 1000px;
+	.business-header-inner {
+		height: 55px;
+		line-height: 55px;
+		float: left;
+	}
+	.balign {
+		display: inline-block;
+		line-height: normal;
+		vertical-align: bottom;
+	}
+	.business-historique {
+		width: 110px;
+	}
+	.business-search, .business-input {
+		input {
+			border-radius: 0;
+			height: 30px;
+			line-height: 30px;
+
+			@include placeholder {
+				line-height: 30px;
+			}
+		}
+	}
+	.business-search {
+		margin-left: 25px;
+		width: 170px;
+	}
+	.business-input	{
+		width: 330px;
+		.control-group-date {
+			float: left;
+			width: 165px;
+		}
+	}
+	.business-export {
+		float: right;
+		width: 150px;
+		a {
+			border: 1px solid $black;
+			color: $black;
+			height: 30px;
+			font-family: $brandon-medium;
+			font-size: 11px;
+			padding: 7px 26px;
+		}
+	}
+}
+
+.business-table {
+	border-top: 1px solid $gray-border;
+	padding-left: 0;
+	padding-top: 30px;
+	margin: 0 auto;
+	width: 1000px;
+	
+	a.click-expand {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		z-index: 1;
+	}
+
+	.business-row + .business-row {
+		border-top: 1px solid $gray-border;
+	}
+
+	.business-row {					
+		list-style: none;
+		position: relative;
+
+		&:nth-child(even) {
+			background-color: #f9f9f9;
+		}
+
+		.business-inner {
+			&.size-small {
+				width: 80px;
+			}
+			&.size-middle {
+				width: 110px;
+			}
+			&.size-big {
+				width: 240px;
+			}
+		}
+		
+		.business-inner-title {
+			float: left;
+			p {
+				color: $turquoise;
+				font-size: 10px;
+				font-family: $brandon-medium;
+				margin-bottom: 5px;
+				text-transform: uppercase;
+			}
+		}
+
+		.business-inner-row {
+			height: 51px;
+			line-height: 51px;
+			float: left;
+			
+			p {				
+				color: $black;
+				display: inline-block;
+				font-size: 14px;
+				font-family: $myriad-thin;				
+			}
+			span {
+				color: $black;
+				display: block;
+				margin-top: 0;
+				font-size: 12px;
+				font-family: $myriad-thin;
+				&.block {
+					display: inline-block;
+				}
+			}
+		}
+
+		.business-date {
+			padding-left: 12px;
+		}
+
+		.collapse {
+		    height: 0px;
+		    overflow: hidden;
+		    display: block;
+		    width: 100%;
+		    
+		    .collapse-inner {
+		    	background-color: #F0F0F0;
+		    	border-top: 1px solid $gray-light;
+		        display: block;
+		        padding: 50px 155px;
+		    }
+		}
+
+	}
+}

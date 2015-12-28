@@ -115,4 +115,17 @@ footer {
 			}
 		}
 	}
+
+	&.footer-driver {
+		ul.footer-big {
+			float: left;
+		}
+
+		ul.social {
+			float: right;
+			li + li {
+				margin-left: 20px;
+			}
+		}
+	}
 }

@@ -1,12 +1,14 @@
 //
-// Home page
+// CINQS page
 // --------------------------------------------------
 
-.page-top {
-	background: url('../images/home/background.jpg') top center no-repeat;
+.cinqsxl-top {
+	background: url('../images/driver/background-cinqsxl.jpg') top center no-repeat;
 	background-size: cover;
 	height: 680px;
 	width: 100%;
+	position: relative;
+	z-index: 2;
 
 	@include respond-to('small') {
 		height: 300px;
@@ -99,7 +101,7 @@
 
 		.subscribe {
 			border:1px solid $gray-border;
-			border-radius: 8px;
+			border-radius: 0;
 			background-color: $gray-lightest;
 
 			height: 680px;
@@ -149,7 +151,9 @@
 	}
 }
 
-.page-bottom {
+.cinqsxl-bottom {
+	position: relative;
+	z-index: 1;
 	.bottom-top {
 		h3 {
 			color: $blue-dark;
@@ -164,6 +168,18 @@
 
 			.picto {
 				text-align: center;
+				padding: 0 20px;
+
+				.inner-picto {
+					height: 70px;
+					position: relative;
+					img {
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						@include transform(translate(-50%,-50%));
+					}
+				}
 				img {
 					margin:0 auto;
 				}
@@ -181,7 +197,7 @@
 		}
 	}
 
-	.driver-bottom {
+	.cinqsxl-bottom {
 		border-top: 1px solid $gray-border;
 		margin: 0 auto;
 		padding: 60px 0;
@@ -232,4 +248,3 @@
 		}
 	}
 }
-

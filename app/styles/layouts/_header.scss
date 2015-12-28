@@ -7,7 +7,7 @@
 	width: 94px;		
 }
 
-body.interne, body.driver {
+body.interne, body.driver, body.business {
 	.logo {
 		background-color: transparent;
 		height: 15px;
@@ -373,6 +373,10 @@ header {
 			&.menu-right {
 				float: right;
 			}
+		}
+
+		.account {
+			float: left;
 		}
 	}
 }
