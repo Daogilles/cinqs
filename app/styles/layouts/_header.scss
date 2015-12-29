@@ -45,7 +45,7 @@ body.interne, body.driver, body.business {
 	}
 }
 
-.interne-header {
+.interne-header, .driver-header {
 	.logo {
 		position: absolute;
 		top: 50%;
@@ -99,6 +99,20 @@ body.interne, body.driver, body.business {
 			@include transform(translate(-50%,-50%));
 		}
 	}
+}
+
+.driver-header {
+	.dropdown-logo {
+		border-radius: 0;
+	}
+	.text {
+		color: $black;
+		text-align: left;
+		padding-left: 10px;
+		font-size: 12px;
+		font-family: $myriad-text;
+	}
+
 }
 
 .progress-bar {
@@ -372,6 +386,14 @@ header {
 
 			&.menu-right {
 				float: right;
+			}
+
+			&.menu-left {
+				li{
+					&:nth-child(1) {
+						width:70px;
+					}
+				}
 			}
 		}
 

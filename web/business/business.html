@@ -37,6 +37,7 @@
 
         <!-- <link rel="stylesheet" href="/styles/plugin/selectordie.css"> -->
         <link rel="stylesheet" href="../styles/main.css">
+        <!-- <link rel="stylesheet" href="../styles/datepicker.css"> -->
     
         
         <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -72,6 +73,11 @@
                 <ul class="menu-right">
                     <li class="account">
                         <p>Charles</p>
+                        <div class="dropdown-logo">
+                            <div class="dropdown-logo-inner">
+                                <div class="text valign">Déconnexion</div>    
+                            </div>                    
+                        </div>
                     </li>
                     <li><a href="#" class="btn-menu">S'inscrire</a></li>
                 </ul>
@@ -81,7 +87,7 @@
             </div>            
         </header>  
         
-        <div class="business-inner">
+        <div class="business-container">
             <div class="business-header">
                 <div class="business-historique business-header-inner">
                     <img src="../images/driver/historique.png" alt="">
@@ -89,10 +95,10 @@
                 <div class="business-input business-header-inner">
                     <div class="balign">
                         <div class="control-group-date">
-                            <input type="text">
+                            <input type="text" placeholder="De" class="datepicker">
                         </div><!--
                         --><div class="control-group-date">
-                            <input type="text">
+                            <input type="text" placeholder="À" class="datepicker">
                         </div>
                     </div>
                     
@@ -168,7 +174,87 @@
                     <a href="#" class="click-expand" data-target="row-1"></a>
                     <div class="collapse" id="row-1">
                         <div class="collapse-inner">
-                            <p>babababababa</p>
+                            <div class="collapse-top row">
+                                <div class="itineraire">
+                                    <div class="from">
+                                        <p class="hour">16:30</p>
+                                        <span></span>
+                                        <p class="address">278 Boulevard Saint Germain, 75007 Paris, France</p>
+                                    </div>
+                                    <span class="ligne"><img src="../images/dots.png" alt=""></span>
+                                    <div class="to">
+                                        <p class="hour">16:52</p>
+                                        <span class="turquoise"></span>
+                                        <p class="address">16 Rue Michel le Comte, 75003 Paris, France</p>                                        
+                                    </div>
+                                </div>
+                                <div class="itineraire-lien">
+                                    <a href="#" class="btn-border">Envoyer une facture</a>
+                                    <a href="#" class="link">J’ai eu un problème avec ma course</a>
+                                    <a href="#" class="link">J’ai perdu quelque chose</a>
+                                </div>
+                            </div>
+
+                            <div class="collapse-bottom row">
+                                <div class="row row-1">
+                                    <div class="col-12 col-md-12 col-xs-12">
+                                        <div class="row">
+                                            <div class="column column-1">
+                                                <p>Type de paiement</p>
+                                                <span>Compte pro</span>
+                                            </div>
+                                            <div class="column column-2">
+                                                <p>Cout attente</p>
+                                                <span>12 €</span>
+                                            </div>                                            
+                                            <div class="column column-3">
+                                                <p>TVA 10%</p>
+                                                <span>2,27 €</span>
+                                            </div>
+                                            <div class="column column-4">
+                                                <p>Prix TTC</p>
+                                                <span>12 €</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row row-2">                                    
+                                    <div class="col-12 col-md-12 col-xs-12">
+                                        <div class="row">
+                                            <div class="column column-1">
+                                                <p>NUMERO RECU</p>
+                                                <span>100245</span>
+                                            </div>
+                                            <div class="column column-2">
+                                                <p>Véhicule</p>
+                                                <span>Audi A6</span>
+                                            </div>                                            
+                                            <div class="column column-3">
+                                                <p>IMMATRICULATION</p>
+                                                <span>AB-123-AB</span>
+                                            </div>
+                                            <div class="column column-4">
+                                                <p>Attente</p>
+                                                <span>3 mins</span>
+                                            </div>
+                                            <div class="column column-5">
+                                                <p>Gamme</p>
+                                                <span>XL</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row row-3">
+                                    <div class="column column-1">
+                                        <p>Référence</p>
+                                        <span>Pôle Communication</span>
+                                    </div>
+                                    <div class="column column-2">
+                                        <p>Commentaires</p>
+                                        <span>Charles qui a galéré pour faire le détails de la page parce que c’était super dur</span>
+                                    </div> 
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -205,6 +291,93 @@
                     <div class="business-inner-row business-inner business-show size-small">
                         <span class="block">Afficher</span>
                     </div>
+
+                    <a href="#" class="click-expand" data-target="row-2"></a>
+                    <div class="collapse" id="row-2">
+                        <div class="collapse-inner">
+                            <div class="collapse-top row">
+                                <div class="itineraire">
+                                    <div class="from">
+                                        <p class="hour">16:30</p>
+                                        <span></span>
+                                        <p class="address">278 Boulevard Saint Germain, 75007 Paris, France</p>
+                                    </div>
+                                    <span class="ligne"><img src="../images/dots.png" alt=""></span>
+                                    <div class="to">
+                                        <p class="hour">16:52</p>
+                                        <span class="turquoise"></span>
+                                        <p class="address">16 Rue Michel le Comte, 75003 Paris, France</p>                                        
+                                    </div>
+                                </div>
+                                <div class="itineraire-lien">
+                                    <a href="#" class="btn-border">Envoyer une facture</a>
+                                    <a href="#" class="link">J’ai eu un problème avec ma course</a>
+                                    <a href="#" class="link">J’ai perdu quelque chose</a>
+                                </div>
+                            </div>
+
+                            <div class="collapse-bottom row">
+                                <div class="row row-1">
+                                    <div class="col-12 col-md-12 col-xs-12">
+                                        <div class="row">
+                                            <div class="column column-1">
+                                                <p>Type de paiement</p>
+                                                <span>Compte pro</span>
+                                            </div>
+                                            <div class="column column-2">
+                                                <p>Cout attente</p>
+                                                <span>12 €</span>
+                                            </div>                                            
+                                            <div class="column column-3">
+                                                <p>TVA 10%</p>
+                                                <span>2,27 €</span>
+                                            </div>
+                                            <div class="column column-4">
+                                                <p>Prix TTC</p>
+                                                <span>12 €</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row row-2">                                    
+                                    <div class="col-12 col-md-12 col-xs-12">
+                                        <div class="row">
+                                            <div class="column column-1">
+                                                <p>NUMERO RECU</p>
+                                                <span>100245</span>
+                                            </div>
+                                            <div class="column column-2">
+                                                <p>Véhicule</p>
+                                                <span>Audi A6</span>
+                                            </div>                                            
+                                            <div class="column column-3">
+                                                <p>IMMATRICULATION</p>
+                                                <span>AB-123-AB</span>
+                                            </div>
+                                            <div class="column column-4">
+                                                <p>Attente</p>
+                                                <span>3 mins</span>
+                                            </div>
+                                            <div class="column column-5">
+                                                <p>Gamme</p>
+                                                <span>XL</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row row-3">
+                                    <div class="column column-1">
+                                        <p>Référence</p>
+                                        <span>Pôle Communication</span>
+                                    </div>
+                                    <div class="column column-2">
+                                        <p>Commentaires</p>
+                                        <span>Charles qui a galéré pour faire le détails de la page parce que c’était super dur</span>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
 
@@ -238,6 +411,93 @@
                     </div>
                     <div class="business-inner-row business-inner business-show size-small">
                         <span class="block">Afficher</span>
+                    </div>
+
+                    <a href="#" class="click-expand" data-target="row-3"></a>
+                    <div class="collapse" id="row-3">
+                        <div class="collapse-inner">
+                            <div class="collapse-top row">
+                                <div class="itineraire">
+                                    <div class="from">
+                                        <p class="hour">16:30</p>
+                                        <span></span>
+                                        <p class="address">278 Boulevard Saint Germain, 75007 Paris, France</p>
+                                    </div>
+                                    <span class="ligne"><img src="../images/dots.png" alt=""></span>
+                                    <div class="to">
+                                        <p class="hour">16:52</p>
+                                        <span class="turquoise"></span>
+                                        <p class="address">16 Rue Michel le Comte, 75003 Paris, France</p>                                        
+                                    </div>
+                                </div>
+                                <div class="itineraire-lien">
+                                    <a href="#" class="btn-border">Envoyer une facture</a>
+                                    <a href="#" class="link">J’ai eu un problème avec ma course</a>
+                                    <a href="#" class="link">J’ai perdu quelque chose</a>
+                                </div>
+                            </div>
+
+                            <div class="collapse-bottom row">
+                                <div class="row row-1">
+                                    <div class="col-12 col-md-12 col-xs-12">
+                                        <div class="row">
+                                            <div class="column column-1">
+                                                <p>Type de paiement</p>
+                                                <span>Compte pro</span>
+                                            </div>
+                                            <div class="column column-2">
+                                                <p>Cout attente</p>
+                                                <span>12 €</span>
+                                            </div>                                            
+                                            <div class="column column-3">
+                                                <p>TVA 10%</p>
+                                                <span>2,27 €</span>
+                                            </div>
+                                            <div class="column column-4">
+                                                <p>Prix TTC</p>
+                                                <span>12 €</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row row-2">                                    
+                                    <div class="col-12 col-md-12 col-xs-12">
+                                        <div class="row">
+                                            <div class="column column-1">
+                                                <p>NUMERO RECU</p>
+                                                <span>100245</span>
+                                            </div>
+                                            <div class="column column-2">
+                                                <p>Véhicule</p>
+                                                <span>Audi A6</span>
+                                            </div>                                            
+                                            <div class="column column-3">
+                                                <p>IMMATRICULATION</p>
+                                                <span>AB-123-AB</span>
+                                            </div>
+                                            <div class="column column-4">
+                                                <p>Attente</p>
+                                                <span>3 mins</span>
+                                            </div>
+                                            <div class="column column-5">
+                                                <p>Gamme</p>
+                                                <span>XL</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row row-3">
+                                    <div class="column column-1">
+                                        <p>Référence</p>
+                                        <span>Pôle Communication</span>
+                                    </div>
+                                    <div class="column column-2">
+                                        <p>Commentaires</p>
+                                        <span>Charles qui a galéré pour faire le détails de la page parce que c’était super dur</span>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -273,6 +533,93 @@
                     <div class="business-inner-row business-inner business-show size-small">
                         <span class="block">Afficher</span>
                     </div>
+
+                    <a href="#" class="click-expand" data-target="row-4"></a>
+                    <div class="collapse" id="row-4">
+                        <div class="collapse-inner">
+                            <div class="collapse-top row">
+                                <div class="itineraire">
+                                    <div class="from">
+                                        <p class="hour">16:30</p>
+                                        <span></span>
+                                        <p class="address">278 Boulevard Saint Germain, 75007 Paris, France</p>
+                                    </div>
+                                    <span class="ligne"><img src="../images/dots.png" alt=""></span>
+                                    <div class="to">
+                                        <p class="hour">16:52</p>
+                                        <span class="turquoise"></span>
+                                        <p class="address">16 Rue Michel le Comte, 75003 Paris, France</p>                                        
+                                    </div>
+                                </div>
+                                <div class="itineraire-lien">
+                                    <a href="#" class="btn-border">Envoyer une facture</a>
+                                    <a href="#" class="link">J’ai eu un problème avec ma course</a>
+                                    <a href="#" class="link">J’ai perdu quelque chose</a>
+                                </div>
+                            </div>
+
+                            <div class="collapse-bottom row">
+                                <div class="row row-1">
+                                    <div class="col-12 col-md-12 col-xs-12">
+                                        <div class="row">
+                                            <div class="column column-1">
+                                                <p>Type de paiement</p>
+                                                <span>Compte pro</span>
+                                            </div>
+                                            <div class="column column-2">
+                                                <p>Cout attente</p>
+                                                <span>12 €</span>
+                                            </div>                                            
+                                            <div class="column column-3">
+                                                <p>TVA 10%</p>
+                                                <span>2,27 €</span>
+                                            </div>
+                                            <div class="column column-4">
+                                                <p>Prix TTC</p>
+                                                <span>12 €</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row row-2">                                    
+                                    <div class="col-12 col-md-12 col-xs-12">
+                                        <div class="row">
+                                            <div class="column column-1">
+                                                <p>NUMERO RECU</p>
+                                                <span>100245</span>
+                                            </div>
+                                            <div class="column column-2">
+                                                <p>Véhicule</p>
+                                                <span>Audi A6</span>
+                                            </div>                                            
+                                            <div class="column column-3">
+                                                <p>IMMATRICULATION</p>
+                                                <span>AB-123-AB</span>
+                                            </div>
+                                            <div class="column column-4">
+                                                <p>Attente</p>
+                                                <span>3 mins</span>
+                                            </div>
+                                            <div class="column column-5">
+                                                <p>Gamme</p>
+                                                <span>XL</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row row-3">
+                                    <div class="column column-1">
+                                        <p>Référence</p>
+                                        <span>Pôle Communication</span>
+                                    </div>
+                                    <div class="column column-2">
+                                        <p>Commentaires</p>
+                                        <span>Charles qui a galéré pour faire le détails de la page parce que c’était super dur</span>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
 
@@ -306,6 +653,93 @@
                     </div>
                     <div class="business-inner-row business-inner business-show size-small">
                         <span class="block">Afficher</span>
+                    </div>
+
+                    <a href="#" class="click-expand" data-target="row-5"></a>
+                    <div class="collapse" id="row-5">
+                        <div class="collapse-inner">
+                            <div class="collapse-top row">
+                                <div class="itineraire">
+                                    <div class="from">
+                                        <p class="hour">16:30</p>
+                                        <span></span>
+                                        <p class="address">278 Boulevard Saint Germain, 75007 Paris, France</p>
+                                    </div>
+                                    <span class="ligne"><img src="../images/dots.png" alt=""></span>
+                                    <div class="to">
+                                        <p class="hour">16:52</p>
+                                        <span class="turquoise"></span>
+                                        <p class="address">16 Rue Michel le Comte, 75003 Paris, France</p>                                        
+                                    </div>
+                                </div>
+                                <div class="itineraire-lien">
+                                    <a href="#" class="btn-border">Envoyer une facture</a>
+                                    <a href="#" class="link">J’ai eu un problème avec ma course</a>
+                                    <a href="#" class="link">J’ai perdu quelque chose</a>
+                                </div>
+                            </div>
+
+                            <div class="collapse-bottom row">
+                                <div class="row row-1">
+                                    <div class="col-12 col-md-12 col-xs-12">
+                                        <div class="row">
+                                            <div class="column column-1">
+                                                <p>Type de paiement</p>
+                                                <span>Compte pro</span>
+                                            </div>
+                                            <div class="column column-2">
+                                                <p>Cout attente</p>
+                                                <span>12 €</span>
+                                            </div>                                            
+                                            <div class="column column-3">
+                                                <p>TVA 10%</p>
+                                                <span>2,27 €</span>
+                                            </div>
+                                            <div class="column column-4">
+                                                <p>Prix TTC</p>
+                                                <span>12 €</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row row-2">                                    
+                                    <div class="col-12 col-md-12 col-xs-12">
+                                        <div class="row">
+                                            <div class="column column-1">
+                                                <p>NUMERO RECU</p>
+                                                <span>100245</span>
+                                            </div>
+                                            <div class="column column-2">
+                                                <p>Véhicule</p>
+                                                <span>Audi A6</span>
+                                            </div>                                            
+                                            <div class="column column-3">
+                                                <p>IMMATRICULATION</p>
+                                                <span>AB-123-AB</span>
+                                            </div>
+                                            <div class="column column-4">
+                                                <p>Attente</p>
+                                                <span>3 mins</span>
+                                            </div>
+                                            <div class="column column-5">
+                                                <p>Gamme</p>
+                                                <span>XL</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row row-3">
+                                    <div class="column column-1">
+                                        <p>Référence</p>
+                                        <span>Pôle Communication</span>
+                                    </div>
+                                    <div class="column column-2">
+                                        <p>Commentaires</p>
+                                        <span>Charles qui a galéré pour faire le détails de la page parce que c’était super dur</span>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -341,6 +775,93 @@
                     <div class="business-inner-row business-inner business-show size-small">
                         <span class="block">Afficher</span>
                     </div>
+
+                    <a href="#" class="click-expand" data-target="row-6"></a>
+                    <div class="collapse" id="row-6">
+                        <div class="collapse-inner">
+                            <div class="collapse-top row">
+                                <div class="itineraire">
+                                    <div class="from">
+                                        <p class="hour">16:30</p>
+                                        <span></span>
+                                        <p class="address">278 Boulevard Saint Germain, 75007 Paris, France</p>
+                                    </div>
+                                    <span class="ligne"><img src="../images/dots.png" alt=""></span>
+                                    <div class="to">
+                                        <p class="hour">16:52</p>
+                                        <span class="turquoise"></span>
+                                        <p class="address">16 Rue Michel le Comte, 75003 Paris, France</p>                                        
+                                    </div>
+                                </div>
+                                <div class="itineraire-lien">
+                                    <a href="#" class="btn-border">Envoyer une facture</a>
+                                    <a href="#" class="link">J’ai eu un problème avec ma course</a>
+                                    <a href="#" class="link">J’ai perdu quelque chose</a>
+                                </div>
+                            </div>
+
+                            <div class="collapse-bottom row">
+                                <div class="row row-1">
+                                    <div class="col-12 col-md-12 col-xs-12">
+                                        <div class="row">
+                                            <div class="column column-1">
+                                                <p>Type de paiement</p>
+                                                <span>Compte pro</span>
+                                            </div>
+                                            <div class="column column-2">
+                                                <p>Cout attente</p>
+                                                <span>12 €</span>
+                                            </div>                                            
+                                            <div class="column column-3">
+                                                <p>TVA 10%</p>
+                                                <span>2,27 €</span>
+                                            </div>
+                                            <div class="column column-4">
+                                                <p>Prix TTC</p>
+                                                <span>12 €</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row row-2">                                    
+                                    <div class="col-12 col-md-12 col-xs-12">
+                                        <div class="row">
+                                            <div class="column column-1">
+                                                <p>NUMERO RECU</p>
+                                                <span>100245</span>
+                                            </div>
+                                            <div class="column column-2">
+                                                <p>Véhicule</p>
+                                                <span>Audi A6</span>
+                                            </div>                                            
+                                            <div class="column column-3">
+                                                <p>IMMATRICULATION</p>
+                                                <span>AB-123-AB</span>
+                                            </div>
+                                            <div class="column column-4">
+                                                <p>Attente</p>
+                                                <span>3 mins</span>
+                                            </div>
+                                            <div class="column column-5">
+                                                <p>Gamme</p>
+                                                <span>XL</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row row-3">
+                                    <div class="column column-1">
+                                        <p>Référence</p>
+                                        <span>Pôle Communication</span>
+                                    </div>
+                                    <div class="column column-2">
+                                        <p>Commentaires</p>
+                                        <span>Charles qui a galéré pour faire le détails de la page parce que c’était super dur</span>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
 
@@ -375,6 +896,93 @@
                     <div class="business-inner-row business-inner business-show size-small">
                         <span class="block">Afficher</span>
                     </div>
+
+                    <a href="#" class="click-expand" data-target="row-7"></a>
+                    <div class="collapse" id="row-7">
+                        <div class="collapse-inner">
+                            <div class="collapse-top row">
+                                <div class="itineraire">
+                                    <div class="from">
+                                        <p class="hour">16:30</p>
+                                        <span></span>
+                                        <p class="address">278 Boulevard Saint Germain, 75007 Paris, France</p>
+                                    </div>
+                                    <span class="ligne"><img src="../images/dots.png" alt=""></span>
+                                    <div class="to">
+                                        <p class="hour">16:52</p>
+                                        <span class="turquoise"></span>
+                                        <p class="address">16 Rue Michel le Comte, 75003 Paris, France</p>                                        
+                                    </div>
+                                </div>
+                                <div class="itineraire-lien">
+                                    <a href="#" class="btn-border">Envoyer une facture</a>
+                                    <a href="#" class="link">J’ai eu un problème avec ma course</a>
+                                    <a href="#" class="link">J’ai perdu quelque chose</a>
+                                </div>
+                            </div>
+
+                            <div class="collapse-bottom row">
+                                <div class="row row-1">
+                                    <div class="col-12 col-md-12 col-xs-12">
+                                        <div class="row">
+                                            <div class="column column-1">
+                                                <p>Type de paiement</p>
+                                                <span>Compte pro</span>
+                                            </div>
+                                            <div class="column column-2">
+                                                <p>Cout attente</p>
+                                                <span>12 €</span>
+                                            </div>                                            
+                                            <div class="column column-3">
+                                                <p>TVA 10%</p>
+                                                <span>2,27 €</span>
+                                            </div>
+                                            <div class="column column-4">
+                                                <p>Prix TTC</p>
+                                                <span>12 €</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row row-2">                                    
+                                    <div class="col-12 col-md-12 col-xs-12">
+                                        <div class="row">
+                                            <div class="column column-1">
+                                                <p>NUMERO RECU</p>
+                                                <span>100245</span>
+                                            </div>
+                                            <div class="column column-2">
+                                                <p>Véhicule</p>
+                                                <span>Audi A6</span>
+                                            </div>                                            
+                                            <div class="column column-3">
+                                                <p>IMMATRICULATION</p>
+                                                <span>AB-123-AB</span>
+                                            </div>
+                                            <div class="column column-4">
+                                                <p>Attente</p>
+                                                <span>3 mins</span>
+                                            </div>
+                                            <div class="column column-5">
+                                                <p>Gamme</p>
+                                                <span>XL</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row row-3">
+                                    <div class="column column-1">
+                                        <p>Référence</p>
+                                        <span>Pôle Communication</span>
+                                    </div>
+                                    <div class="column column-2">
+                                        <p>Commentaires</p>
+                                        <span>Charles qui a galéré pour faire le détails de la page parce que c’était super dur</span>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
 
@@ -408,6 +1016,93 @@
                     </div>
                     <div class="business-inner-row business-inner business-show size-small">
                         <span class="block">Afficher</span>
+                    </div>
+
+                    <a href="#" class="click-expand" data-target="row-8"></a>
+                    <div class="collapse" id="row-8">
+                        <div class="collapse-inner">
+                            <div class="collapse-top row">
+                                <div class="itineraire">
+                                    <div class="from">
+                                        <p class="hour">16:30</p>
+                                        <span></span>
+                                        <p class="address">278 Boulevard Saint Germain, 75007 Paris, France</p>
+                                    </div>
+                                    <span class="ligne"><img src="../images/dots.png" alt=""></span>
+                                    <div class="to">
+                                        <p class="hour">16:52</p>
+                                        <span class="turquoise"></span>
+                                        <p class="address">16 Rue Michel le Comte, 75003 Paris, France</p>                                        
+                                    </div>
+                                </div>
+                                <div class="itineraire-lien">
+                                    <a href="#" class="btn-border">Envoyer une facture</a>
+                                    <a href="#" class="link">J’ai eu un problème avec ma course</a>
+                                    <a href="#" class="link">J’ai perdu quelque chose</a>
+                                </div>
+                            </div>
+
+                            <div class="collapse-bottom row">
+                                <div class="row row-1">
+                                    <div class="col-12 col-md-12 col-xs-12">
+                                        <div class="row">
+                                            <div class="column column-1">
+                                                <p>Type de paiement</p>
+                                                <span>Compte pro</span>
+                                            </div>
+                                            <div class="column column-2">
+                                                <p>Cout attente</p>
+                                                <span>12 €</span>
+                                            </div>                                            
+                                            <div class="column column-3">
+                                                <p>TVA 10%</p>
+                                                <span>2,27 €</span>
+                                            </div>
+                                            <div class="column column-4">
+                                                <p>Prix TTC</p>
+                                                <span>12 €</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row row-2">                                    
+                                    <div class="col-12 col-md-12 col-xs-12">
+                                        <div class="row">
+                                            <div class="column column-1">
+                                                <p>NUMERO RECU</p>
+                                                <span>100245</span>
+                                            </div>
+                                            <div class="column column-2">
+                                                <p>Véhicule</p>
+                                                <span>Audi A6</span>
+                                            </div>                                            
+                                            <div class="column column-3">
+                                                <p>IMMATRICULATION</p>
+                                                <span>AB-123-AB</span>
+                                            </div>
+                                            <div class="column column-4">
+                                                <p>Attente</p>
+                                                <span>3 mins</span>
+                                            </div>
+                                            <div class="column column-5">
+                                                <p>Gamme</p>
+                                                <span>XL</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row row-3">
+                                    <div class="column column-1">
+                                        <p>Référence</p>
+                                        <span>Pôle Communication</span>
+                                    </div>
+                                    <div class="column column-2">
+                                        <p>Commentaires</p>
+                                        <span>Charles qui a galéré pour faire le détails de la page parce que c’était super dur</span>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -443,6 +1138,93 @@
                     <div class="business-inner-row business-inner business-show size-small">
                         <span class="block">Afficher</span>
                     </div>
+
+                    <a href="#" class="click-expand" data-target="row-9"></a>
+                    <div class="collapse" id="row-9">
+                        <div class="collapse-inner">
+                            <div class="collapse-top row">
+                                <div class="itineraire">
+                                    <div class="from">
+                                        <p class="hour">16:30</p>
+                                        <span></span>
+                                        <p class="address">278 Boulevard Saint Germain, 75007 Paris, France</p>
+                                    </div>
+                                    <span class="ligne"><img src="../images/dots.png" alt=""></span>
+                                    <div class="to">
+                                        <p class="hour">16:52</p>
+                                        <span class="turquoise"></span>
+                                        <p class="address">16 Rue Michel le Comte, 75003 Paris, France</p>                                        
+                                    </div>
+                                </div>
+                                <div class="itineraire-lien">
+                                    <a href="#" class="btn-border">Envoyer une facture</a>
+                                    <a href="#" class="link">J’ai eu un problème avec ma course</a>
+                                    <a href="#" class="link">J’ai perdu quelque chose</a>
+                                </div>
+                            </div>
+
+                            <div class="collapse-bottom row">
+                                <div class="row row-1">
+                                    <div class="col-12 col-md-12 col-xs-12">
+                                        <div class="row">
+                                            <div class="column column-1">
+                                                <p>Type de paiement</p>
+                                                <span>Compte pro</span>
+                                            </div>
+                                            <div class="column column-2">
+                                                <p>Cout attente</p>
+                                                <span>12 €</span>
+                                            </div>                                            
+                                            <div class="column column-3">
+                                                <p>TVA 10%</p>
+                                                <span>2,27 €</span>
+                                            </div>
+                                            <div class="column column-4">
+                                                <p>Prix TTC</p>
+                                                <span>12 €</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row row-2">                                    
+                                    <div class="col-12 col-md-12 col-xs-12">
+                                        <div class="row">
+                                            <div class="column column-1">
+                                                <p>NUMERO RECU</p>
+                                                <span>100245</span>
+                                            </div>
+                                            <div class="column column-2">
+                                                <p>Véhicule</p>
+                                                <span>Audi A6</span>
+                                            </div>                                            
+                                            <div class="column column-3">
+                                                <p>IMMATRICULATION</p>
+                                                <span>AB-123-AB</span>
+                                            </div>
+                                            <div class="column column-4">
+                                                <p>Attente</p>
+                                                <span>3 mins</span>
+                                            </div>
+                                            <div class="column column-5">
+                                                <p>Gamme</p>
+                                                <span>XL</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row row-3">
+                                    <div class="column column-1">
+                                        <p>Référence</p>
+                                        <span>Pôle Communication</span>
+                                    </div>
+                                    <div class="column column-2">
+                                        <p>Commentaires</p>
+                                        <span>Charles qui a galéré pour faire le détails de la page parce que c’était super dur</span>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
 
@@ -476,6 +1258,93 @@
                     </div>
                     <div class="business-inner-row business-inner business-show size-small">
                         <span class="block">Afficher</span>
+                    </div>
+
+                    <a href="#" class="click-expand" data-target="row-10"></a>
+                    <div class="collapse" id="row-10">
+                        <div class="collapse-inner">
+                            <div class="collapse-top row">
+                                <div class="itineraire">
+                                    <div class="from">
+                                        <p class="hour">16:30</p>
+                                        <span></span>
+                                        <p class="address">278 Boulevard Saint Germain, 75007 Paris, France</p>
+                                    </div>
+                                    <span class="ligne"><img src="../images/dots.png" alt=""></span>
+                                    <div class="to">
+                                        <p class="hour">16:52</p>
+                                        <span class="turquoise"></span>
+                                        <p class="address">16 Rue Michel le Comte, 75003 Paris, France</p>                                        
+                                    </div>
+                                </div>
+                                <div class="itineraire-lien">
+                                    <a href="#" class="btn-border">Envoyer une facture</a>
+                                    <a href="#" class="link">J’ai eu un problème avec ma course</a>
+                                    <a href="#" class="link">J’ai perdu quelque chose</a>
+                                </div>
+                            </div>
+
+                            <div class="collapse-bottom row">
+                                <div class="row row-1">
+                                    <div class="col-12 col-md-12 col-xs-12">
+                                        <div class="row">
+                                            <div class="column column-1">
+                                                <p>Type de paiement</p>
+                                                <span>Compte pro</span>
+                                            </div>
+                                            <div class="column column-2">
+                                                <p>Cout attente</p>
+                                                <span>12 €</span>
+                                            </div>                                            
+                                            <div class="column column-3">
+                                                <p>TVA 10%</p>
+                                                <span>2,27 €</span>
+                                            </div>
+                                            <div class="column column-4">
+                                                <p>Prix TTC</p>
+                                                <span>12 €</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row row-2">                                    
+                                    <div class="col-12 col-md-12 col-xs-12">
+                                        <div class="row">
+                                            <div class="column column-1">
+                                                <p>NUMERO RECU</p>
+                                                <span>100245</span>
+                                            </div>
+                                            <div class="column column-2">
+                                                <p>Véhicule</p>
+                                                <span>Audi A6</span>
+                                            </div>                                            
+                                            <div class="column column-3">
+                                                <p>IMMATRICULATION</p>
+                                                <span>AB-123-AB</span>
+                                            </div>
+                                            <div class="column column-4">
+                                                <p>Attente</p>
+                                                <span>3 mins</span>
+                                            </div>
+                                            <div class="column column-5">
+                                                <p>Gamme</p>
+                                                <span>XL</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row row-3">
+                                    <div class="column column-1">
+                                        <p>Référence</p>
+                                        <span>Pôle Communication</span>
+                                    </div>
+                                    <div class="column column-2">
+                                        <p>Commentaires</p>
+                                        <span>Charles qui a galéré pour faire le détails de la page parce que c’était super dur</span>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
@@ -512,7 +1381,8 @@
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
         
-        <script src="../scripts/bundle.js"></script>
+        <script src="../scripts/bundle.js"></script>        
+        <script src="../scripts/jquery-ui.min.js"></script>
         <script src="../scripts/collapse.js"></script>
 
         <script type="text/javascript">

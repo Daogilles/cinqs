@@ -1,6 +1,9 @@
 //
 // Business page
 // --------------------------------------------------
+.business-container {
+	margin-bottom: 100px;
+}
 
 .business-header {
 	height: 55px;
@@ -33,12 +36,42 @@
 	.business-search {
 		margin-left: 25px;
 		width: 170px;
+		input {
+			padding-left: 10px;
+		}
 	}
 	.business-input	{
 		width: 330px;
 		.control-group-date {
 			float: left;
+			position: relative;
 			width: 165px;
+			
+			input {
+				@include placeholder {
+					color: $black;
+					font-size: 14px;
+					font-family: $myriad-thin;
+				}
+			}
+
+			&:after {
+				background: url(../images/driver/arrow-input-date.png);
+				content: '';
+				display: block;
+				position: absolute;
+				right: 10px;
+				height: 5px;
+				width: 10px;	
+				top: 50%;
+				@include transform(translateY(-50%));			
+			}
+		}
+
+		.control-group-date + .control-group-date{
+			input {
+				border-left: none;
+			}
 		}
 	}
 	.business-export {
@@ -66,9 +99,13 @@
 		position: absolute;
 		left: 0;
 		top: 0;
-		height: 100%;
+		height: 51px;
 		width: 100%;
 		z-index: 1;
+		&.active {
+			background-color: $orange-true;
+			opacity: 0.2;
+		}
 	}
 
 	.business-row + .business-row {
@@ -145,7 +182,108 @@
 		        display: block;
 		        padding: 50px 155px;
 		    }
-		}
 
+		    .itineraire {
+		    	float: left;
+		    	p {
+		    		color: $black;
+		    		font-family: $myriad-thin;
+		    		font-size: 14px;
+		    		line-height: 14px;
+		    		display: inline-block;
+		    		margin-top: 0;
+		    		&.hour {
+		    			font-size: 12px;		    			
+		    		}
+		    	}
+		    	.ligne {
+					margin:2px 0;
+					display: block;
+					margin-left: 42px;
+		    	}
+		    	.from, .to {
+		    		display: block;
+		    		height: 20px;
+		    		line-height: 20px;
+		    		width: 100%;
+		    		span {
+		    			border:2px solid $gray;
+		    			border-radius: 100%;
+		    			display: inline-block;
+		    			margin: 0 10px;
+		    			height: 10px;
+		    			width: 10px;
+		    			&.turquoise {
+		    				border: 2px solid $turquoise;
+		    			}
+		    		}
+		    	}
+		    }
+		    .itineraire-lien {
+		    	float: right;
+		    	width: 155px;
+		    	a.link {
+		    		color: $blue-dark;
+		    		font-size: 11px;
+		    		font-family: $myriad-thin;
+		    	}
+		    	a.btn-border {
+		    		border: 1px solid $turquoise;
+		    		color: $turquoise;
+		    		height: 26px;
+		    		line-height: 26px;
+		    		font-family: $brandon-medium;
+		    		font-size: 11px;
+		    		text-transform: uppercase;
+		    		text-align: center;
+		    		width: 100%;
+		    	}
+
+		    	a + a {
+		    		margin-top: 10px;
+		    	}
+		    }
+
+		    .collapse-bottom {
+		    	.column {
+		    		display: inline-block;
+		    		p {
+			    		color: $blue-dark;
+			    		font-size: 10px;
+			    		font-family: $brandon-medium;
+			    		text-transform: uppercase;
+			    	}
+			    	span {
+			    		color: $black;
+			    		font-size: 14px;
+			    		font-family: $myriad-thin;
+			    	}
+		    	}
+		    	.row-1, .row-2 {
+		    		.column-1 {
+		    			width: 140px;
+		    		}
+		    		.column-2 {
+		    			width: 120px;
+		    		}
+		    		.column-3 {
+		    			width: 110px;
+		    		}
+		    		.column-4 {
+		    			width: 85px;
+		    		}
+		    	}
+		    	.row-3 {
+		    		.column-1 {
+		    			width: 140px;
+		    		}
+		    	}
+		    	
+		    	.row + .row {
+		    		margin-top: 20px;
+		    	}
+		    }
+
+		}
 	}
 }
