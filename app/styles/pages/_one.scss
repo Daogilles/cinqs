@@ -1,5 +1,5 @@
 //
-// Home page
+// one page
 // --------------------------------------------------
 
 .page-top {
@@ -7,8 +7,8 @@
 	background-size: cover;
 	height: 680px;
 	width: 100%;
-	z-index: 2;
 	position: relative;
+	z-index: 2;
 
 	@include respond-to('small') {
 		height: 300px;
@@ -151,7 +151,6 @@
 	}
 }
 
-
 .page-bottom {
 	position: relative;
 	z-index: 1;
@@ -186,7 +185,7 @@
 		}
 	}
 
-	.bottom-bottom {
+	.driver-bottom {
 		border-top: 1px solid $gray-border;
 		margin: 0 auto;
 		padding: 60px 0;
@@ -232,8 +231,97 @@
 		}
 
 		.btn-submit-wrapper {
-			margin: 20px auto 0;
+			margin: 60px auto 0;
 			width: 220px;
 		}
+	}
+}
+
+
+.page-gamme {
+	border-top: 1px solid $gray-border;
+	// padding: 60px 0;
+
+	.gamme {
+		padding:60px 25px 40px 25px;
+		text-align: center;		
+	}
+
+	&.one {
+		.gamme {
+			&.active {
+				@include linear-gradient(to top, #F4F4F4, $white 70%);
+			}
+		}
+	}
+
+	&.cinqs {
+		.gamme {
+			&.active {
+				background-color: $gray-lightest;
+			}
+		}
+	}
+
+	.inner-logo {
+		height: 37px;
+		margin-bottom: 25px;
+		position: relative;
+		img {
+			height: auto;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			@include transform(translate(-50%,-50%));
+		}
+	}
+	p {
+		color: $gray;
+		font-size: 16px;
+		font-family: $proxima-regular;
+
+		&.text {
+			font-size: 18px;
+			font-family: $myriad-thin;
+		}
+		&.bold {
+			color: $blue-dark;
+			font-family: $proxima-semibold;
+		}
+	}
+	p+p {
+		margin-top: 30px;
+	}
+	hr {
+		background-color: $gray-border;
+		display: block;
+		height: 1px;
+		margin: 30px 0;
+		width: 100%;
+	}
+	
+	a.link {
+		color: $blue-dark;
+		margin-top: 40px;
+		font-size: 18px;
+		font-family: $proxima-semibold;
+		height: 45px;
+		line-height: 45px;
+		position: relative;
+
+		&:after {
+			background: url(../images/driver/arrow.png) center center no-repeat;
+			content: '';
+			height: 15px;
+			width: 10px;
+			position: absolute;
+			top: 50%;
+			right: -20px;
+			@include transform(translateY(-50%));
+		}
+	}
+
+	.control-group {
+		margin-top: 40px;
 	}
 }

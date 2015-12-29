@@ -7,7 +7,7 @@
 	width: 94px;		
 }
 
-body.interne {
+body.interne, body.driver, body.business {
 	.logo {
 		background-color: transparent;
 		height: 15px;
@@ -21,6 +21,20 @@ body.interne {
 		img {
 			max-height: 100%;
 			max-width: 100%;
+		}
+	}
+
+	&.one  {
+		.logo {
+			height: 37px;
+			width: 68px;
+		}
+	}
+
+	&.cinqs  {
+		.logo {
+			height: 15px;
+			width: 76px;
 		}
 	}
 
@@ -325,6 +339,44 @@ header {
 				top: 50%;
 				margin-top: -3px;
 			}	
+		}
+	}
+
+
+	&.driver-header {
+		ul {
+			margin-left: 0;
+			padding-left: 0;
+			&:before {
+				display: none;
+			}
+			
+			a {
+				color: $gray-driver-menu;
+				&.btn-menu {
+					color: #3E3E3E;
+					display: initial;
+					border: 1px solid $gray-border;
+					padding: 7px 25px;
+				}
+			}
+
+			li {
+				height: 60px;
+				line-height: 60px;	
+			}
+
+			li + li {
+				margin-left: 30px;			
+			}
+
+			&.menu-right {
+				float: right;
+			}
+		}
+
+		.account {
+			float: left;
 		}
 	}
 }
