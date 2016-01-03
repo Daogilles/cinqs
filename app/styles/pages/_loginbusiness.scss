@@ -2,3 +2,101 @@
 // Login business page
 // --------------------------------------------------
 
+.business-login {
+	margin: 80px auto;
+	
+	width: 350px;
+	@include respond-to("small") {
+		width: 95%;
+	}
+	h1 {
+		color: $black-light;
+		font-family: $myriad-thin;
+		font-size: 26px;
+		text-align: center;
+	}
+	
+	p {
+		color: $gray;
+		font-size: 10px;
+		font-family: $brandon-medium;
+		margin: 30px 0;
+		text-transform: uppercase;
+		text-align: center;
+	}
+	.control-group {
+
+		label {
+			color: $blue-dark;
+			font-size: 11px;
+			font-family: $brandon-medium;
+			text-transform: uppercase;
+		}
+		input {
+			border: none;
+			color: $black;
+			font-size: 15px;
+			height: 20px;
+			line-height: 120%;
+			font-family: $myriad-text;
+			padding-left: 0;
+
+			@include placeholder {
+				color: $gray;
+				height: 20px;
+				line-height: 120%;
+			}
+		}		
+
+		.btn-submit-wrapper {
+			input {
+				color: $white;
+				font-size: 13px;
+				font-family: $brandon-medium;
+				height: 30px;
+				line-height: 30px;
+				width: 130px;
+				float: right;
+				text-transform: uppercase;
+				margin:6px 0;
+			}
+			
+		}
+	}
+
+	.forgot-pwd {
+		color: $turquoise;
+		font-size: 12px;
+		font-family: $myriad-text;
+		text-align: left;
+		margin-top: 10px;
+	}
+
+	.right {
+		.control-group {
+			margin-top: 0;
+		}
+	}
+
+	.field-container {
+		border-top: 1px solid $gray-border;
+		padding: 10px 0;
+		margin-top: 30px;
+	}
+
+	.field-container + .field-container {
+		border-bottom: 1px solid $gray-border;		
+		margin-top: 0;
+	}
+
+	.social-button {
+		width: 100%;
+		img {
+			max-width: 100%;
+		}
+	}
+
+	.gg-button {
+		margin-top: 10px;
+	}
+}

@@ -8791,6 +8791,85 @@ ul.actions-content {
       margin: 60px auto 0;
       width: 220px; }
 
+.business-login {
+  margin: 80px auto;
+  width: 350px; }
+  @media (max-width: 767px) {
+    .business-login {
+      width: 95%; } }
+  .business-login h1 {
+    color: #111111;
+    font-family: "myriad_set_prothin";
+    font-size: 26px;
+    text-align: center; }
+  .business-login p {
+    color: #9A9A9A;
+    font-size: 10px;
+    font-family: "brandon_grotesquemedium";
+    margin: 30px 0;
+    text-transform: uppercase;
+    text-align: center; }
+  .business-login .control-group label {
+    color: #333D47;
+    font-size: 11px;
+    font-family: "brandon_grotesquemedium";
+    text-transform: uppercase; }
+  .business-login .control-group input {
+    border: none;
+    color: #000;
+    font-size: 15px;
+    height: 20px;
+    line-height: 120%;
+    font-family: "myriad_set_protext";
+    padding-left: 0; }
+    .business-login .control-group input::-webkit-input-placeholder {
+      color: #9A9A9A;
+      height: 20px;
+      line-height: 120%; }
+    .business-login .control-group input::-moz-placeholder {
+      color: #9A9A9A;
+      height: 20px;
+      line-height: 120%; }
+    .business-login .control-group input:-moz-placeholder {
+      color: #9A9A9A;
+      height: 20px;
+      line-height: 120%; }
+    .business-login .control-group input:-ms-input-placeholder {
+      color: #9A9A9A;
+      height: 20px;
+      line-height: 120%; }
+  .business-login .control-group .btn-submit-wrapper input {
+    color: #FFF;
+    font-size: 13px;
+    font-family: "brandon_grotesquemedium";
+    height: 30px;
+    line-height: 30px;
+    width: 130px;
+    float: right;
+    text-transform: uppercase;
+    margin: 6px 0; }
+  .business-login .forgot-pwd {
+    color: #35D3B5;
+    font-size: 12px;
+    font-family: "myriad_set_protext";
+    text-align: left;
+    margin-top: 10px; }
+  .business-login .right .control-group {
+    margin-top: 0; }
+  .business-login .field-container {
+    border-top: 1px solid #e2e2e2;
+    padding: 10px 0;
+    margin-top: 30px; }
+  .business-login .field-container + .field-container {
+    border-bottom: 1px solid #e2e2e2;
+    margin-top: 0; }
+  .business-login .social-button {
+    width: 100%; }
+    .business-login .social-button img {
+      max-width: 100%; }
+  .business-login .gg-button {
+    margin-top: 10px; }
+
 .page-top {
   background: url("../images/home/background.jpg") top center no-repeat;
   background-size: cover;
