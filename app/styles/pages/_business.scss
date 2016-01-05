@@ -38,6 +38,7 @@
 		width: 170px;
 		input {
 			padding-left: 10px;
+			font-size: 14px;
 		}
 	}
 	.business-input	{
@@ -48,6 +49,7 @@
 			width: 165px;
 			
 			input {
+				font-size: 14px;
 				@include placeholder {
 					color: $black;
 					font-size: 14px;
@@ -84,12 +86,14 @@
 			font-family: $brandon-medium;
 			font-size: 11px;
 			padding: 7px 26px;
+			text-transform: uppercase;
 		}
 	}
 }
 
 .business-table {
 	border-top: 1px solid $gray-border;
+	border-bottom: 1px solid $gray-border;
 	padding-left: 0;
 	padding-top: 30px;
 	margin: 0 auto;
@@ -122,18 +126,25 @@
 
 		.business-inner {
 			&.size-small {
-				width: 80px;
+				width: 50px;
+			}
+			&.size-middle-155 {
+				width: 155px;
 			}
 			&.size-middle {
-				width: 110px;
+				width: 100px;
 			}
 			&.size-big {
 				width: 240px;
 			}
+
 		}
 		
-		.business-inner-title {
+		.business-inner-title {			
 			float: left;
+			&.date {
+				padding-left: 10px;
+			}
 			p {
 				color: $turquoise;
 				font-size: 10px;
@@ -177,7 +188,7 @@
 		    width: 100%;
 		    
 		    .collapse-inner {
-		    	background-color: #F0F0F0;
+		    	background-color: #F9F9F9;
 		    	border-top: 1px solid $gray-light;
 		        display: block;
 		        padding: 50px 155px;
@@ -221,10 +232,10 @@
 		    }
 		    .itineraire-lien {
 		    	float: right;
-		    	width: 155px;
+		    	width: 170px;
 		    	a.link {
 		    		color: $blue-dark;
-		    		font-size: 11px;
+		    		font-size: 12px;
 		    		font-family: $myriad-thin;
 		    	}
 		    	a.btn-border {

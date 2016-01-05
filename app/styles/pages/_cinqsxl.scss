@@ -178,6 +178,15 @@
 						top: 50%;
 						left: 50%;
 						@include transform(translate(-50%,-50%));
+						&.cinqs-dollar {
+							width: 80px;
+						}
+						&.cinqs-voiture {
+							width: 123px;
+						}
+						&.cinqs-people {
+							width: 60px;
+						}
 					}
 				}
 				img {
@@ -191,6 +200,7 @@
 				span {
 					display: block;
 					font-size: 18px;
+					font-family: $proxima-regular;
 					margin-top: 10px;
 				}
 			}
@@ -233,6 +243,7 @@
 
 			span {
 				display: block;
+				font-family: $proxima-regular;				
 				padding-left: 40px;
 				margin-top: 15px;
 				font-size: 18px;

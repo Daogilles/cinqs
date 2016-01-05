@@ -630,7 +630,10 @@ p {
   color: #9A9A9A;
   font-family: "proxima_nova_rgregular";
   line-height: 1.6;
-  font-size: 14px; }
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased; }
   p strong {
     font-family: "proxima_nova_ltsemibold"; }
   p small {
@@ -642,29 +645,43 @@ p {
 
 span {
   color: #9A9A9A;
-  font-family: "proxima_nova_rgregular";
   line-height: 1.2;
-  font-size: 14px; }
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased; }
 
 h1, .h1 {
   font-family: "proxima_nova_rgbold";
   font-size: 48px;
-  line-height: 1.2; }
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased; }
 
 h2, .h2 {
   font-family: "proxima_nova_rgregular";
   font-size: 30px;
-  line-height: 1.2; }
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased; }
 
 h3, .h3 {
   font-family: "proxima_nova_rgregular";
   font-size: 28px;
-  line-height: 1.4; }
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased; }
 
 h4, .h4 {
   font-family: "proxima_nova_rgregular";
   font-size: 16px;
-  line-height: 1.4; }
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased; }
 
 ul, ol {
   padding-left: 15px; }
@@ -3576,29 +3593,36 @@ header {
         right: 0;
         top: 50%;
         margin-top: -3px; } }
-  header.driver-header ul {
-    margin-left: 0;
-    padding-left: 0; }
-    header.driver-header ul:before {
-      display: none; }
-    header.driver-header ul a {
-      color: #7F7F7F; }
-      header.driver-header ul a.btn-menu {
-        color: #3E3E3E;
-        display: initial;
-        border: 1px solid #e2e2e2;
-        padding: 7px 25px; }
-    header.driver-header ul li {
-      height: 60px;
-      line-height: 60px; }
-    header.driver-header ul li + li {
-      margin-left: 30px; }
-    header.driver-header ul.menu-right {
-      float: right; }
-    header.driver-header ul.menu-left li:nth-child(1) {
-      width: 70px; }
-  header.driver-header .account {
-    float: left; }
+  header.driver-header {
+    height: 59px;
+    line-height: 59px; }
+    header.driver-header ul {
+      margin-left: 0;
+      padding-left: 0; }
+      header.driver-header ul:before {
+        display: none; }
+      header.driver-header ul a {
+        color: #7F7F7F; }
+        header.driver-header ul a.btn-menu {
+          color: #3E3E3E;
+          display: initial;
+          border: 1px solid #e2e2e2;
+          padding: 7px 25px; }
+        header.driver-header ul a.active {
+          border-bottom: 1px solid #000;
+          height: 59px; }
+      header.driver-header ul li {
+        height: 60px;
+        line-height: 60px; }
+      header.driver-header ul li + li {
+        margin-left: 40px; }
+      header.driver-header ul.menu-right {
+        float: right; }
+      header.driver-header ul.menu-left li:nth-child(1) {
+        width: 70px; }
+    header.driver-header .account {
+      float: left;
+      margin-right: 20px; }
 
 footer.footer-plans {
   border-top: 1px solid #e2e2e2;
@@ -4721,64 +4745,9 @@ span.icon {
 
 /* Interaction states
 ----------------------------------*/
-.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
-  border: 1px solid #B6B6B6;
-  font-weight: normal;
-  color: #4F4F4F; }
-
-.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
-  background: #ededed url(images/bg_fallback.png) 0 0 repeat-x;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #ededed 0%, #c4c4c4 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ededed), color-stop(100%, #c4c4c4));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #ededed 0%, #c4c4c4 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #ededed 0%, #c4c4c4 100%);
-  /* Opera11.10+ */
-  background: -ms-linear-gradient(top, #ededed 0%, #c4c4c4 100%);
-  /* IE10+ */
-  background: linear-gradient(top, #ededed 0%, #c4c4c4 100%);
-  /* W3C */
-  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset;
-  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset; }
-
 .ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited {
   color: #4F4F4F;
   text-decoration: none; }
-
-.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
-  border: 1px solid #9D9D9D;
-  font-weight: normal;
-  color: #313131; }
-
-.ui-state-hover a, .ui-state-hover a:hover {
-  color: #313131;
-  text-decoration: none; }
-
-.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
-  outline: none;
-  color: #1c4257;
-  border: 1px solid #7096ab;
-  background: #ededed url(images/bg_fallback.png) 0 -50px repeat-x;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #b9e0f5 0%, #92bdd6 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b9e0f5), color-stop(100%, #92bdd6));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #b9e0f5 0%, #92bdd6 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #b9e0f5 0%, #92bdd6 100%);
-  /* Opera11.10+ */
-  background: -ms-linear-gradient(top, #b9e0f5 0%, #92bdd6 100%);
-  /* IE10+ */
-  background: linear-gradient(top, #b9e0f5 0%, #92bdd6 100%);
-  /* W3C */
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none; }
 
 .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
   color: #313131;
@@ -4789,17 +4758,6 @@ span.icon {
 
 /* Interaction Cues
 ----------------------------------*/
-.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
-  border: 1px solid #d2dbf4;
-  background: #f4f8fd;
-  color: #0d2054;
-  -moz-border-radius: 0 !important;
-  -webkit-border-radius: 0 !important;
-  border-radius: 0 !important; }
-
-.ui-state-highlight a, .ui-widget-content .ui-state-highlight a, .ui-widget-header .ui-state-highlight a {
-  color: #363636; }
-
 .ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error {
   border: 1px solid #e2d0d0;
   background: #fcf0f0;
@@ -6118,7 +6076,7 @@ button.ui-button::-moz-focus-inner {
  * http://docs.jquery.com/UI/Datepicker#theming
  */
 .ui-datepicker {
-  width: 17em;
+  width: 260px;
   padding: 0;
   display: none;
   border-color: #DDDDDD; }
@@ -6137,6 +6095,7 @@ button.ui-button::-moz-focus-inner {
   border-radius: 0; }
 
 .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
+  cursor: pointer;
   position: absolute;
   top: 6px;
   width: 8px;
@@ -6148,6 +6107,12 @@ button.ui-button::-moz-focus-inner {
 
 .ui-datepicker .ui-datepicker-next {
   right: 16px; }
+
+.ui-datepicker .ui-datepicker-prev-hover {
+  left: 14px; }
+
+.ui-datepicker .ui-datepicker-next-hover {
+  right: 14px; }
 
 .ui-datepicker .ui-datepicker-next span {
   display: block;
@@ -6196,11 +6161,11 @@ button.ui-button::-moz-focus-inner {
 
 .ui-datepicker td {
   border: 0;
-  padding: 1px; }
+  padding: 0; }
 
 .ui-datepicker td span, .ui-datepicker td a {
   display: block;
-  padding: .2em;
+  padding: 0;
   text-align: right;
   text-decoration: none; }
 
@@ -6223,9 +6188,6 @@ button.ui-button::-moz-focus-inner {
 .ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
   float: left; }
 
-.ui-datepicker table .ui-state-highlight {
-  color: #35D3B5; }
-
 .ui-datepicker table .ui-state-hover {
   color: #000; }
 
@@ -6238,15 +6200,16 @@ button.ui-button::-moz-focus-inner {
   text-align: center; }
 
 .ui-datepicker-calendar .ui-state-active {
-  background: #5F83B9;
-  border-color: #5F83B9;
-  color: #FFF;
-  font-weight: bold;
-  text-shadow: 0 1px 1px #234386; }
+  color: #35D3B5; }
 
 .ui-datepicker-calendar thead {
   background-color: #F9f9f9;
   border-bottom: 1px solid #e2e2e2; }
+
+.ui-datepicker-calendar thead span {
+  font-family: "brandon_grotesquemedium";
+  font-size: 11px;
+  color: #BBBBBB; }
 
 /* with multiple calendars */
 .ui-datepicker.ui-datepicker-multi {
@@ -7877,7 +7840,7 @@ ul.actions-content {
 .driver-top .content-top {
   text-align: center; }
   .driver-top .content-top .title {
-    margin: 85px auto 60px;
+    margin: 100px auto 60px;
     width: 620px; }
     @media (max-width: 1023px) {
       .driver-top .content-top .title {
@@ -7898,39 +7861,53 @@ ul.actions-content {
     .driver-top h4 {
       width: 80%; } }
 
-.driver-top .inner .picto {
-  padding: 0 40px; }
-
-.driver-top .inner .inner-picto {
-  margin: 0 auto; }
-
-.driver-top .inner .inner-logo-container {
-  height: 37px;
-  margin: 40px auto 15px; }
-  .driver-top .inner .inner-logo-container img {
-    margin: 0 auto; }
-
-.driver-top .inner p {
-  color: #9A9A9A;
-  font-size: 16px;
-  font-family: "myriad_set_protext";
-  text-align: center; }
-
-.driver-top .inner ul {
-  padding-left: 25px; }
-  .driver-top .inner ul li {
-    list-style-image: url(../images/check.png); }
-    .driver-top .inner ul li p {
-      text-align: left; }
-  .driver-top .inner ul li + li {
-    padding-top: 23px; }
-
-.driver-top .inner a.btn {
-  border-radius: 0;
-  margin-top: 25px;
-  margin-bottom: 100px;
-  line-height: 45px;
-  text-align: center; }
+.driver-top .picto-container {
+  margin: 0 auto 100px;
+  width: 900px; }
+  @media (max-width: 1023px) {
+    .driver-top .picto-container {
+      width: 100%; } }
+  .driver-top .picto-container .picto {
+    float: left;
+    padding: 0 40px;
+    max-width: 300px; }
+    @media (max-width: 1023px) {
+      .driver-top .picto-container .picto {
+        width: 100%; } }
+  .driver-top .picto-container .inner-picto {
+    margin: 0 auto;
+    width: 200px; }
+  .driver-top .picto-container .inner-logo-container {
+    height: 37px;
+    margin: 40px auto 15px; }
+    .driver-top .picto-container .inner-logo-container img {
+      margin: 0 auto; }
+      .driver-top .picto-container .inner-logo-container img.cinqs {
+        width: 96px; }
+      .driver-top .picto-container .inner-logo-container img.one {
+        width: 68px; }
+      .driver-top .picto-container .inner-logo-container img.cinqsxl {
+        width: 134px; }
+  .driver-top .picto-container p {
+    color: #9A9A9A;
+    font-size: 16px;
+    font-family: "myriad_set_protext";
+    text-align: center; }
+  .driver-top .picto-container ul {
+    height: 160px;
+    padding: 0 5px 0 25px; }
+    .driver-top .picto-container ul li {
+      list-style-image: url(../images/check.png); }
+      .driver-top .picto-container ul li p {
+        text-align: left; }
+    .driver-top .picto-container ul li + li {
+      padding-top: 23px; }
+  .driver-top .picto-container a.btn {
+    border-radius: 0;
+    margin-top: 25px;
+    line-height: 45px;
+    text-align: center;
+    width: 184px; }
 
 .driver-quote {
   background-color: #FCFCFC;
@@ -7951,6 +7928,9 @@ ul.actions-content {
     text-align: center; }
     .driver-quote .quote-inner img {
       margin: 30px auto 0; }
+
+.page-bottom.driver .bottom-bottom {
+  padding: 100px 0; }
 
 .business-container {
   margin-bottom: 100px; }
@@ -7985,29 +7965,32 @@ ul.actions-content {
     margin-left: 25px;
     width: 170px; }
     .business-header .business-search input {
-      padding-left: 10px; }
+      padding-left: 10px;
+      font-size: 14px; }
   .business-header .business-input {
     width: 330px; }
     .business-header .business-input .control-group-date {
       float: left;
       position: relative;
       width: 165px; }
-      .business-header .business-input .control-group-date input::-webkit-input-placeholder {
-        color: #000;
-        font-size: 14px;
-        font-family: "myriad_set_prothin"; }
-      .business-header .business-input .control-group-date input::-moz-placeholder {
-        color: #000;
-        font-size: 14px;
-        font-family: "myriad_set_prothin"; }
-      .business-header .business-input .control-group-date input:-moz-placeholder {
-        color: #000;
-        font-size: 14px;
-        font-family: "myriad_set_prothin"; }
-      .business-header .business-input .control-group-date input:-ms-input-placeholder {
-        color: #000;
-        font-size: 14px;
-        font-family: "myriad_set_prothin"; }
+      .business-header .business-input .control-group-date input {
+        font-size: 14px; }
+        .business-header .business-input .control-group-date input::-webkit-input-placeholder {
+          color: #000;
+          font-size: 14px;
+          font-family: "myriad_set_prothin"; }
+        .business-header .business-input .control-group-date input::-moz-placeholder {
+          color: #000;
+          font-size: 14px;
+          font-family: "myriad_set_prothin"; }
+        .business-header .business-input .control-group-date input:-moz-placeholder {
+          color: #000;
+          font-size: 14px;
+          font-family: "myriad_set_prothin"; }
+        .business-header .business-input .control-group-date input:-ms-input-placeholder {
+          color: #000;
+          font-size: 14px;
+          font-family: "myriad_set_prothin"; }
       .business-header .business-input .control-group-date:after {
         background: url(../images/driver/arrow-input-date.png);
         content: '';
@@ -8033,10 +8016,12 @@ ul.actions-content {
       height: 30px;
       font-family: "brandon_grotesquemedium";
       font-size: 11px;
-      padding: 7px 26px; }
+      padding: 7px 26px;
+      text-transform: uppercase; }
 
 .business-table {
   border-top: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
   padding-left: 0;
   padding-top: 30px;
   margin: 0 auto;
@@ -8059,13 +8044,17 @@ ul.actions-content {
     .business-table .business-row:nth-child(even) {
       background-color: #f9f9f9; }
     .business-table .business-row .business-inner.size-small {
-      width: 80px; }
+      width: 50px; }
+    .business-table .business-row .business-inner.size-middle-155 {
+      width: 155px; }
     .business-table .business-row .business-inner.size-middle {
-      width: 110px; }
+      width: 100px; }
     .business-table .business-row .business-inner.size-big {
       width: 240px; }
     .business-table .business-row .business-inner-title {
       float: left; }
+      .business-table .business-row .business-inner-title.date {
+        padding-left: 10px; }
       .business-table .business-row .business-inner-title p {
         color: #35D3B5;
         font-size: 10px;
@@ -8097,7 +8086,7 @@ ul.actions-content {
       display: block;
       width: 100%; }
       .business-table .business-row .collapse .collapse-inner {
-        background-color: #F0F0F0;
+        background-color: #F9F9F9;
         border-top: 1px solid #DDDDDD;
         display: block;
         padding: 50px 155px; }
@@ -8132,10 +8121,10 @@ ul.actions-content {
               border: 2px solid #35D3B5; }
       .business-table .business-row .collapse .itineraire-lien {
         float: right;
-        width: 155px; }
+        width: 170px; }
         .business-table .business-row .collapse .itineraire-lien a.link {
           color: #333D47;
-          font-size: 11px;
+          font-size: 12px;
           font-family: "myriad_set_prothin"; }
         .business-table .business-row .collapse .itineraire-lien a.btn-border {
           border: 1px solid #35D3B5;
@@ -8303,7 +8292,8 @@ ul.actions-content {
     .page-bottom .bottom-top .inner .picto {
       text-align: center; }
       .page-bottom .bottom-top .inner .picto img {
-        margin: 0 auto; }
+        margin: 0 auto;
+        width: 140px; }
       .page-bottom .bottom-top .inner .picto p {
         color: #1e343e;
         font-size: 20px;
@@ -8311,6 +8301,7 @@ ul.actions-content {
       .page-bottom .bottom-top .inner .picto span {
         display: block;
         font-size: 18px;
+        font-family: "proxima_nova_rgregular";
         margin-top: 10px; }
   .page-bottom .driver-bottom {
     border-top: 1px solid #e2e2e2;
@@ -8338,6 +8329,7 @@ ul.actions-content {
         font-family: "proxima_nova_ltsemibold"; }
       .page-bottom .driver-bottom .text-wrapper span {
         display: block;
+        font-family: "proxima_nova_rgregular";
         padding-left: 40px;
         margin-top: 15px;
         font-size: 18px; }
@@ -8351,18 +8343,24 @@ ul.actions-content {
 .page-gamme {
   border-top: 1px solid #e2e2e2; }
   .page-gamme .gamme {
-    padding: 60px 25px 40px 25px;
+    height: 720px;
     text-align: center; }
-  .page-gamme.one .gamme.active {
+  .page-gamme .inner-gamme {
+    padding: 60px 25px 40px 25px; }
+  .page-gamme .gamme.active {
     background-color: #F4F4F4;
     background-image: -webkit-linear-gradient(bottom, #F4F4F4, #FFF 70%);
     background-image: linear-gradient(to top,#F4F4F4, #FFF 70%); }
-  .page-gamme.cinqs .gamme.active {
-    background-color: #FAFAFA; }
   .page-gamme .inner-logo {
     height: 37px;
     margin-bottom: 25px;
     position: relative; }
+    .page-gamme .inner-logo.cinqs {
+      width: 96px; }
+    .page-gamme .inner-logo.one {
+      width: 68px; }
+    .page-gamme .inner-logo.cinqsxl {
+      width: 134px; }
     .page-gamme .inner-logo img {
       height: auto;
       position: absolute;
@@ -8379,7 +8377,8 @@ ul.actions-content {
     font-family: "proxima_nova_rgregular"; }
     .page-gamme p.text {
       font-size: 18px;
-      font-family: "myriad_set_prothin"; }
+      font-family: "myriad_set_protext";
+      padding: 0 20px; }
     .page-gamme p.bold {
       color: #333D47;
       font-family: "proxima_nova_ltsemibold"; }
@@ -8557,6 +8556,12 @@ ul.actions-content {
           -ms-transform: translate(-50%, -50%);
           -o-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%); }
+          .cinqs-bottom .bottom-top .inner .picto .inner-picto img.cinqs-dollar {
+            width: 80px; }
+          .cinqs-bottom .bottom-top .inner .picto .inner-picto img.cinqs-voiture {
+            width: 123px; }
+          .cinqs-bottom .bottom-top .inner .picto .inner-picto img.cinqs-people {
+            width: 60px; }
       .cinqs-bottom .bottom-top .inner .picto img {
         margin: 0 auto; }
       .cinqs-bottom .bottom-top .inner .picto p {
@@ -8566,6 +8571,7 @@ ul.actions-content {
       .cinqs-bottom .bottom-top .inner .picto span {
         display: block;
         font-size: 18px;
+        font-family: "proxima_nova_rgregular";
         margin-top: 10px; }
   .cinqs-bottom .cinqs-bottom {
     border-top: 1px solid #e2e2e2;
@@ -8593,6 +8599,7 @@ ul.actions-content {
         font-family: "proxima_nova_ltsemibold"; }
       .cinqs-bottom .cinqs-bottom .text-wrapper span {
         display: block;
+        font-family: "proxima_nova_rgregular";
         padding-left: 40px;
         margin-top: 15px;
         font-size: 18px; }
@@ -8745,6 +8752,12 @@ ul.actions-content {
           -ms-transform: translate(-50%, -50%);
           -o-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%); }
+          .cinqsxl-bottom .bottom-top .inner .picto .inner-picto img.cinqs-dollar {
+            width: 80px; }
+          .cinqsxl-bottom .bottom-top .inner .picto .inner-picto img.cinqs-voiture {
+            width: 123px; }
+          .cinqsxl-bottom .bottom-top .inner .picto .inner-picto img.cinqs-people {
+            width: 60px; }
       .cinqsxl-bottom .bottom-top .inner .picto img {
         margin: 0 auto; }
       .cinqsxl-bottom .bottom-top .inner .picto p {
@@ -8754,6 +8767,7 @@ ul.actions-content {
       .cinqsxl-bottom .bottom-top .inner .picto span {
         display: block;
         font-size: 18px;
+        font-family: "proxima_nova_rgregular";
         margin-top: 10px; }
   .cinqsxl-bottom .cinqsxl-bottom {
     border-top: 1px solid #e2e2e2;
@@ -8781,6 +8795,7 @@ ul.actions-content {
         font-family: "proxima_nova_ltsemibold"; }
       .cinqsxl-bottom .cinqsxl-bottom .text-wrapper span {
         display: block;
+        font-family: "proxima_nova_rgregular";
         padding-left: 40px;
         margin-top: 15px;
         font-size: 18px; }
@@ -8838,6 +8853,9 @@ ul.actions-content {
       color: #9A9A9A;
       height: 20px;
       line-height: 120%; }
+    .business-login .control-group input:focus {
+      background-color: #FFF;
+      line-height: 120%; }
   .business-login .control-group .btn-submit-wrapper input {
     color: #FFF;
     font-size: 13px;
@@ -8864,11 +8882,38 @@ ul.actions-content {
     border-bottom: 1px solid #e2e2e2;
     margin-top: 0; }
   .business-login .social-button {
-    width: 100%; }
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    width: 350px; }
     .business-login .social-button img {
-      max-width: 100%; }
+      left: 10px;
+      top: 50%;
+      height: 20px;
+      width: 20px;
+      position: absolute;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%); }
+    .business-login .social-button p {
+      color: #FFF;
+      font-size: 13px;
+      font-family: "brandon_grotesquemedium";
+      margin: 0;
+      line-height: 40px;
+      text-align: center;
+      text-transform: uppercase; }
+  .business-login .fb-button {
+    background-color: #3B579D; }
+    .business-login .fb-button:hover {
+      background-color: #4863A6; }
   .business-login .gg-button {
+    background-color: #DD4B39;
     margin-top: 10px; }
+    .business-login .gg-button:hover {
+      background-color: #ea5340; }
 
 .page-top {
   background: url("../images/home/background.jpg") top center no-repeat;
@@ -9007,6 +9052,7 @@ ul.actions-content {
         font-family: "proxima_nova_rgbold"; }
       .page-bottom .bottom-top .inner .picto span {
         display: block;
+        font-family: "proxima_nova_rgregular";
         font-size: 18px;
         margin-top: 10px; }
   .page-bottom .bottom-bottom {
@@ -9035,6 +9081,7 @@ ul.actions-content {
         font-family: "proxima_nova_ltsemibold"; }
       .page-bottom .bottom-bottom .text-wrapper span {
         display: block;
+        font-family: "proxima_nova_rgregular";
         padding-left: 40px;
         margin-top: 15px;
         font-size: 18px; }

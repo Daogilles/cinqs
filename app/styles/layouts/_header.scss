@@ -112,7 +112,7 @@ body.interne, body.driver, body.business {
 		font-size: 12px;
 		font-family: $myriad-text;
 	}
-
+	
 }
 
 .progress-bar {
@@ -358,6 +358,8 @@ header {
 
 
 	&.driver-header {
+		height: 59px;
+		line-height: 59px;
 		ul {
 			margin-left: 0;
 			padding-left: 0;
@@ -373,6 +375,10 @@ header {
 					border: 1px solid $gray-border;
 					padding: 7px 25px;
 				}
+				&.active {
+					border-bottom: 1px solid $black;
+					height: 59px;
+				}
 			}
 
 			li {
@@ -381,7 +387,7 @@ header {
 			}
 
 			li + li {
-				margin-left: 30px;			
+				margin-left: 40px;			
 			}
 
 			&.menu-right {
@@ -399,6 +405,7 @@ header {
 
 		.account {
 			float: left;
+			margin-right: 20px;
 		}
 	}
 }

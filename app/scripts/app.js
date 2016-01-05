@@ -237,7 +237,11 @@ function App() {
             dayNamesShort: ['D', 'L', 'M', 'M', 'J', 'V', 'S'],
             dayNamesMin: ['D', 'L', 'M', 'M', 'J', 'V', 'S'],
             weekHeader: 'Sem.',
-            dateFormat: 'yy-mm-dd'
+            dateFormat: 'yy-mm-dd',            
+        })
+
+        $('.datepicker-from').datepicker( 'option' , 'onClose', function() {
+            $('.datepicker-to').datepicker('show');
         })
         $.datepicker.setDefaults( $.datepicker.regional[ "fr" ] );
 

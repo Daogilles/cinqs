@@ -7,7 +7,7 @@
 	.content-top {
 		text-align: center;
 		.title {
-			margin:85px auto 60px;
+			margin:100px auto 60px;
 			width: 620px;
 
 			@include respond-to('medium') {
@@ -33,18 +33,39 @@
 		}
 	}
 
-	.inner {
+	.picto-container {
+		margin:0 auto 100px;
+		width: 900px;
+		@include respond-to('medium') {
+			width: 100%;
+		}
 		.picto {
+			float: left;
 			padding: 0 40px;
+			max-width: 300px;
+
+			@include respond-to('medium') {
+				width: 100%;
+			}
 		}
 		.inner-picto {
 			margin: 0 auto;
+			width: 200px;
 		}
 		.inner-logo-container {
 			height: 37px;
 			margin: 40px auto 15px;
 			img {
 				margin: 0 auto;
+				&.cinqs {
+					width: 96px;
+				}
+				&.one {
+					width: 68px;
+				}
+				&.cinqsxl {
+					width: 134px;
+				}
 			}
 		}
 		p {
@@ -52,10 +73,12 @@
 			font-size: 16px;
 			font-family: $myriad-text;
 			text-align: center;
+			
 		}
 
 		ul {
-			padding-left: 25px;
+			height: 160px;
+			padding: 0 5px 0 25px;
 			li {
 				list-style-image: url(../images/check.png);		
 				p {
@@ -69,10 +92,10 @@
 		}
 		a.btn {
 			border-radius: 0;
-			margin-top: 25px;
-			margin-bottom: 100px;
+			margin-top: 25px;			
 			line-height: 45px;
 			text-align: center;
+			width: 184px;
 		}
 	}
 }
@@ -102,6 +125,14 @@
 		text-align: center;
 		img {
 			margin: 30px auto 0;
+		}
+	}
+}
+
+.page-bottom {
+	&.driver {
+		.bottom-bottom {
+			padding: 100px 0;
 		}
 	}
 }

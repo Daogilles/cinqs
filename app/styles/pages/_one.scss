@@ -170,6 +170,7 @@
 				text-align: center;
 				img {
 					margin:0 auto;
+					width: 140px;
 				}
 				p {
 					color: $blue;
@@ -179,6 +180,7 @@
 				span {
 					display: block;
 					font-size: 18px;
+					font-family: $proxima-regular;
 					margin-top: 10px;
 				}
 			}
@@ -221,6 +223,7 @@
 
 			span {
 				display: block;
+				font-family: $proxima-regular;				
 				padding-left: 40px;
 				margin-top: 15px;
 				font-size: 18px;
@@ -241,32 +244,48 @@
 .page-gamme {
 	border-top: 1px solid $gray-border;
 	// padding: 60px 0;
-
+	
 	.gamme {
-		padding:60px 25px 40px 25px;
+		height: 720px;
 		text-align: center;		
 	}
+	
+	.inner-gamme {
+		padding:60px 25px 40px 25px;
+	}
 
-	&.one {
+	// &.one {
 		.gamme {
 			&.active {
 				@include linear-gradient(to top, #F4F4F4, $white 70%);
 			}
 		}
-	}
+	// }
 
-	&.cinqs {
-		.gamme {
-			&.active {
-				background-color: $gray-lightest;
-			}
-		}
-	}
+	// &.cinqs {
+	// 	.gamme {
+	// 		&.active {
+	// 			background-color: $gray-lightest;
+	// 		}
+	// 	}
+	// }
 
 	.inner-logo {
 		height: 37px;
 		margin-bottom: 25px;
 		position: relative;
+		
+		&.cinqs {
+			width: 96px;
+		}
+		&.one {
+			width: 68px;
+		}
+		&.cinqsxl {
+			width: 134px;
+		}
+		
+
 		img {
 			height: auto;
 			position: absolute;
@@ -282,7 +301,8 @@
 
 		&.text {
 			font-size: 18px;
-			font-family: $myriad-thin;
+			font-family: $myriad-text;
+			padding: 0 20px;
 		}
 		&.bold {
 			color: $blue-dark;
