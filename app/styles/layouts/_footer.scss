@@ -37,10 +37,12 @@ footer {
 		}
 		.aexid {
 			height: auto;
+			padding-left: 20px;
 			margin-top: 30px;
 
 			li {
-				list-style-image: url(../images/check.png);		
+				list-style-image: url(../images/check.png);	
+				width: 100%;	
 				p {
 					text-align: left;
 					margin-top: 0;
@@ -55,8 +57,10 @@ footer {
 			border-radius: 0;
 			margin-top: 25px;
 			margin-bottom: 100px;
-			line-height: 45px;
+			height: 38px;
+			line-height: 38px;
 			text-align: center;
+			width: 184px;
 		}
 	}
 	ul {
@@ -116,7 +120,7 @@ footer {
 		}
 	}
 
-	&.footer-driver {
+	&.footer-driver, &.footer-business-login {
 		ul.footer-big {
 			float: left;
 		}
@@ -127,5 +131,15 @@ footer {
 				margin-left: 20px;
 			}
 		}
+	}
+
+	&.footer-business-login {
+		height: 20px;
+		bottom: 20px;
+		left: 50%;
+		position: absolute;
+		width: 1000px;
+
+		@include transform(translateX(-50%));
 	}
 }

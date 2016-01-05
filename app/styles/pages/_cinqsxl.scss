@@ -147,6 +147,12 @@
 				font-family: $proxima-regular;
 				margin-top: 10px;
 			}
+
+			.btn-submit-wrapper {
+				input {
+					text-transform: uppercase;
+				}
+			}
 		}
 	}
 }
@@ -255,7 +261,11 @@
 
 		.btn-submit-wrapper {
 			margin: 60px auto 0;
-			width: 220px;
+			width: 290px;
+
+			input {
+				text-transform: uppercase;
+			}
 		}
 	}
 }

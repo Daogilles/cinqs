@@ -408,5 +408,13 @@ header {
 			margin-right: 20px;
 		}
 	}
+
+	&.business-header {
+		margin: 0 auto;
+		width: 1000px;
+		.wrapper {
+			width: 100%;
+		}
+	}
 }
 

@@ -341,6 +341,14 @@
 		}
 	}
 
+	&.cinqs, &.cinqsxl {
+		.btn-submit-wrapper {
+			input {
+				text-transform: uppercase;
+			}			
+		}
+	}
+
 	.control-group {
 		margin-top: 40px;
 	}

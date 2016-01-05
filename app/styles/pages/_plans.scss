@@ -45,6 +45,8 @@
 			max-width: 300px;
 
 			@include respond-to('medium') {
+				margin-bottom: 40px;
+				max-width: 100%;
 				width: 100%;
 			}
 		}
@@ -73,29 +75,44 @@
 			font-size: 16px;
 			font-family: $myriad-text;
 			text-align: center;
-			
+			@include respond-to('medium') {
+				margin: 0 auto;
+				width: 330px;
+			}
 		}
 
 		ul {
 			height: 160px;
-			padding: 0 5px 0 25px;
+			padding: 0 5px 0 0;
 			li {
-				list-style-image: url(../images/check.png);		
+				// list-style-image: url(../images/check.png);	
+				background: url(../images/check.png) left center no-repeat;
+				list-style: none;
+				padding-left: 25px;
 				p {
 					text-align: left;
 				}		
 			}
 			li + li {
-				padding-top: 23px;
+				margin-top: 23px;
 			}
-			
+			@include respond-to('medium') {
+				margin: 15px auto 0;
+				width: 330px;
+			}
 		}
 		a.btn {
 			border-radius: 0;
 			margin-top: 25px;			
-			line-height: 45px;
+			height: 38px;
+			line-height: 38px;
 			text-align: center;
 			width: 184px;
+
+			@include respond-to('medium') {
+				display: block;
+				margin: 0 auto;
+			}
 		}
 	}
 }
@@ -131,6 +148,11 @@
 
 .page-bottom {
 	&.driver {
+
+		@include respond-to('medium') {
+			padding: 0 30px;
+		}
+
 		.bottom-bottom {
 			padding: 100px 0;
 		}
