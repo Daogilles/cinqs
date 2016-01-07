@@ -6,8 +6,11 @@
 footer {
 	&.footer-plans {
 		border-top: 1px solid $gray-border;
-		background-color: #FAFAFA;
+		// background-color: #FAFAFA;
 		padding-top: 100px;
+		padding-bottom: 20px;
+		@include linear-gradient(to top, #F4F4F4, $white 90%);		
+
 		@include respond-to('medium') {
 			padding: 0 30px;
 			padding-top: 100px;
@@ -31,9 +34,9 @@ footer {
 		.inner + .inner {
 			float: right;
 			padding: 0 20px;
-			img {
-				margin: 0 auto;
-			}
+			// img {
+			// 	margin: 0 auto;
+			// }
 		}
 		.aexid {
 			height: auto;
@@ -65,7 +68,7 @@ footer {
 	}
 	ul {
 		height: 20px;
-		margin: 0 auto 20px;
+		margin: 0 auto;
 		
 		li {
 			float: left;
@@ -91,7 +94,7 @@ footer {
 			width: 550px;
 		}
 		&.footer-mobile {
-			background-color: $gray-lightest;
+			// background-color: $gray-lightest;
 			display: none;
 			height: 70px;
 			padding:20px;

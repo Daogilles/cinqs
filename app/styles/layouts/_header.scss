@@ -416,5 +416,21 @@ header {
 			width: 100%;
 		}
 	}
+
+	&.rent {
+		li.border-left {
+			&:before {
+				background-color: $gray-border;
+				content:'';
+				left: -20px;
+				top: 50%;
+				height: 35px;
+				width: 1px;
+				position: absolute;
+
+				@include transform(translateY(-50%));
+			}
+		}
+	}
 }
 

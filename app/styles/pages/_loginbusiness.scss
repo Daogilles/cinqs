@@ -42,6 +42,7 @@
 			line-height: 120%;
 			font-family: $myriad-text;
 			padding-left: 0;
+			width: 100%;
 
 			@include placeholder {
 				color: $gray;
@@ -78,16 +79,21 @@
 		margin-top: 10px;
 	}
 
-	.right {
-		.control-group {
-			margin-top: 0;
-		}
-	}
+	
 
 	.field-container {
 		border-top: 1px solid $gray-border;
 		padding: 10px 0;
 		margin-top: 30px;
+		.left {
+			width: 220px;
+		}
+		.right {
+			width: 130px;
+			.control-group {
+				margin-top: 0;
+			}
+		}
 	}
 
 	.field-container + .field-container {

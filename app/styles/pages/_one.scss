@@ -151,7 +151,7 @@
 	}
 }
 
-.page-bottom {
+.page-bottom-one {
 	position: relative;
 	z-index: 1;
 	.bottom-top {
@@ -163,7 +163,7 @@
 		}
 
 		.inner {
-			margin:60px auto;
+			margin:60px auto 100px;
 			width: 80%;
 
 			.picto {
@@ -190,7 +190,7 @@
 	.driver-bottom {
 		border-top: 1px solid $gray-border;
 		margin: 0 auto;
-		padding: 60px 0;
+		padding: 100px 0;
 		width: 100%;
 
 		@include respond-to('small') {
@@ -243,11 +243,25 @@
 
 .page-gamme {
 	border-top: 1px solid $gray-border;
-	// padding: 60px 0;
+	display: block;
+
+	&.page-gamme-mobile {
+		display: none;
+	}
+
+	@include respond-to('medium') {
+		display: none;
+		&.page-gamme-mobile {
+			display: block;
+		}
+	}
 	
 	.gamme {
 		height: 720px;
-		text-align: center;		
+		text-align: center;	
+		@include respond-to('medium') {
+			height: 100%;
+		}	
 	}
 	
 	.inner-gamme {

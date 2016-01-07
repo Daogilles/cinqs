@@ -1,0 +1,245 @@
+//
+// rent page
+// --------------------------------------------------
+
+
+.page-bottom-rent {
+	position: relative;
+	z-index: 1;
+
+	.content-top {
+		text-align: center;
+		.title {
+			margin:100px auto;
+			width: 620px;
+
+			@include respond-to('medium') {
+				width: 90%;
+			}
+
+			h1 {
+				color: $black-light;
+				font-size: 34px;
+				font-family: $myriad-thin;
+				margin-bottom: 30px;
+			}
+			h4 {
+				color: $black-light;
+				font-size: 20px;
+				font-family: $myriad-thin;
+			}
+		}
+	}
+
+
+	.gamme-voiture {
+		height: 790px;
+		margin: 0 auto;
+		width: 845px;
+
+		@include respond-to('small') {
+			height: 100%;
+			width: 100%;
+		}
+
+		.gamme {
+			float: left;
+			height: 100%;
+			width: 281px;
+
+			@include respond-to('small') {
+				float: none;
+				margin: 0 auto;
+				width: 90%;
+			}
+
+			&.active {
+				background-color: #FAFAFA;
+			}
+
+			a.btn-stock {
+				background-color: $turquoise;
+				color: $white;
+				font-family: $brandon-medium;
+				font-size: 12px;
+				height: 22px;
+				line-height: 22px;
+				text-transform: uppercase;
+				width: 161px;
+				position: absolute;
+				left: 50%;
+				top: 0;
+				@include transform(translateX(-50%));
+			}
+
+			.type {
+				border-bottom: 1px solid $gray-border;
+				height: 106px;
+				line-height: 106px;
+				text-align: center;
+				position: relative;
+				width: 100%;
+
+				p {
+					color: $black;
+					font-family: $myriad-thin;
+					font-size: 32px;
+				}
+			}
+			.voiture {
+				border-bottom: 1px solid $gray-border;
+				.voiture-img {
+					height: 90px;
+					line-height: 90px;
+					margin: 20px 0 10px;
+					text-align: center;
+					img {
+						&.green {
+							width: 120px;
+						}
+						&.standard {
+							width: 137px;
+						}
+						&.premium {
+							width: 120px;
+						}
+					}
+				}
+				p {
+					color: $black;
+					font-size: 18px;
+					font-family: $myriad-thin;
+					text-align: center;
+					margin-bottom: 30px;
+				}
+			}
+			.reservation {
+				border-bottom: 1px solid $gray-border;
+				text-align: center;
+				p {
+					color: $black;
+					font-size: 22px;
+					font-family: $myriad-text;
+					margin-top: 30px;
+				}
+				a.btn-book {
+					background-color: $black;
+					color: $white;
+					height: 37px;
+					line-height: 37px;
+					font-family: $brandon-medium;
+					font-size: 13px;
+					margin: 35px auto 30px;
+					text-transform: uppercase;
+					width: 174px;
+				}
+			}
+			.infos {	
+				margin-bottom: 70px;
+				text-align: center;			
+				p {
+					color: $black;
+					font-size: 18px;
+					font-family: $myriad-thin;
+					font-weight: bold;
+					margin-top: 30px;
+				}				
+				span {
+					color: $black;
+					font-size: 18px;
+					font-family: $myriad-thin;
+				}
+			}
+		}
+
+	}
+
+	.bottom-top {
+		h3 {
+			color: $blue-dark;
+			@include respond-to('medium') {
+				text-align: center;
+			}
+		}
+
+		.inner {
+			margin:60px auto 100px;
+			width: 80%;
+
+			.picto {
+				text-align: center;
+				img {
+					margin:0 auto;
+					width: 140px;
+				}
+				p {
+					color: $blue;
+					font-size: 20px;
+					font-family: $proxima-bold;
+				}
+				span {
+					display: block;
+					font-size: 18px;
+					font-family: $proxima-regular;
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+
+	.driver-bottom {
+		border-top: 1px solid $gray-border;
+		margin: 0 auto;
+		padding: 100px 0;
+		width: 100%;
+
+		@include respond-to('small') {
+			border-top: none;
+			padding: 0 30px;
+			margin: 100px 0;
+		}
+
+		h3 {
+			text-align: center;
+			font-family: $myriad-thin;
+			font-size: 34px;
+		}
+
+		.text-wrapper {
+			margin: 35px auto 0;
+			width: 80%;
+
+			@include respond-to('medium') {
+				width: 100%;
+			}
+
+			&:nth-child(2) {
+				margin-top: 70px;
+			}
+
+			p {
+				color: $blue-dark;
+				font-size: 18px;
+				font-family: $proxima-semibold;
+			}
+
+			span {
+				display: block;
+				font-family: $proxima-regular;				
+				padding-left: 40px;
+				margin-top: 15px;
+				font-size: 18px;
+				@include respond-to('medium') {
+					padding: 0;
+				}
+			}
+		}
+
+		.btn-submit-wrapper {
+			margin: 60px auto 0;
+			width: 220px;
+		}
+	}
+}
+
+
