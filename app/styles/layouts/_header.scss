@@ -412,12 +412,26 @@ header {
 	&.business-header {
 		margin: 0 auto;
 		width: 1000px;
+
+		@include respond-to('medium') {
+			width: 100%;
+		}
+
 		.wrapper {
 			width: 100%;
 		}
 	}
 
 	&.rent {
+		@include respond-to('medium') {
+			.wrapper {
+				width: 96%;
+			}
+			.menu-right {
+				display: none;
+			}
+		}
+
 		li.border-left {
 			&:before {
 				background-color: $gray-border;
